@@ -38,3 +38,13 @@ LavenderTown_Text_PokemonTowerSign::
     .string "POKéMON TOWER\n"
     .string "Becalm the Spirits of POKéMON$"
 
+LavenderTown_Text_TriggerEscape::
+    .string "¡Una fuerza paranormal arrastró a\n"
+    .string "{PLAYER} hacia atrás!$"
+
+LavenderTown_Text_TriggerEscape1::
+    .string "De repente a {PLAYER} le ha entrado\n"
+    .string "mucho sueño…$"
+
+LavenderTown_Text_TriggerEscapeBlackout::
+    .string "{PLAYER} ha perdido el conocimiento…$"
