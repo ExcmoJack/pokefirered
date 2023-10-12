@@ -492,6 +492,11 @@ static const struct MenuAction sMultichoiceList_TrainerTowerMode[] = {
     { gOtherText_Exit }
 };
 
+static const struct MenuAction sMultichoiceList_TengoOtraOpcion[] = {
+    { gText_Multichoice_Yes },
+    { gText_Multichoice_TengoOtraOpcion }
+};
+
 static const struct MenuAction sMultichoiceList_Exit[] = {
     { gOtherText_Exit }
 };
@@ -562,6 +567,7 @@ static const struct MultichoiceListStruct sMultichoiceLists[] = {
     [MULTICHOICE_62]                                         = MULTICHOICE(sMultichoiceList_62),
     [MULTICHOICE_JOIN_OR_LEAD]                               = MULTICHOICE(sMultichoiceList_JoinOrLead),
     [MULTICHOICE_TRAINER_TOWER_MODE]                         = MULTICHOICE(sMultichoiceList_TrainerTowerMode),
+    [MULTICHOICE_TENGO_OTRA_OPCION]                          = MULTICHOICE(sMultichoiceList_TengoOtraOpcion),
 };
 
 // From Cool to Berries goes unused

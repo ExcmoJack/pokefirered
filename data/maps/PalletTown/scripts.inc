@@ -1,5 +1,6 @@
 .equ LOCALID_SIGN_LADY, 1
 .equ LOCALID_PROF_OAK,  3
+.equ LOCALID_MISTICO,   4
 
 .equ SIGN_LADY_READY, VAR_TEMP_2
 
@@ -38,8 +39,44 @@ PalletTown_EventScript_MoveSignLadyToRouteEntrance::
 	return
 
 PalletTown_OnFrame::
-	map_script_2 VAR_MAP_SCENE_PALLET_TOWN_OAK, 2, PalletTown_EventScript_OakRatingScene
+	map_script_2 VAR_MAP_SCENE_PALLET_TOWN_OAK, 1, PalletTown_EventScript_SendPlayerToLavender
+	@ map_script_2 VAR_MAP_SCENE_PALLET_TOWN_OAK, 2, PalletTown_EventScript_OakRatingScene
 	.2byte 0
+
+PalletTown_EventScript_SendPlayerToLavender::
+	lockall
+	textcolor NPC_TEXT_COLOR_CREEPY
+	delay 20
+	playbgm MUS_POKE_TOWER, 0
+	setweather WEATHER_RAIN_THUNDERSTORM
+	applymovement LOCALID_MISTICO, Common_Movement_ExclamationMark
+	waitmovement 0
+	applymovement LOCALID_MISTICO, PalletTown_Movement_MisticoSeAcerca
+	waitmovement 0
+	doweather
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterLeft
+	waitmovement 0
+	setvar VAR_MAP_SCENE_PALLET_TOWN_OAK, 2
+	msgbox PalletTown_Text_Mistico_Introduccion, MSGBOX_DEFAULT
+	message PalletTown_Text_Mistico_Pregunta
+	waitmessage
+	multichoice 20, 0, MULTICHOICE_TENGO_OTRA_OPCION, TRUE
+	switch VAR_RESULT
+	call_if_eq VAR_RESULT, 1, PalletTown_EventScript_SendPlayerToLavender_2
+	msgbox PalletTown_Text_Mistico_Teleport
+	warpteleport MAP_LAVENDER_TOWN, 255, 18, 8
+	releaseall
+	end
+
+PalletTown_EventScript_SendPlayerToLavender_2::
+	msgbox PalletTown_Text_Mistico_Teleport_2
+	closemessage
+	return
+
+PalletTown_Movement_MisticoSeAcerca::
+	walk_right
+	walk_right
+	step_end
 
 @ Oak approaches player after exiting their house post Elite Four to check if they should receieve the National Dex
 PalletTown_EventScript_OakRatingScene::

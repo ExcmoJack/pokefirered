@@ -153,7 +153,7 @@ const u8 gText_Escape3[] = _("{ESCAPE 0x03}"); // Unused, RIGHT_ARROW in pokeeme
 const u8 gText_IDNumber2[] = _("{ID}{NO}");
 const u8 gText_PokeSum_PP[] = _("{PP}");
 const u8 gText_SelectorArrow2[] = _("▶");
-const u8 gText_YesNo[] = _("YES\nNO");
+const u8 gText_YesNo[] = _("Sí\nNo");
 const u8 gText_GoBackToThePreviousMenu[] = _("Go back to the\nprevious menu.");
 const u8 gText_WhatWouldYouLikeToDo[] = _("What would you like to do?");
 const u8 gText_MenuPokedex[] = _("POKéDEX");
@@ -1333,3 +1333,6 @@ const u8 gText_Receive[] = _("RECEIVE");
 const u8 gText_Send[] = _("SEND");
 const u8 gText_Toss[] = _("TOSS");
 const u8 gText_DelAllCancelOk[] = _("DEL. ALL{CLEAR_TO 0x57}CANCEL{CLEAR_TO 0xA4}OK");
+
+const u8 gText_Multichoice_TengoOtraOpcion[] = _("¿Tengo otra opción?");
+const u8 gText_Multichoice_Yes[] = _("Sí");

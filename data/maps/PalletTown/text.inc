@@ -65,3 +65,25 @@ PalletTown_Text_OakYouEnjoyingTraveling::
     .string "Good for you, good for you.\n"
     .string "Hohoho.$"
 
+PalletTown_Text_Mistico_Introduccion::
+    .string "Saludos, disculpa mi repentina\n"
+    .string "aparición.\p"
+    .string "No tengo tiempo para\n"
+    .string "presentaciones.\p"
+    .string "Provengo de un lugar que ha sido\n"
+    .string "tomado por los espíritus.\p"
+    .string "La providencia me ha traído\n"
+    .string "hasta aquí en busca de alguien\l"
+    .string "capaz de librarnos de ellos.$"
+
+PalletTown_Text_Mistico_Pregunta::
+    .string "Es cuestión de vida o muerte.\n"
+    .string "¿Me ayudarás?$"
+
+PalletTown_Text_Mistico_Teleport::
+    .string "Ven, te llevaré a mi hogar.$"
+
+PalletTown_Text_Mistico_Teleport_2::
+    .string "Me temo que no tienes opción,\n"
+    .string "lo harás igualmente.$"
+
