@@ -2695,7 +2695,7 @@ static const struct BattleWindowText sTextOnWindowsInfo_Normal[] = {
     },
     [B_WIN_OAK_OLD_MAN] = {
         .fillValue = PIXEL_FILL(0x1),
-        .fontId = FONT_MALE,
+        .fontId = FONT_NORMAL,
         .x = 0,
         .y = 1,
         .letterSpacing = 0,
@@ -2709,10 +2709,12 @@ static const struct BattleWindowText sTextOnWindowsInfo_Normal[] = {
 
 static const u8 sNpcTextColorToFont[] = 
 {
-    [NPC_TEXT_COLOR_MALE]    = FONT_MALE, 
-    [NPC_TEXT_COLOR_FEMALE]  = FONT_FEMALE, 
+    [NPC_TEXT_COLOR_MALE]    = FONT_NORMAL, 
+    [NPC_TEXT_COLOR_FEMALE]  = FONT_NORMAL, 
     [NPC_TEXT_COLOR_MON]     = FONT_NORMAL, 
     [NPC_TEXT_COLOR_NEUTRAL] = FONT_NORMAL,
+    [NPC_TEXT_COLOR_CREEPY]  = FONT_FEMALE,
+    [NPC_TEXT_COLOR_EVIL]    = FONT_MALE,
 };
 
 // windowId: Upper 2 bits are text flags

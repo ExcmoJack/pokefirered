@@ -230,3 +230,13 @@ const u16 gFieldEffectObjectPic_Bubbles[] = INCBIN_U16("graphics/field_effects/p
 const u16 gFieldEffectObjectPic_SmallSparkle[] = INCBIN_U16("graphics/field_effects/pics/small_sparkle.4bpp");
 const u16 gFieldEffectPal_SmallSparkle[] = INCBIN_U16("graphics/field_effects/palettes/small_sparkle.gbapal");
 const u16 gFieldEffectObjectPic_Bird[] = INCBIN_U16("graphics/field_effects/pics/bird.4bpp");
+
+const u16 gObjectEventPic_Gastly[] = INCBIN_U16("graphics/object_events/pics/pokemon/gastly.4bpp");
+const u16 gObjectEventPic_Haunter[] = INCBIN_U16("graphics/object_events/pics/pokemon/haunter.4bpp");
+const u16 gObjectEventPic_Gengar[] = INCBIN_U16("graphics/object_events/pics/pokemon/gengar.4bpp");
+const u16 gObjectEventPic_Vulpix[] = INCBIN_U16("graphics/object_events/pics/pokemon/vulpix.4bpp");
+const u16 gObjectEventPic_Farfetchd[] = INCBIN_U16("graphics/object_events/pics/pokemon/farfetchd.4bpp");
+const u16 gObjectEventPic_MrMime[] = INCBIN_U16("graphics/object_events/pics/pokemon/mrmime.4bpp");
+const u16 gObjectEventPic_Dusclops[] = INCBIN_U16("graphics/object_events/pics/pokemon/dusclops.4bpp");
+const u16 gObjectEventPic_MissingNo[] = INCBIN_U16("graphics/object_events/pics/pokemon/missingno.4bpp");
+const u16 gObjectEventPic_Portal[] = INCBIN_U16("graphics/object_events/pics/people/portal.4bpp");

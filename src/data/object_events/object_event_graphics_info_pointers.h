@@ -150,6 +150,15 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_DeoxysD;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_DeoxysA;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_DeoxysN;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SSAnne;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Gastly;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Haunter;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Gengar;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Vulpix;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_MrMime;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Dusclops;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Farfetchd;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_MissingNo;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Portal;
 
 
 const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM_OBJ_EVENT_GFX] = {
@@ -305,4 +314,13 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_DEOXYS_A]                 = &gObjectEventGraphicsInfo_DeoxysA,
     [OBJ_EVENT_GFX_DEOXYS_N]                 = &gObjectEventGraphicsInfo_DeoxysN,
     [OBJ_EVENT_GFX_SS_ANNE]                  = &gObjectEventGraphicsInfo_SSAnne,
+    [OBJ_EVENT_GFX_GASTLY]                   = &gObjectEventGraphicsInfo_Gastly,
+    [OBJ_EVENT_GFX_HAUNTER]                  = &gObjectEventGraphicsInfo_Haunter,
+    [OBJ_EVENT_GFX_GENGAR]                   = &gObjectEventGraphicsInfo_Gengar,
+    [OBJ_EVENT_GFX_MR_MIME]                  = &gObjectEventGraphicsInfo_MrMime,
+    [OBJ_EVENT_GFX_VULPIX]                   = &gObjectEventGraphicsInfo_Vulpix,
+    [OBJ_EVENT_GFX_DUSCLOPS]                 = &gObjectEventGraphicsInfo_Dusclops,
+    [OBJ_EVENT_GFX_FARFETCHD]                = &gObjectEventGraphicsInfo_Farfetchd,
+    [OBJ_EVENT_GFX_MISSINGNO]                = &gObjectEventGraphicsInfo_MissingNo,
+    [OBJ_EVENT_GFX_PORTAL]                   = &gObjectEventGraphicsInfo_Portal,
 };
