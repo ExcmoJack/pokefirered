@@ -1,28 +1,50 @@
 VermilionCity_Text_GrimerMultipliesInSludge::
-    .string "We're careful about pollution here.\p"
-    .string "We've heard GRIMER multiplies in\n"
-    .string "toxic sludge.$"
+VermilionCity_Text_WomanBattle::
+    .string "Devoraré… tu esencia…$"
+
+VermilionCity_Text_WomanBattle2::
+    .string "Me… desvanezco…$"
 
 VermilionCity_Text_DidYouSeeSSAnneInHarbor::
-    .string "Did you see the S.S. ANNE moored\n"
-    .string "in the harbor?$"
+VermilionCity_Text_BattleOldMan::
+    .string "Huelo… energía vital…\n"
+    .string "Dame…$"
+
+VermilionCity_Text_BattleOldManWin::
+    .string "Me… lleva…\n"
+    .string "Ayuda…$"
+
+VermilionCity_Text_BattleAfter::
+    .string "…$"
+
+VermilionCity_Text_DungeonUnblocked::
+    .string "Parece que las barreras\n"
+    .string "de la casa del tejado azul\l"
+    .string "han desaparecido…$"
 
 VermilionCity_Text_SSAnneHasDepartedForYear::
-    .string "So, the S.S. ANNE has departed?\p"
-    .string "She'll be back in VERMILION about\n"
-    .string "this time next year.$"
+VermilionCity_Text_SailorBattle::
+    .string "Únete… a…\n"
+    .string "nosotros…$"
+
+VermilionCity_Text_SailorBattle2::
+    .string "Ah… ah…\n"
+    .string "Aaaaah…$"
 
 VermilionCity_Text_BuildingOnThisLand::
-    .string "I'm putting up a building on this\n"
-    .string "plot of land. I own it all.\p"
-    .string "My POKéMON is tamping the land\n"
-    .string "to lay the foundation.$"
+VermilionCity_Text_BattleOldMan2::
+    .string "Me quedaré…\n"
+    .string "con… TU ALMA…$"
+
+VermilionCity_Text_BattleOldMan2Win::
+    .string "¿Qué…\n"
+    .string "pasa…?$"
 
 VermilionCity_Text_Machop::
-    .string "MACHOP: Guoh! Gogogoh!$"
+    .string "¿Mime?$"
 
 VermilionCity_Text_MachopStompingLandFlat::
-    .string "A MACHOP is stomping the land flat.$"
+    .string "Mr. Mime usó Teletransporte.$"
 
 VermilionCity_Text_SSAnneVisitsOnceAYear::
     .string "The S.S. ANNE is a famous luxury\n"
@@ -30,8 +52,8 @@ VermilionCity_Text_SSAnneVisitsOnceAYear::
     .string "It visits VERMILION once a year.$"
 
 VermilionCity_Text_CitySign::
-    .string "VERMILION CITY\n"
-    .string "The Port of Exquisite Sunsets$"
+    .string "CIUDAD CARMÍN\n"
+    .string "El puerto de los ocasos exquisitos.$"
 
 VermilionCity_Text_SnorlaxBlockingRoute12::
     .string "NOTICE!\p"
@@ -42,16 +64,16 @@ VermilionCity_Text_SnorlaxBlockingRoute12::
     .string "VERMILION POLICE$"
 
 VermilionCity_Text_PokemonFanClubSign::
-    .string "POKéMON FAN CLUB\n"
-    .string "All POKéMON fans welcome!$"
+    .string "CLUB DE FANS DE POKéMON\n"
+    .string "¡Bienvenidos todos!$"
 
 VermilionCity_Text_GymSign::
-    .string "VERMILION CITY POKéMON GYM\n"
-    .string "LEADER: LT. SURGE\l"
-    .string "The Lightning American!$"
+    .string "LÍDER del GIMNASIO POKéMON\n"
+    .string "de CARMÍN: LT. SURGE\l"
+    .string "¡El Rayo americano!$"
 
 VermilionCity_Text_VermilionHarbor::
-    .string "VERMILION HARBOR$"
+    .string "PUERTO CARMÍN$"
 
 VermilionCity_Text_WelcomeToTheSSAnne::
     .string "Welcome to the S.S. ANNE!$"

@@ -1,4 +1,5 @@
 .equ LOCALID_FERRY_SAILOR, 6
+.equ LOCALID_MR_MIME, 4
 
 VermilionCity_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, VermilionCity_OnTransition
@@ -6,14 +7,14 @@ VermilionCity_MapScripts::
 	.byte 0
 
 VermilionCity_OnFrame::
-	map_script_2 VAR_MAP_SCENE_VERMILION_CITY, 2, VermilionCity_EventScript_ExitSSAnne
+	map_script_2 VAR_MAP_SCENE_VERMILION_CITY, 1, VermilionCity_EventScript_ExitSSAnne
 	.2byte 0
 
 VermilionCity_EventScript_ExitSSAnne::
 	lockall
-	applymovement OBJ_EVENT_ID_PLAYER, VermilionCity_Movement_ExitSSAnne
-	waitmovement 0
-	setvar VAR_MAP_SCENE_VERMILION_CITY, 3
+	msgbox VermilionCity_Text_DungeonUnblocked
+	closemessage
+	setvar VAR_MAP_SCENE_VERMILION_CITY, 2
 	releaseall
 	end
 
@@ -32,14 +33,14 @@ VermilionCity_EventScript_HideOaksAide::
 	return
 
 VermilionCity_EventScript_Woman::
-	msgbox VermilionCity_Text_GrimerMultipliesInSludge, MSGBOX_NPC
+	trainerbattle_single TRAINER_PICNICKER_ISABELLE, VermilionCity_Text_WomanBattle, VermilionCity_Text_WomanBattle2
+	msgbox VermilionCity_Text_BattleAfter
+	release
 	end
 
 VermilionCity_EventScript_OldMan1::
-	lock
-	faceplayer
-	goto_if_eq VAR_MAP_SCENE_VERMILION_CITY, 3, VermilionCity_EventScript_OldMan1SSAnneLeft
-	msgbox VermilionCity_Text_DidYouSeeSSAnneInHarbor
+	trainerbattle_single TRAINER_YOUNGSTER_YASU, VermilionCity_Text_BattleOldMan, VermilionCity_Text_BattleOldManWin
+	msgbox VermilionCity_Text_BattleAfter
 	release
 	end
 
@@ -218,7 +219,9 @@ VermilionCity_EventScript_CheckSeagallopPresentTrigger::
 	end
 
 VermilionCity_EventScript_Sailor::
-	msgbox VermilionCity_Text_SSAnneVisitsOnceAYear, MSGBOX_NPC
+	trainerbattle_single TRAINER_SAILOR_TREVOR, VermilionCity_Text_SailorBattle, VermilionCity_Text_SailorBattle2
+	msgbox VermilionCity_Text_BattleAfter
+	release
 	end
 
 VermilionCity_EventScript_OaksAide::
@@ -230,18 +233,30 @@ VermilionCity_EventScript_OaksAide::
 	end
 
 VermilionCity_EventScript_OldMan2::
-	msgbox VermilionCity_Text_BuildingOnThisLand, MSGBOX_NPC
+	trainerbattle_single TRAINER_YOUNGSTER_DAVE, VermilionCity_Text_BattleOldMan2, VermilionCity_Text_BattleOldMan2Win
+	msgbox VermilionCity_Text_BattleAfter
+	release
 	end
 
 VermilionCity_EventScript_Machop::
 	lock
 	faceplayer
 	waitse
-	playmoncry SPECIES_MACHOP, CRY_MODE_NORMAL
+	playmoncry SPECIES_MR_MIME, CRY_MODE_NORMAL
 	msgbox VermilionCity_Text_Machop
 	waitmoncry
+	playse SE_M_TELEPORT
+	applymovement LOCALID_MR_MIME, Common_Movement_Disappear
+	waitmovement 0
 	msgbox VermilionCity_Text_MachopStompingLandFlat
+	closemessage
+	setvar VAR_MAP_SCENE_VERMILION_CITY, 1
+	removeobject LOCALID_MR_MIME
 	release
+	end
+
+VermilionCity_EventScript_Gastly::
+	msgbox VermilionCity_Text_BattleAfter, MSGBOX_NPC
 	end
 
 VermilionCity_EventScript_CitySign::
@@ -266,3 +281,76 @@ VermilionCity_EventScript_GymSign::
 VermilionCity_EventScript_HarborSign::
 	msgbox VermilionCity_Text_VermilionHarbor, MSGBOX_SIGN
 	end
+
+VermilionCity_EventScript_TriggerEscape::
+	lock
+	specialvar VAR_RESULT, GetPlayerFacingDirection
+	switch VAR_RESULT
+	case DIR_SOUTH, VermilionCity_EventScript_TriggerEscapeSouth
+	case DIR_NORTH, VermilionCity_EventScript_TriggerEscapeNorth
+	case DIR_EAST, VermilionCity_EventScript_TriggerEscapeEast
+	case DIR_WEST, VermilionCity_EventScript_TriggerEscapeWest
+	end
+	
+VermilionCity_EventScript_TriggerEscapeSouth::
+	applymovement OBJ_EVENT_ID_PLAYER, VermilionCity_Movement_PlayerTriggerEscapingSouth
+	waitmovement 0
+	goto VermilionCity_EventScript_TriggerEscapeEnd
+
+VermilionCity_EventScript_TriggerEscapeNorth::
+	applymovement OBJ_EVENT_ID_PLAYER, VermilionCity_Movement_PlayerTriggerEscapingNorth
+	waitmovement 0
+	goto VermilionCity_EventScript_TriggerEscapeEnd
+
+VermilionCity_EventScript_TriggerEscapeEast::
+	applymovement OBJ_EVENT_ID_PLAYER, VermilionCity_Movement_PlayerTriggerEscapingEast
+	waitmovement 0
+	goto VermilionCity_EventScript_TriggerEscapeEnd
+
+VermilionCity_EventScript_TriggerEscapeWest::
+	applymovement OBJ_EVENT_ID_PLAYER, VermilionCity_Movement_PlayerTriggerEscapingWest
+	waitmovement 0
+	goto VermilionCity_EventScript_TriggerEscapeEnd
+
+VermilionCity_EventScript_TriggerEscapeEnd::
+	msgbox LavenderTown_Text_TriggerEscape
+	closemessage
+	fadescreen FADE_TO_BLACK
+	delay 10
+	addvar VAR_TEMP_0, 1
+	goto_if_eq VAR_TEMP_0, 5, VermilionCity_EventScript_TriggerEscapeBlackout
+	fadescreen FADE_FROM_BLACK
+	msgbox LavenderTown_Text_TriggerEscape1
+	closemessage
+	release
+	end
+
+VermilionCity_EventScript_TriggerEscapeBlackout::
+	msgbox LavenderTown_Text_TriggerEscapeBlackout
+	warpsilent MAP_VERMILION_CITY_POKEMON_CENTER_1F, 255, 7, 4
+	release
+	end
+
+VermilionCity_Movement_PlayerTriggerEscapingNorth::
+	lock_facing_direction
+	slide_down
+	unlock_facing_direction
+	step_end
+
+VermilionCity_Movement_PlayerTriggerEscapingSouth::
+	lock_facing_direction
+	slide_up
+	unlock_facing_direction
+	step_end
+
+VermilionCity_Movement_PlayerTriggerEscapingEast::
+	lock_facing_direction
+	slide_left
+	unlock_facing_direction
+	step_end
+
+VermilionCity_Movement_PlayerTriggerEscapingWest::
+	lock_facing_direction
+	slide_right
+	unlock_facing_direction
+	step_end

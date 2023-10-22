@@ -980,7 +980,7 @@ Text_ISee::
 	.string "そっか‥$"
 
 Text_TheDoorIsClosed::
-	.string "ドアは　しまっている‥$"
+	.string "La puerta está cerrada…$"
 
 Text_TheDoorIsOpen::
 	.string "The door is open…$"
@@ -1062,6 +1062,11 @@ EventScript_ResetAllMapFlags::
 	setflag FLAG_HIDE_SAFFRON_CITY_POKECENTER_SABRINA_JOURNALS
 	setflag FLAG_HIDE_MISTICO_PALETA
 	setflag FLAG_HIDE_MISTICO_LAVANDA
+	setflag FLAG_PORTAL_HOUSE1
+	setflag FLAG_PORTAL_HOUSE2
+	setflag FLAG_PORTAL_VOLUNTEER_HOUSE
+	setflag FLAG_PORTAL_SHOP
+	setflag FLAG_PORTAL_POKEMON_CENTER
 	setvar VAR_MASSAGE_COOLDOWN_STEP_COUNTER, 500
 	end
 
@@ -1234,6 +1239,10 @@ EventScript_VsSeekerChargingDone::
 	releaseall
 	end
 
+EventScript_DoorIsClosed::
+	msgbox Text_TheDoorIsClosed, MSGBOX_SIGN
+	return
+
 Common_EventScript_UnionRoomAttendant::
 	call CableClub_EventScript_UnionRoomAttendant
 	end
@@ -1362,3 +1371,42 @@ Text_TestMsg::
 	.include "data/text/save.inc"
 	.include "data/text/new_game_intro.inc"
 	.include "data/text/pokedude.inc"
+
+	.include "data/maps/VermilionCity_Dungeon/scripts.inc"
+	.include "data/maps/VermilionCity_Dungeon/text.inc"
+
+	.include "data/maps/VermilionCity_Dungeon2/scripts.inc"
+	.include "data/maps/VermilionCity_Dungeon2/text.inc"
+
+	.include "data/maps/MtPyre_1F/scripts.inc"
+	.include "data/maps/MtPyre_1F/text.inc"
+
+	.include "data/maps/MtPyre_2F/scripts.inc"
+	.include "data/maps/MtPyre_2F/text.inc"
+
+	.include "data/maps/MtPyre_3F/scripts.inc"
+	.include "data/maps/MtPyre_3F/text.inc"
+
+	.include "data/maps/MtPyre_4F/scripts.inc"
+	.include "data/maps/MtPyre_4F/text.inc"
+
+	.include "data/maps/MtPyre_5F/scripts.inc"
+	.include "data/maps/MtPyre_5F/text.inc"
+
+	.include "data/maps/MtPyre_6F/scripts.inc"
+	.include "data/maps/MtPyre_6F/text.inc"
+
+	.include "data/maps/MtPyre_Exterior/scripts.inc"
+	.include "data/maps/MtPyre_Exterior/text.inc"
+
+	.include "data/maps/MtPyre_Summit/scripts.inc"
+	.include "data/maps/MtPyre_Summit/text.inc"
+
+	.include "data/maps/LakeOfRage/scripts.inc"
+	.include "data/maps/LakeOfRage/text.inc"
+
+	.include "data/maps/IllexForest/scripts.inc"
+	.include "data/maps/IllexForest/text.inc"
+
+	.include "data/maps/PokemonTowerBasement_B1F/scripts.inc"
+	.include "data/maps/PokemonTowerBasement_B1F/text.inc"
