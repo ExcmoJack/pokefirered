@@ -48,3 +48,17 @@ LavenderTown_Text_TriggerEscape1::
 
 LavenderTown_Text_TriggerEscapeBlackout::
     .string "{PLAYER} ha perdido el conocimiento…$"
+
+LavenderTown_Text_MisticoIntroduccion::
+    .string "Saludos, {PLAYER}.\n"
+    .string "Como ya habrás podido observar,\l"
+    .string "aquí en Pueblo Lavanda se\l"
+    .string "respira un ambiente enrarecido.\p"
+    .string "Están sucediendo cosas extrañas.\n"
+    .string "Dejaré que lo explores a tu\l"
+    .string "ritmo mientras te preparas.\p"
+    .string "Habla con los habitantes y\n"
+    .string "empápate de conocimiento\l"
+    .string "popular.\p"
+    .string "Yo te estaré vigilando aquí hasta\n"
+    .string "que te hayas puesto al día.$"

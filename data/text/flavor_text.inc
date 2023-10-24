@@ -114,9 +114,12 @@ Text_VideoGame::
 	.string "It sure looks fun!$"
 
 Text_Burglary::
-	.string "There are obvious signs of burglary\n"
-	.string "here…$"
+	.string "Será…{PAUSE_UNTIL_PRESS} ¿Obra del fantasma de la\n"
+	.string "historia…?$"
 
 Text_PlayerFacingTVScreen::
 	.string "There's a POKéMON on TV!\n"
 	.string "It looks like it's having fun.$"
+
+Text_PkmnJoinedTeam::
+	.string "¡{STR_VAR_1} se ha unido al equipo!$"

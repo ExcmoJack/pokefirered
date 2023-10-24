@@ -4,22 +4,26 @@ LavenderTown_PokemonCenter_1F_Text_HearMrFujiNotFromAroundHere::
     .string "these parts originally, either.$"
 
 LavenderTown_VolunteerPokemonHouse_Text_WhereDidMrFujiGo::
-    .string "That's odd, MR. FUJI isn't here.\n"
-    .string "Where'd he go?$"
+    .string "Están pasando cosas muy raras.\n"
+    .string "¿Por qué el Sr. Fuji parece tan\l"
+    .string "tranquilo?$"
 
 LavenderTown_VolunteerPokemonHouse_Text_MrFujiWasPrayingForCubonesMother::
-    .string "MR. FUJI had been praying alone\n"
-    .string "for CUBONE's mother.$"
+    .string "Los… espíritus…\n"
+    .string "Se llevaron al Sr. Fuji…$"
 
 LavenderTown_VolunteerPokemonHouse_Text_MrFujiLooksAfterOrphanedMons::
-    .string "This is really MR. FUJI's house.\p"
-    .string "He's really kind.\p"
-    .string "He looks after abandoned and\n"
-    .string "orphaned POKéMON.$"
+    .string "Aquí vive el Señor Fuji.\p"
+    .string "Es la persona más sabia del pueblo.\p"
+    .string "Conoce un montón de historias\n"
+    .string "sobre Pokémon.$"
 
 LavenderTown_VolunteerPokemonHouse_Text_MonsNiceToHug::
-    .string "It's so warm!\n"
-    .string "POKéMON are so nice to hug.$"
+    .string "¡Tengo miedo!\n"
+    .string "¿Los Pokémon suelen ser tan malos?$"
+
+LavenderTown_VolunteerPokemonHouse_Text_MonsNiceToHug2::
+    .string "¿Dónde está el Sr. Fuji?$"
 
 LavenderTown_VolunteerPokemonHouse_Text_Nidorino::
     .string "NIDORINO: Gaoo!$"
@@ -54,14 +58,34 @@ LavenderTown_VolunteerPokemonHouse_Text_HasPokeFluteHelpedYou::
     .string "helped you?$"
 
 LavenderTown_VolunteerPokemonHouse_Text_GrandPrizeDrawingClipped::
-    .string "POKéMON FAN MAGAZINE\n"
-    .string "Monthly Grand Prize Drawing!\p"
-    .string "The application form is…\p"
-    .string "Gone! It's been clipped out.\n"
-    .string "Someone must have applied already.$"
+    .string "Es un…{PAUSE_UNTIL_PRESS} ¿Un hechizo de protección\n"
+    .string "contra los malos espíritus?$"
 
 LavenderTown_VolunteerPokemonHouse_Text_PokemonMagazinesLineShelf::
-    .string "POKéMON magazines line the shelf.\p"
-    .string "POKéMON INSIDER…\p"
-    .string "POKéMON FAN…$"
+    .string "Un montón de libros antiguos.$"
 
+LavenderTown_VolunteerPokemonHouse_Text_HistoriaVulpix1::
+    .string "Todo esto que está sucediendo en\n"
+    .string "Pueblo Lavanda me recuerda\l"
+    .string "a una historia que dice así:$"
+
+LavenderTown_VolunteerPokemonHouse_Text_HistoriaVulpix2::
+    .string "“En la lúgubre noche del\n"
+    .string "Monte Pírico, un solitario viajero\l"
+    .string "se adentró en el espeso bosque.”\p"
+    .string "“Un espíritu vengativo acechaba,\n"
+    .string "susurros oscuros llenaban el aire.”\p"
+    .string "“En ese momento de desesperación,\n"
+    .string "un Vulpix de nueve colas apareció.”\p"
+    .string "Su pelaje brillaba en la.\n"
+    .string "oscuridad.”\p"
+    .string "“Vulpix guió al viajero por\n"
+    .string "los caminos esquivos, alejándolo\l"
+    .string "del espíritu.”\p"
+    .string "“Finalmente, al amanecer, el\n"
+    .string "espíritu cedió y Vulpix desapareció\l"
+    .string "en la luz del día como un guardián\l"
+    .string "místico.”$"
+
+LavenderTown_VolunteerPokemonHouse_Text_HistoriaVulpix3::
+    .string "¡Ah! ¿Qué está pasando?$"

@@ -158,7 +158,7 @@
 #define VAR_MAP_SCENE_CINNABAR_ISLAND_POKEMON_LAB_EXPERIMENT_ROOM_REVIVE_STATE 0x406A
 #define VAR_MAP_SCENE_ROUTE24                                                  0x406B
 #define VAR_MAP_SCENE_PEWTER_CITY                                              0x406C
-#define VAR_0x406D                                                             0x406D
+#define VAR_MAP_SCENE_LAVENDER_TOWN                                            0x406D
 #define VAR_MAP_SCENE_FUCHSIA_CITY_SAFARI_ZONE_ENTRANCE                        0x406E
 #define VAR_CABLE_CLUB_STATE                                                   0x406F
 #define VAR_MAP_SCENE_PALLET_TOWN_SIGN_LADY                                    0x4070
@@ -191,14 +191,14 @@
 #define VAR_MAP_SCENE_MT_MOON_B2F                                              0x408B
 
 
-#define VAR_0x408C                 0x408C
-#define VAR_0x408D                 0x408D
-#define VAR_0x408E                 0x408E
-#define VAR_0x408F                 0x408F
-#define VAR_0x4090                 0x4090
-#define VAR_0x4091                 0x4091
-#define VAR_0x4092                 0x4092
-#define VAR_0x4093                 0x4093
+#define VAR_MAP_SCENE_LAVENDER_TOWN_HOUSE1               0x408C
+#define VAR_MAP_SCENE_LAVENDER_TOWN_HOUSE2               0x408D
+#define VAR_MAP_SCENE_LAVENDER_TOWN_VOLUNTEER_HOUSE      0x408E
+#define VAR_MAP_SCENE_LAVENDER_TOWN_MART                 0x408F
+#define VAR_MAP_SCENE_LAVENDER_TOWN_POKEMON_CENTER       0x4090
+#define VAR_MAP_SCENE_MT_PYRE                            0x4091
+#define VAR_MAP_SCENE_MT_PYRE_EXTERIOR                   0x4092
+#define VAR_MAP_SCENE_MT_PYRE_EXTERIOR_WEATHER           0x4093
 #define VAR_0x4094                 0x4094
 #define VAR_0x4095                 0x4095
 #define VAR_0x4096                 0x4096

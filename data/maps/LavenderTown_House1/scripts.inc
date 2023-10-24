@@ -61,16 +61,6 @@ LavenderTown_House1_EventScript_CooltrainerFGhostGone::
 	release
 	end
 
-LavenderTown_House1_EventScript_Cubone::
-	lock
-	faceplayer
-	waitse
-	playmoncry SPECIES_CUBONE, CRY_MODE_NORMAL
-	msgbox LavenderTown_House1_Text_Cubone
-	waitmoncry
-	release
-	end
-
 LavenderTown_House1_EventScript_SendPlayerToVermillion::
 	setrespawn SPAWN_VERMILION_CITY
 	delay 20
@@ -98,4 +88,14 @@ LavenderTown_House1_EventScript_CooltrainerF_2::
 
 LavenderTown_House1_EventScript_CooltrainerF_3::
 	msgbox LavenderTown_House1_Text_HistoriaMrMime_5, MSGBOX_NPC
+	end
+
+LavenderTown_House1_EventScript_Cubone::
+	lock
+	faceplayer
+	waitse
+	playmoncry SPECIES_CUBONE, CRY_MODE_NORMAL
+	msgbox LavenderTown_House1_Text_Cubone
+	waitmoncry
+	release
 	end

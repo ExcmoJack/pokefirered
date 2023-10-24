@@ -1,5 +1,8 @@
+.equ LOCALID_MISTICO,   4
+
 LavenderTown_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, LavenderTown_OnTransition
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, LavenderTown_OnFrame
 	.byte 0
 
 LavenderTown_OnTransition::
@@ -7,6 +10,10 @@ LavenderTown_OnTransition::
 	setvar VAR_MAP_SCENE_S_S_ANNE_2F_CORRIDOR, 1
 	setflag FLAG_HIDE_SS_ANNE_RIVAL
 	end
+
+LavenderTown_OnFrame::
+	map_script_2 VAR_MAP_SCENE_LAVENDER_TOWN, 0, LavenderTown_EventScript_Mistico_Intro
+	.2byte 0
 
 LavenderTown_EventScript_LittleGirl::
 	lock
@@ -88,6 +95,46 @@ LavenderTown_EventScript_TriggerEscapeBlackout::
 	warpsilent MAP_LAVENDER_TOWN_POKEMON_CENTER_1F, 255, 7, 4
 	release
 	end
+
+LavenderTown_EventScript_Mistico_Intro::
+	lock
+	setrespawn SPAWN_LAVENDER_TOWN
+	textcolor NPC_TEXT_COLOR_CREEPY
+	delay 20
+	addobject LOCALID_MISTICO
+	playse SE_DOOR
+	waitse
+	clearflag FLAG_HIDE_MISTICO_LAVANDA
+	applymovement LOCALID_MISTICO, LavenderTown_Movement_MisticoApproach
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterUp
+	waitmovement 0
+	msgbox LavenderTown_Text_MisticoIntroduccion
+	closemessage
+	applymovement LOCALID_MISTICO, LavenderTown_Movement_MisticoBlockTower
+	waitmovement 0
+	setvar VAR_MAP_SCENE_LAVENDER_TOWN, 1
+	setobjectxyperm LOCALID_MISTICO, 18, 7
+	release
+	end
+
+LavenderTown_Movement_MisticoApproach::
+	walk_down
+	walk_down
+	walk_left
+	walk_left
+	walk_left
+	walk_down
+	step_end
+
+LavenderTown_Movement_MisticoBlockTower::
+	walk_up
+	walk_right
+	walk_right
+	walk_right
+	walk_up
+	walk_in_place_down
+	step_end
 
 LavenderTown_Movement_PlayerTriggerEscapingNorth::
 	lock_facing_direction

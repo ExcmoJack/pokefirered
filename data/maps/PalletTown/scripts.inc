@@ -64,7 +64,9 @@ PalletTown_EventScript_SendPlayerToLavender::
 	switch VAR_RESULT
 	call_if_eq VAR_RESULT, 1, PalletTown_EventScript_SendPlayerToLavender_2
 	msgbox PalletTown_Text_Mistico_Teleport
-	warpteleport MAP_LAVENDER_TOWN, 255, 18, 8
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterDown
+	waitmovement 0
+	warpteleport MAP_LAVENDER_TOWN, 255, 15, 10
 	releaseall
 	end
 

@@ -583,7 +583,7 @@ SevenIsland_SevaultCanyon_EventScript_ItemMaxElixir::
 	end
 
 SevenIsland_SevaultCanyon_EventScript_ItemNugget::
-	finditem ITEM_NUGGET
+	finditem ITEM_CLEANSE_TAG
 	end
 
 ThreeIsland_BerryForest_EventScript_ItemMaxEther::
@@ -595,7 +595,7 @@ ThreeIsland_BerryForest_EventScript_ItemFullHeal::
 	end
 
 ThreeIsland_BerryForest_EventScript_ItemMaxElixir::
-	finditem ITEM_MAX_ELIXIR
+	finditem ITEM_GS_BALL
 	end
 
 MtEmber_Exterior_EventScript_ItemUltraBall::

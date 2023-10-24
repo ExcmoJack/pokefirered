@@ -1,0 +1,93 @@
+{
+  "id": "MAP_MT_PYRE_EXTERIOR",
+  "name": "MtPyre_Exterior",
+  "layout": "LAYOUT_MT_PYRE_EXTERIOR",
+  "music": "MUS_POKE_MANSION",
+  "region_map_section": "MAPSEC_SEVII_ISLE_6",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_ROUTE",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": false,
+  "show_map_name": true,
+  "floor_number": 0,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": 0,
+  "object_events": [
+
+  ],
+  "warp_events": [
+    {
+      "x": 19,
+      "y": 10,
+      "elevation": 0,
+      "dest_map": "MAP_MT_PYRE_SUMMIT",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 20,
+      "y": 10,
+      "elevation": 0,
+      "dest_map": "MAP_MT_PYRE_SUMMIT",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 10,
+      "y": 42,
+      "elevation": 0,
+      "dest_map": "MAP_MT_PYRE_1F",
+      "dest_warp_id": "0"
+    }
+  ],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 23,
+      "y": 28,
+      "elevation": 0,
+      "var": "VAR_MAP_SCENE_MT_PYRE_EXTERIOR_WEATHER",
+      "var_value": "1",
+      "script": "MtPyre_Exterior_EventScript_SetSun"
+    },
+    {
+      "type": "trigger",
+      "x": 22,
+      "y": 27,
+      "elevation": 0,
+      "var": "VAR_MAP_SCENE_MT_PYRE_EXTERIOR_WEATHER",
+      "var_value": "1",
+      "script": "MtPyre_Exterior_EventScript_SetSun"
+    },
+    {
+      "type": "trigger",
+      "x": 24,
+      "y": 21,
+      "elevation": 0,
+      "var": "VAR_MAP_SCENE_MT_PYRE_EXTERIOR_WEATHER",
+      "var_value": "0",
+      "script": "MtPyre_Exterior_EventScript_SetFog"
+    },
+    {
+      "type": "trigger",
+      "x": 25,
+      "y": 21,
+      "elevation": 0,
+      "var": "VAR_MAP_SCENE_MT_PYRE_EXTERIOR_WEATHER",
+      "var_value": "0",
+      "script": "MtPyre_Exterior_EventScript_SetFog"
+    },
+    {
+      "type": "trigger",
+      "x": 26,
+      "y": 21,
+      "elevation": 0,
+      "var": "VAR_MAP_SCENE_MT_PYRE_EXTERIOR_WEATHER",
+      "var_value": "0",
+      "script": "MtPyre_Exterior_EventScript_SetFog"
+    }
+  ],
+  "bg_events": [
+
+  ]
+}
