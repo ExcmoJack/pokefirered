@@ -1,11 +1,13 @@
+.equ LOCALID_PORTAL, 2
+
 LavenderTown_House2_MapScripts::
 	.byte 0
 
 LavenderTown_House2_EventScript_NameRater::
 	lock
 	faceplayer
-	msgbox LavenderTown_House2_Text_WantMeToRateNicknames, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, YES, LavenderTown_House2_EventScript_ChooseMon
+	msgbox LavenderTown_House2_Text_Inspector_1, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, YES, LavenderTown_House2_EventScript_InspectorHistoria
 	goto_if_eq VAR_RESULT, NO, LavenderTown_House2_EventScript_DontRateNickname
 	end
 
@@ -18,7 +20,6 @@ LavenderTown_House2_EventScript_ChooseMon::
 	end
 
 LavenderTown_House2_EventScript_DontRateNickname::
-	msgbox LavenderTown_House2_Text_ISeeComeVisitAgain
 	release
 	end
 
@@ -58,5 +59,65 @@ LavenderTown_House2_EventScript_ChooseNewNickname::
 
 LavenderTown_House2_EventScript_ChoseNewNickname::
 	msgbox LavenderTown_House2_Text_FromNowOnShallBeKnownAsName
+	release
+	end
+
+LavenderTown_House2_EventScript_InspectorHistoria::
+	setvar VAR_MAP_SCENE_LAVENDER_TOWN_HOUSE2, 1
+	textcolor NPC_TEXT_COLOR_MALE
+	msgbox LavenderTown_House2_Text_Inspector_2
+	textcolor NPC_TEXT_COLOR_NEUTRAL
+	msgbox LavenderTown_House2_Text_Inspector_Historia_Farfetchd
+	closemessage
+	textcolor NPC_TEXT_COLOR_MALE
+	msgbox LavenderTown_House2_Text_Inspector_3
+	closemessage
+	textcolor NPC_TEXT_COLOR_NEUTRAL
+	msgbox LavenderTown_House2_Text_Inspector_Historia_Celebi
+	closemessage
+	textcolor NPC_TEXT_COLOR_MALE
+	msgbox LavenderTown_House2_Text_Inspector_4
+	closemessage
+	delay 20
+	playse SE_THUNDERSTORM_STOP
+	setvar VAR_0x8004, 0  @ Vertical pan
+	setvar VAR_0x8005, 3  @ Horizontal pan
+	setvar VAR_0x8006, 4  @ Num shakes
+	setvar VAR_0x8007, 2  @ Shake delay
+	special ShakeScreen
+	clearflag FLAG_PORTAL_HOUSE2
+	msgbox LavenderTown_House2_Text_Inspector_5
+	closemessage
+	delay 20
+	playse SE_THUNDERSTORM_STOP
+	setvar VAR_0x8004, 0  @ Vertical pan
+	setvar VAR_0x8005, 3  @ Horizontal pan
+	setvar VAR_0x8006, 4  @ Num shakes
+	setvar VAR_0x8007, 2  @ Shake delay
+	special ShakeScreen
+	playse SE_M_TELEPORT
+	addobject LOCALID_PORTAL
+	applymovement LOCALID_PORTAL, Common_Movement_Appear
+	waitmovement 0
+	release
+	end
+
+LavenderTown_House2_EventScript_SendPlayerToIlexForest::
+	lock
+	delay 20
+	playse SE_THUNDER
+	waitse
+	warpteleport MAP_ILLEX_FOREST, 255, 3, 38
+	release
+	end
+
+LavenderTown_House2_EventScript_DesactivarPortal::
+	lock
+	addvar VAR_MAP_SCENE_LAVENDER_TOWN, 1
+	setvar VAR_MAP_SCENE_LAVENDER_TOWN_HOUSE2, 3
+	playse SE_M_TELEPORT
+	applymovement LOCALID_PORTAL, Common_Movement_Disappear
+	waitmovement 0
+	setflag FLAG_PORTAL_HOUSE2
 	release
 	end
