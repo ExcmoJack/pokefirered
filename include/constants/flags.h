@@ -208,11 +208,11 @@
 #define FLAG_HIDE_VULPIX_MT_PYRE_5F 0x0BE
 #define FLAG_HIDE_VULPIX_MT_PYRE_6F 0x0BF
 #define FLAG_HIDE_HIKER_MT_PYRE     0x0C0
-#define FLAG_HIDE_CELEBI_ILEX_FOREST  0x0C1
-#define FLAG_0x0C2               0x0C2
-#define FLAG_0x0C3               0x0C3
-#define FLAG_0x0C4               0x0C4
-#define FLAG_0x0C5               0x0C5
+#define FLAG_HIDE_CELEBI_ILEX_FOREST    0x0C1
+#define FLAG_TALKED_CESAR               0x0C2
+#define FLAG_HIDE_HAUNTER_ILEX_FOREST   0x0C3
+#define FLAG_HIDE_GENGAR_ILEX_FOREST    0x0C4
+#define FLAG_HIDE_FARFETCHD_ILEX_FOREST 0x0C5
 #define FLAG_0x0C6               0x0C6
 #define FLAG_0x0C7               0x0C7
 #define FLAG_0x0C8               0x0C8

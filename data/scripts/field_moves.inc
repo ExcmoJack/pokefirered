@@ -1,12 +1,11 @@
 EventScript_CutTree::
 	goto_if_questlog EventScript_ReleaseEnd
 	lockall
-	goto_if_unset FLAG_BADGE02_GET, EventScript_CantCutTree
-	checkpartymove MOVE_CUT
+	checkpartymove MOVE_FURY_CUTTER
 	goto_if_eq VAR_RESULT, PARTY_SIZE, EventScript_CantCutTree
 	setfieldeffectargument 0, VAR_RESULT
 	bufferpartymonnick STR_VAR_1, VAR_RESULT
-	buffermovename STR_VAR_2, MOVE_CUT
+	buffermovename STR_VAR_2, MOVE_FURY_CUTTER
 	msgbox Text_CutTreeDown, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, EventScript_DontCutTree
 	msgbox Text_MonUsedMove
@@ -45,16 +44,14 @@ EventScript_DontCutTree::
 	end
 
 Text_CutTreeDown::
-	.string "This tree looks like it can be CUT\n"
-	.string "down!\p"
+	.string "¡Este árbol se puede cortar!\n"
 	.string "Would you like to CUT it?$"
 
 Text_MonUsedMove::
-	.string "{STR_VAR_1} used {STR_VAR_2}!$"
+	.string "{STR_VAR_1} usó {STR_VAR_2}!$"
 
 Text_TreeCanBeCutDown::
-	.string "This tree looks like it can be CUT\n"
-	.string "down!$"
+	.string "¡Este árbol se puede cortar!$"
 
 EventScript_RockSmash::
 	goto_if_questlog EventScript_ReleaseEnd
