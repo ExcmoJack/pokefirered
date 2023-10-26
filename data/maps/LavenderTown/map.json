@@ -204,6 +204,15 @@
       "var": "VAR_TEMP_F",
       "var_value": "0",
       "script": "LavenderTown_EventScript_TriggerEscape"
+    },
+    {
+      "type": "trigger",
+      "x": 10,
+      "y": 12,
+      "elevation": 0,
+      "var": "VAR_MAP_SCENE_LAVENDER_TOWN_UNBLOCK_FUJIS_HOUSE",
+      "var_value": "0",
+      "script": "LavenderTown_EventScript_TriggerCasaFuji"
     }
   ],
   "bg_events": [

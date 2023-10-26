@@ -48,7 +48,7 @@
       "graphics_id": "OBJ_EVENT_GFX_CELEBI",
       "x": 10,
       "y": 18,
-      "elevation": 0,
+      "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
       "movement_range_y": 0,
@@ -69,7 +69,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "IllexForest_EventScript_Gastly_1",
-      "flag": "FLAG_TEMP_2"
+      "flag": "FLAG_HIDE_GASTLY_2_ILEX_FOREST"
     },
     {
       "type": "object",
@@ -83,7 +83,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "IllexForest_EventScript_Gastly_2",
-      "flag": "FLAG_TEMP_3"
+      "flag": "FLAG_HIDE_GASTLY_1_ILEX_FOREST"
     },
     {
       "type": "object",
@@ -111,7 +111,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "IllexForest_EventScript_Gastly_4",
-      "flag": "FLAG_TEMP_5"
+      "flag": "FLAG_HIDE_GASTLY_4_ILEX_FOREST"
     },
     {
       "type": "object",
@@ -125,7 +125,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "IllexForest_EventScript_Gastly_5",
-      "flag": "FLAG_TEMP_6"
+      "flag": "FLAG_HIDE_GASTLY_5_ILEX_FOREST"
     },
     {
       "type": "object",
@@ -180,7 +180,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "IllexForest_EventScript_Gengar",
       "flag": "FLAG_HIDE_GENGAR_ILEX_FOREST"
     },
     {
@@ -195,7 +195,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "IllexForest_EventScript_Gastly_3",
-      "flag": "FLAG_TEMP_4"
+      "flag": "FLAG_HIDE_GASTLY_3_ILEX_FOREST"
     }
   ],
   "warp_events": [
@@ -236,8 +236,8 @@
       "x": 10,
       "y": 24,
       "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
+      "script": "IllexForest_EventScript_Celebi"
     },
     {
       "type": "sign",

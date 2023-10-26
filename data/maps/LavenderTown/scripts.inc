@@ -1,3 +1,4 @@
+.equ LOCALID_NPC_CASA,   2
 .equ LOCALID_MISTICO,   4
 
 LavenderTown_MapScripts::
@@ -30,6 +31,11 @@ LavenderTown_EventScript_LittleGirlBelieve::
 	end
 
 LavenderTown_EventScript_WorkerM::
+	goto_if_eq VAR_MAP_SCENE_LAVENDER_TOWN_UNBLOCK_FUJIS_HOUSE, 1, LavenderTown_EventScript_WorkerM_2
+	msgbox LavenderTown_Text_BloqueoCasaFuji, MSGBOX_NPC
+	end
+
+LavenderTown_EventScript_WorkerM_2::
 	msgbox LavenderTown_Text_TownKnownAsMonGraveSite, MSGBOX_NPC
 	end
 
@@ -117,6 +123,27 @@ LavenderTown_EventScript_Mistico_Intro::
 	setobjectxyperm LOCALID_MISTICO, 18, 7
 	release
 	end
+
+LavenderTown_EventScript_TriggerCasaFuji::
+	lock
+	applymovement LOCALID_NPC_CASA, Common_Movement_FacePlayer
+	waitmovement 0
+	msgbox LavenderTown_Text_BloqueoCasaFuji
+	applymovement OBJ_EVENT_ID_PLAYER, LavenderTown_Movement_PlayerTriggerBloqueoCasaFuji
+	waitmovement 0
+	closemessage
+	applymovement LOCALID_NPC_CASA, Common_Movement_WalkInPlaceFasterDown
+	waitmovement 0
+	release
+	end
+
+LavenderTown_EventScript_UnblockTriggerCasaFuji::
+	setvar VAR_MAP_SCENE_LAVENDER_TOWN_UNBLOCK_FUJIS_HOUSE, 1
+	return
+
+LavenderTown_Movement_PlayerTriggerBloqueoCasaFuji::
+	walk_down
+	step_end
 
 LavenderTown_Movement_MisticoApproach::
 	walk_down

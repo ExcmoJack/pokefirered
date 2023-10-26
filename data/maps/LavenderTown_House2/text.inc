@@ -73,6 +73,10 @@ LavenderTown_House2_Text_Inspector_5::
     .string "¡Guaau!\n"
     .string "¿Qué es esa luz?$"
 
+LavenderTown_House2_Text_Inspector_6::
+    .string "Ayuda…\n"
+    .string "Fantasmas…$"
+
 LavenderTown_House2_Text_WantMeToRateNicknames::
     .string "Hello, hello!\n"
     .string "I am the official NAME RATER!\p"

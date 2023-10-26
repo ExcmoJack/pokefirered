@@ -1,42 +1,42 @@
 LavenderTown_Text_DoYouBelieveInGhosts::
-    .string "Do you believe in ghosts?$"
+    .string "¿Crees en los fantasmas?$"
 
 LavenderTown_Text_SoThereAreBelievers::
-    .string "Really?\n"
-    .string "So there are believers…$"
+    .string "¡Por supuesto que sí!\n"
+    .string "Que nos lo digan a nosotros…$"
 
 LavenderTown_Text_JustImaginingWhiteHand::
-    .string "Hahaha, I guess not.\p"
-    .string "That white hand on your shoulder…\n"
-    .string "I'm just imagining it.$"
+    .string "¿En serio?\p"
+    .string "¿No ves a tu alrededor?\n"
+    .string "Pero si está lleno de fantasmas…$"
 
 LavenderTown_Text_TownKnownAsMonGraveSite::
-    .string "This town is known as the grave\n"
-    .string "site of POKéMON.\p"
-    .string "Memorial services are held in\n"
-    .string "POKéMON TOWER.$"
+    .string "Parece que el hechizo protector\n"
+    .string "no ha funcionado.\p"
+    .string "Supongo que tendremos que\n"
+    .string "prepararnos para lo peor.$"
 
 LavenderTown_Text_GhostsAppearedInTower::
-    .string "Ghosts appeared in POKéMON TOWER.\p"
-    .string "I think they're the spirits of\n"
-    .string "POKéMON that the ROCKETS killed.$"
+    .string "Los espíritus han tomado el pueblo.\p"
+    .string "Parecen proceder de la TORRE\n"
+    .string "POKéMON pero, ¿qué quieren?$"
 
 LavenderTown_Text_TownSign::
-    .string "LAVENDER TOWN\n"
-    .string "The Noble Purple Town$"
+    .string "PUEBLO LAVANDA\n"
+    .string "El noble pueblo púrpura.$"
 
 LavenderTown_Text_SilphScopeNotice::
-    .string "New SILPH SCOPE!\n"
-    .string "Make the Invisible Plain to See!\p"
-    .string "SILPH CO.$"
+    .string "SILPH S.A.\p"
+    .string "¡El nuevo SCOPE SILPH!\p"
+    .string "¡Hace visible lo invisible!$"
 
 LavenderTown_Text_VolunteerPokemonHouse::
-    .string "LAVENDER VOLUNTEER\n"
-    .string "POKéMON HOUSE$"
+    .string "CASA POKéMON DE VOLUNTARIOS\n"
+    .string "DE PUEBLO LAVANDA$"
 
 LavenderTown_Text_PokemonTowerSign::
-    .string "POKéMON TOWER\n"
-    .string "Becalm the Spirits of POKéMON$"
+    .string "TORRE POKéMON: que las almas de\n"
+    .string "los POKéMON descansen en paz.$"
 
 LavenderTown_Text_TriggerEscape::
     .string "¡Una fuerza paranormal arrastró a\n"
@@ -62,3 +62,8 @@ LavenderTown_Text_MisticoIntroduccion::
     .string "popular.\p"
     .string "Yo te estaré vigilando aquí hasta\n"
     .string "que te hayas puesto al día.$"
+
+LavenderTown_Text_BloqueoCasaFuji::
+    .string "Lo siento, no puedo dejarte entrar.\n"
+    .string "Están conjurando un hechizo\l"
+    .string "protector en el interior.$"

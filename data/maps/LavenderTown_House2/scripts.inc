@@ -1,14 +1,35 @@
 .equ LOCALID_PORTAL, 2
 
 LavenderTown_House2_MapScripts::
+	map_script MAP_SCRIPT_ON_LOAD, LavenderTown_House2_OnLoad
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, LavenderTown_House2_OnFrame
 	.byte 0
+
+LavenderTown_House2_OnLoad::
+	goto_if_set FLAG_GET_MR_MIME_CARMIN, LavenderTown_House2_OnLoad1
+	end
+
+LavenderTown_House2_OnLoad1::
+	setweather WEATHER_FOG_DIAGONAL
+	doweather
+	end
+
+LavenderTown_House2_OnFrame::
+	map_script_2 VAR_MAP_SCENE_LAVENDER_TOWN_HOUSE2, 2, LavenderTown_House2_EventScript_DesactivarPortal
+	.2byte 0
 
 LavenderTown_House2_EventScript_NameRater::
 	lock
 	faceplayer
+	goto_if_eq VAR_MAP_SCENE_LAVENDER_TOWN_HOUSE2, 2, LavenderTown_House2_EventScript_InspectorHistoria
 	msgbox LavenderTown_House2_Text_Inspector_1, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, YES, LavenderTown_House2_EventScript_InspectorHistoria
+	goto_if_eq VAR_RESULT, YES, LavenderTown_House2_EventScript_Inspector2
 	goto_if_eq VAR_RESULT, NO, LavenderTown_House2_EventScript_DontRateNickname
+	end
+
+LavenderTown_House2_EventScript_Inspector2::
+	msgbox LavenderTown_House2_Text_Inspector_6, MSGBOX_NPC
+	release
 	end
 
 LavenderTown_House2_EventScript_ChooseMon::
@@ -119,5 +140,6 @@ LavenderTown_House2_EventScript_DesactivarPortal::
 	applymovement LOCALID_PORTAL, Common_Movement_Disappear
 	waitmovement 0
 	setflag FLAG_PORTAL_HOUSE2
+	call_if_eq VAR_MAP_SCENE_LAVENDER_TOWN, 2, LavenderTown_EventScript_UnblockTriggerCasaFuji
 	release
 	end

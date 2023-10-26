@@ -1,5 +1,6 @@
 .equ LOCALID_FARFETCHD, 1
 .equ LOCALID_HAUNTER, 2
+.equ LOCALID_CELEBI, 3
 .equ LOCALID_CESAR, 6
 .equ LOCALID_KARATEKA, 9
 .equ LOCALID_GENGAR, 12
@@ -112,7 +113,7 @@ IllexForest_EventScript_Haunter::
 	end
 
 IllexForest_EventScript_CommonDisapearNpc::
-	addvar VAR_TEMP_A, 1
+	addvar VAR_MAP_SCENE_ILEX_FOREST, 1
 	applymovement VAR_LAST_TALKED, Common_Movement_Disappear
 	removeobject VAR_LAST_TALKED
 	return
@@ -142,6 +143,96 @@ IllexForest_EventScript_Farfetchd::
 	release
 	end
 
+IllexForest_EventScript_Gengar::
+	lock
+	faceplayer
+	textcolor NPC_TEXT_COLOR_EVIL
+	playmoncry SPECIES_GENGAR, CRY_MODE_ENCOUNTER
+	msgbox IllexForest_Text_Gengar_1
+	closemessage
+	waitmoncry
+	setwildbattle SPECIES_GENGAR, 25
+	dowildbattle
+	msgbox IllexForest_Text_Gengar_2
+	closemessage
+	applymovement LOCALID_GENGAR, Common_Movement_Disappear
+	waitmovement 0
+	removeobject LOCALID_GENGAR
+	playmoncry SPECIES_GENGAR, CRY_MODE_WEAK
+	msgbox IllexForest_Text_Gengar_3
+	closemessage
+	waitmoncry
+	setflag FLAG_HIDE_GENGAR_ILEX_FOREST
+	addvar VAR_MAP_SCENE_ILEX_FOREST, 1
+	release
+	end
+
+IllexForest_EventScript_Celebi::
+	lock
+	checkitem ITEM_GS_BALL, 1
+	goto_if_eq VAR_RESULT, 1, IllexForest_EventScript_Celebi_HasGsBall
+	msgbox IllexForest_Text_Celebi_NoGsBall, MSGBOX_SIGN
+	closemessage
+	release
+	end
+
+IllexForest_EventScript_Celebi_HasGsBall::
+	goto_if_eq VAR_MAP_SCENE_ILEX_FOREST, 7, IllexForest_EventScript_Celebi_MustAppear
+	msgbox IllexForest_Text_Celebi_NoGsBall, MSGBOX_SIGN
+	closemessage
+	release
+	end
+
+IllexForest_EventScript_Celebi_MustAppear::
+	msgbox IllexForest_Text_Celebi_NoGsBall, MSGBOX_SIGN
+	closemessage
+	msgbox IllexForest_Text_Celebi_UseGsBall
+	closemessage
+	applymovement LOCALID_CELEBI, IllexForest_Movement_Celebi_Appear
+	waitmovement 0
+	waitmoncry
+	givemon SPECIES_CELEBI, 20, ITEM_LEFTOVERS
+	delay 20
+	bufferspeciesname STR_VAR_1, SPECIES_CELEBI
+	playfanfare MUS_EVOLVED
+	message Text_PkmnJoinedTeam
+	waitmessage
+	waitfanfare
+	delay 20
+	playse SE_THUNDERSTORM_STOP
+	setvar VAR_0x8004, 0  @ Vertical pan
+	setvar VAR_0x8005, 3  @ Horizontal pan
+	setvar VAR_0x8006, 4  @ Num shakes
+	setvar VAR_0x8007, 2  @ Shake delay
+	special ShakeScreen
+	delay 20
+	msgbox IllexForest_Text_Celebi_SendHome
+	closemessage
+	delay 20
+	playse SE_THUNDERSTORM_STOP
+	setvar VAR_0x8004, 0  @ Vertical pan
+	setvar VAR_0x8005, 3  @ Horizontal pan
+	setvar VAR_0x8006, 4  @ Num shakes
+	setvar VAR_0x8007, 2  @ Shake delay
+	special ShakeScreen
+	delay 10
+	playse SE_THUNDER
+	waitse
+	setflag FLAG_GET_MONS_ILEX_FOREST
+	setvar VAR_MAP_SCENE_LAVENDER_TOWN_HOUSE2, 2
+	warpteleport MAP_LAVENDER_TOWN_HOUSE2, 255, 9, 4
+	release
+	end
+
 IllexForest_EventScript_Cartel::
 	msgbox IllexForest_Text_Cartel, MSGBOX_SIGN
 	end
+
+IllexForest_Movement_Celebi_Appear::
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	step_end
