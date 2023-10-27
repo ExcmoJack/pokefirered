@@ -21,7 +21,7 @@ LavenderTown_House2_OnFrame::
 LavenderTown_House2_EventScript_NameRater::
 	lock
 	faceplayer
-	goto_if_eq VAR_MAP_SCENE_LAVENDER_TOWN_HOUSE2, 2, LavenderTown_House2_EventScript_Inspector1
+	goto_if_eq VAR_MAP_SCENE_LAVENDER_TOWN_HOUSE2, 1, LavenderTown_House2_EventScript_Inspector1
 	goto_if_eq VAR_MAP_SCENE_LAVENDER_TOWN_HOUSE2, 3, LavenderTown_House2_EventScript_Inspector2
 	msgbox LavenderTown_House2_Text_Inspector_1, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, YES, LavenderTown_House2_EventScript_InspectorHistoria

@@ -188,8 +188,12 @@ IllexForest_EventScript_Celebi_MustAppear::
 	closemessage
 	msgbox IllexForest_Text_Celebi_UseGsBall
 	closemessage
+	clearflag FLAG_HIDE_CELEBI_ILEX_FOREST
+	addobject LOCALID_CELEBI
 	applymovement LOCALID_CELEBI, IllexForest_Movement_Celebi_Appear
 	waitmovement 0
+	playmoncry SPECIES_CELEBI, CRY_MODE_NORMAL
+	showmonpic SPECIES_CELEBI, 10, 3
 	waitmoncry
 	givemon SPECIES_CELEBI, 20, ITEM_LEFTOVERS
 	delay 20
