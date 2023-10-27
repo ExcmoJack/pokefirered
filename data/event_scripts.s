@@ -1068,6 +1068,7 @@ EventScript_ResetAllMapFlags::
 	setflag FLAG_PORTAL_SHOP
 	setflag FLAG_PORTAL_POKEMON_CENTER
 	setflag FLAG_HIDE_HIKER_MT_PYRE
+	setflag FLAG_HIDE_CELEBI_ILEX_FOREST
 	setvar VAR_MASSAGE_COOLDOWN_STEP_COUNTER, 500
 	end
 
@@ -1409,8 +1410,8 @@ Text_TestMsg::
 	.include "data/maps/IllexForest/scripts.inc"
 	.include "data/maps/IllexForest/text.inc"
 
-	.include "data/maps/PokemonTowerBasement_B1F/scripts.inc"
-	.include "data/maps/PokemonTowerBasement_B1F/text.inc"
+	.include "data/maps/PokemonTower_B2F/scripts.inc"
+	.include "data/maps/PokemonTower_B2F/text.inc"
 
 	.include "data/maps/PokemonTower_B1F/scripts.inc"
 	.include "data/maps/PokemonTower_B1F/text.inc"

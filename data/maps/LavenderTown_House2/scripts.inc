@@ -6,7 +6,7 @@ LavenderTown_House2_MapScripts::
 	.byte 0
 
 LavenderTown_House2_OnLoad::
-	goto_if_set FLAG_GET_MR_MIME_CARMIN, LavenderTown_House2_OnLoad1
+	goto_if_set FLAG_GET_MONS_ILEX_FOREST, LavenderTown_House2_OnLoad1
 	end
 
 LavenderTown_House2_OnLoad1::
@@ -21,10 +21,16 @@ LavenderTown_House2_OnFrame::
 LavenderTown_House2_EventScript_NameRater::
 	lock
 	faceplayer
-	goto_if_eq VAR_MAP_SCENE_LAVENDER_TOWN_HOUSE2, 2, LavenderTown_House2_EventScript_InspectorHistoria
+	goto_if_eq VAR_MAP_SCENE_LAVENDER_TOWN_HOUSE2, 2, LavenderTown_House2_EventScript_Inspector1
+	goto_if_eq VAR_MAP_SCENE_LAVENDER_TOWN_HOUSE2, 3, LavenderTown_House2_EventScript_Inspector2
 	msgbox LavenderTown_House2_Text_Inspector_1, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, YES, LavenderTown_House2_EventScript_Inspector2
+	goto_if_eq VAR_RESULT, YES, LavenderTown_House2_EventScript_InspectorHistoria
 	goto_if_eq VAR_RESULT, NO, LavenderTown_House2_EventScript_DontRateNickname
+	end
+
+LavenderTown_House2_EventScript_Inspector1::
+	msgbox LavenderTown_House2_Text_Inspector_5, MSGBOX_NPC
+	release
 	end
 
 LavenderTown_House2_EventScript_Inspector2::

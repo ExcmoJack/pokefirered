@@ -45,7 +45,7 @@ EventScript_DontCutTree::
 
 Text_CutTreeDown::
 	.string "¡Este árbol se puede cortar!\n"
-	.string "Would you like to CUT it?$"
+	.string "¿Quieres cortarlo?$"
 
 Text_MonUsedMove::
 	.string "{STR_VAR_1} usó {STR_VAR_2}!$"
