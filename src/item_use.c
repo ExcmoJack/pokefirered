@@ -190,7 +190,7 @@ static void DisplayItemMessageInCurrentContext(u8 taskId, bool8 inField, u8 font
 
 static void PrintNotTheTimeToUseThat(u8 taskId, bool8 inField)
 {
-    DisplayItemMessageInCurrentContext(taskId, inField, FONT_MALE, gText_OakForbidsUseOfItemHere);
+    DisplayItemMessageInCurrentContext(taskId, inField, FONT_NORMAL, gText_OakForbidsUseOfItemHere);
 }
 
 static void Task_ItemUse_CloseMessageBoxAndReturnToField(u8 taskId)
@@ -904,7 +904,7 @@ void FieldUseFunc_OakStopsYou(u8 taskId)
     if (GetPocketByItemId(gSpecialVar_ItemId) == POCKET_BERRY_POUCH)
     {
         StringExpandPlaceholders(gStringVar4, gText_OakForbidsUseOfItemHere);
-        DisplayItemMessageInBerryPouch(taskId, FONT_MALE, gStringVar4, Task_BerryPouch_DestroyDialogueWindowAndRefreshListMenu);
+        DisplayItemMessageInBerryPouch(taskId, FONT_NORMAL, gStringVar4, Task_BerryPouch_DestroyDialogueWindowAndRefreshListMenu);
     }
     else
         PrintNotTheTimeToUseThat(taskId, gTasks[taskId].data[3]);
