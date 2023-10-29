@@ -4526,16 +4526,16 @@
       "blockdata_filepath": "data/layouts/IllexForest/map.bin"
     },
     {
-      "id": "LAYOUT_POKEMON_TOWER_BASEMENT_B1F",
-      "name": "PokemonTowerBasement_B1F_Layout",
-      "width": 20,
-      "height": 20,
+      "id": "LAYOUT_POKEMON_TOWER_B2F",
+      "name": "PokemonTower_B2F_Layout",
+      "width": 25,
+      "height": 24,
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Cave",
-      "border_filepath": "data/layouts/PokemonTowerBasement_B1F/border.bin",
-      "blockdata_filepath": "data/layouts/PokemonTowerBasement_B1F/map.bin"
+      "border_filepath": "data/layouts/PokemonTower_B2F/border.bin",
+      "blockdata_filepath": "data/layouts/PokemonTower_B2F/map.bin"
     },
     {
       "id": "LAYOUT_POKEMON_TOWER_B1F",
@@ -4548,6 +4548,18 @@
       "secondary_tileset": "gTileset_Cave",
       "border_filepath": "data/layouts/PokemonTower_B1F/border.bin",
       "blockdata_filepath": "data/layouts/PokemonTower_B1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_POKEMON_TOWER_B3F",
+      "name": "PokemonTower_B3F_Layout",
+      "width": 28,
+      "height": 36,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_MtEmber",
+      "border_filepath": "data/layouts/PokemonTower_B3F/border.bin",
+      "blockdata_filepath": "data/layouts/PokemonTower_B3F/map.bin"
     }
   ]
 }

@@ -519,18 +519,19 @@
 #define MAP_SEVEN_ISLAND_SEVAULT_CANYON_HOUSE (0 | (42 << 8))
 
 // gMapGroup_NewZones
-#define MAP_MT_PYRE_1F                 (0 | (43 << 8))
-#define MAP_MT_PYRE_2F                 (1 | (43 << 8))
-#define MAP_MT_PYRE_3F                 (2 | (43 << 8))
-#define MAP_MT_PYRE_4F                 (3 | (43 << 8))
-#define MAP_MT_PYRE_5F                 (4 | (43 << 8))
-#define MAP_MT_PYRE_6F                 (5 | (43 << 8))
-#define MAP_MT_PYRE_EXTERIOR           (6 | (43 << 8))
-#define MAP_MT_PYRE_SUMMIT             (7 | (43 << 8))
-#define MAP_LAKE_OF_RAGE               (8 | (43 << 8))
-#define MAP_ILLEX_FOREST               (9 | (43 << 8))
-#define MAP_POKEMON_TOWER_BASEMENT_B1F (10 | (43 << 8))
-#define MAP_POKEMON_TOWER_B1F          (11 | (43 << 8))
+#define MAP_MT_PYRE_1F        (0 | (43 << 8))
+#define MAP_MT_PYRE_2F        (1 | (43 << 8))
+#define MAP_MT_PYRE_3F        (2 | (43 << 8))
+#define MAP_MT_PYRE_4F        (3 | (43 << 8))
+#define MAP_MT_PYRE_5F        (4 | (43 << 8))
+#define MAP_MT_PYRE_6F        (5 | (43 << 8))
+#define MAP_MT_PYRE_EXTERIOR  (6 | (43 << 8))
+#define MAP_MT_PYRE_SUMMIT    (7 | (43 << 8))
+#define MAP_LAKE_OF_RAGE      (8 | (43 << 8))
+#define MAP_ILLEX_FOREST      (9 | (43 << 8))
+#define MAP_POKEMON_TOWER_B1F (10 | (43 << 8))
+#define MAP_POKEMON_TOWER_B2F (11 | (43 << 8))
+#define MAP_POKEMON_TOWER_B3F (12 | (43 << 8))
 
 #define MAP_GROUPS_COUNT 44
 

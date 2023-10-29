@@ -200,8 +200,8 @@
 #define VAR_MAP_SCENE_MT_PYRE_EXTERIOR                   0x4092
 #define VAR_MAP_SCENE_MT_PYRE_EXTERIOR_WEATHER           0x4093
 #define VAR_MAP_SCENE_ILEX_FOREST                        0x4094
-#define VAR_0x4095                 0x4095
-#define VAR_0x4096                 0x4096
+#define VAR_MAP_SCENE_POKEMON_TOWER                      0x4095
+#define VAR_MAP_SCENE_POKEMON_TOWER_BASEMENT             0x4096
 #define VAR_0x4097                 0x4097
 #define VAR_0x4098                 0x4098
 #define VAR_0x4099                 0x4099
