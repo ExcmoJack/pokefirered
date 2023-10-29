@@ -194,6 +194,8 @@ IllexForest_EventScript_Celebi_MustAppear::
 	waitmovement 0
 	playmoncry SPECIES_CELEBI, CRY_MODE_NORMAL
 	showmonpic SPECIES_CELEBI, 10, 3
+	waitbuttonpress
+	hidemonpic
 	waitmoncry
 	givemon SPECIES_CELEBI, 20, ITEM_LEFTOVERS
 	delay 20
