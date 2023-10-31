@@ -569,7 +569,9 @@
     "MtPyre_Summit",
     "LakeOfRage",
     "IllexForest",
-    "PokemonTowerBasement_B1F",
-    "PokemonTower_B1F"
+    "PokemonTower_B1F",
+    "PokemonTower_B2F",
+    "PokemonTower_B3F",
+    "TheEnd"
   ]
 }

@@ -139,7 +139,7 @@ RocketHideout_B4F_EventScript_ItemCalcium::
 	end
 
 PokemonTower_3F_EventScript_ItemEscapeRope::
-	finditem ITEM_ESCAPE_ROPE
+	finditem ITEM_SUPER_POTION
 	end
 
 PokemonTower_4F_EventScript_ItemElixir::
@@ -151,7 +151,7 @@ PokemonTower_4F_EventScript_ItemAwakening::
 	end
 
 PokemonTower_4F_EventScript_ItemGreatBall::
-	finditem ITEM_GREAT_BALL
+	finditem ITEM_SUPER_POTION
 	end
 
 PokemonTower_5F_EventScript_ItemNugget::
@@ -483,7 +483,7 @@ Route11_EventScript_ItemAwakening::
 	end
 
 PokemonTower_5F_EventScript_ItemCleanseTag::
-	finditem ITEM_CLEANSE_TAG
+	finditem ITEM_TM29
 	end
 
 CeladonCity_EventScript_ItemEther::

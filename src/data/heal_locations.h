@@ -22,6 +22,7 @@ static const struct HealLocation sSpawnPoints[] =
     [SPAWN_SIX_ISLAND - 1] = {MAP_GROUP(SIX_ISLAND), MAP_NUM(SIX_ISLAND), 11, 12},
     [SPAWN_MT_PYRE - 1] = {MAP_GROUP(MT_PYRE_1F), MAP_NUM(MT_PYRE_1F), 14, 10},
     [SPAWN_ILLEX_FOREST - 1] = {MAP_GROUP(ILLEX_FOREST), MAP_NUM(ILLEX_FOREST), 18, 39},
+    [SPAWN_THE_END - 1] = {MAP_GROUP(THE_END), MAP_NUM(THE_END), 10, 10},
 };
 
 static const u16 sWhiteoutRespawnHealCenterMapIdxs[][2] =
@@ -48,6 +49,7 @@ static const u16 sWhiteoutRespawnHealCenterMapIdxs[][2] =
     [SPAWN_SIX_ISLAND - 1] = {MAP_GROUP(SIX_ISLAND_POKEMON_CENTER_1F), MAP_NUM(SIX_ISLAND_POKEMON_CENTER_1F)},
     [SPAWN_MT_PYRE - 1] = {MAP_GROUP(MT_PYRE_1F), MAP_NUM(MT_PYRE_1F)},
     [SPAWN_ILLEX_FOREST - 1] = {MAP_GROUP(ILLEX_FOREST), MAP_NUM(ILLEX_FOREST)},
+    [SPAWN_THE_END - 1] = {MAP_GROUP(THE_END), MAP_NUM(THE_END)},
 };
 
 static const u8 sWhiteoutRespawnHealerNpcIds[] =
@@ -74,4 +76,5 @@ static const u8 sWhiteoutRespawnHealerNpcIds[] =
     [SPAWN_SIX_ISLAND - 1] = 1,
     [SPAWN_MT_PYRE - 1] = 1,
     [SPAWN_ILLEX_FOREST - 1] = 9,
+    [SPAWN_THE_END - 1] = 1,
 };

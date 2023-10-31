@@ -532,6 +532,7 @@
 #define MAP_POKEMON_TOWER_B1F (10 | (43 << 8))
 #define MAP_POKEMON_TOWER_B2F (11 | (43 << 8))
 #define MAP_POKEMON_TOWER_B3F (12 | (43 << 8))
+#define MAP_THE_END           (13 | (43 << 8))
 
 #define MAP_GROUPS_COUNT 44
 

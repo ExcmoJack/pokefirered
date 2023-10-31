@@ -1,10 +1,10 @@
 PalletTown_PlayersHouse_2F_Text_PlayedWithNES::
-    .string "{PLAYER} played with the NES.\p"
-    .string "…Okay!\n"
-    .string "It's time to go!$"
+    .string "{PLAYER} jugó a Hoenn Adventures.\p"
+    .string "¡Juegazo!\n"
+    .string "¡Pero hay que irse!$"
 
 PalletTown_PlayersHouse_2F_Text_PressLRForHelp::
-    .string "It's a posted notice…\p"
-    .string "If you're confused, ask for HELP!\n"
-    .string "Press the L or R Button!$"
+    .string "Hay una nota…\p"
+    .string "Responde siempre con sinceridad\n"
+    .string "para mejor experiencia.\pCreado por Jack Johnson\n(Excmojack)$"
 

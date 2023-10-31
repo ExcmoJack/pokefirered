@@ -1,33 +1,33 @@
 PokemonTower_6F_Text_AngelicaIntro::
-    .string "Give…me…\n"
-    .string "blood…$"
+    .string "Dame…\n"
+    .string "sangre…$"
 
 PokemonTower_6F_Text_AngelicaDefeat::
-    .string "Groan!$"
+    .string "¡Aah!$"
 
 PokemonTower_6F_Text_AngelicaPostBattle::
-    .string "I feel anemic and weak…$"
+    .string "Tengo hambre…$"
 
 PokemonTower_6F_Text_EmiliaIntro::
     .string "Urff…\n"
-    .string "Kwaah!$"
+    .string "¡Kwaah!$"
 
 PokemonTower_6F_Text_EmiliaDefeat::
-    .string "Something fell out!$"
+    .string "¡Algo está fallando!$"
 
 PokemonTower_6F_Text_EmiliaPostBattle::
-    .string "My hair didn't fall out!\n"
-    .string "It was a malevolent spirit!$"
+    .string "¡No ha sido mi culpa!\n"
+    .string "¡Era un espíritu!$"
 
 PokemonTower_6F_Text_JenniferIntro::
-    .string "Ke…ke…ke…\n"
+    .string "¡Ke…ke…ke…\n"
     .string "ke…ke…ke!$"
 
 PokemonTower_6F_Text_JenniferDefeat::
-    .string "Keee!$"
+    .string "¡Keee!$"
 
 PokemonTower_6F_Text_JenniferPostBattle::
-    .string "What's going on here?$"
+    .string "¿Qué está pasando aquí?$"
 
 PokemonTower_6F_Text_BeGoneIntruders::
     .string "Be gone…\n"

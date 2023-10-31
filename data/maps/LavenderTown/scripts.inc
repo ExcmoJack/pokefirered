@@ -10,6 +10,16 @@ LavenderTown_OnTransition::
 	setworldmapflag FLAG_WORLD_MAP_LAVENDER_TOWN
 	setvar VAR_MAP_SCENE_S_S_ANNE_2F_CORRIDOR, 1
 	setflag FLAG_HIDE_SS_ANNE_RIVAL
+	goto_if_eq VAR_MAP_SCENE_LAVENDER_TOWN, 0, LavenderTown_OnTransition_1
+	goto_if_lt VAR_MAP_SCENE_LAVENDER_TOWN, 5, LavenderTown_OnTransition_2
+	end
+
+LavenderTown_OnTransition_1::
+	setobjectxyperm LOCALID_MISTICO, 18, 6
+	end
+
+LavenderTown_OnTransition_2::
+	setobjectxyperm LOCALID_MISTICO, 18, 7
 	end
 
 LavenderTown_OnFrame::
@@ -44,6 +54,7 @@ LavenderTown_EventScript_Boy::
 	end
 
 LavenderTown_EventScript_TownSign::
+	buffernumberstring STR_VAR_1, VAR_MAP_SCENE_LAVENDER_TOWN
 	msgbox LavenderTown_Text_TownSign, MSGBOX_SIGN
 	end
 
@@ -141,6 +152,45 @@ LavenderTown_EventScript_UnblockTriggerCasaFuji::
 	setvar VAR_MAP_SCENE_LAVENDER_TOWN_UNBLOCK_FUJIS_HOUSE, 1
 	return
 
+LavenderTown_EventScript_Mistico_1::
+	lock
+	goto_if_eq VAR_MAP_SCENE_LAVENDER_TOWN, 4, LavenderTown_EventScript_Mistico_2
+	goto_if_eq VAR_MAP_SCENE_LAVENDER_TOWN, 5, LavenderTown_EventScript_Mistico_3
+	msgbox LavenderTown_Text_Mistico_1, MSGBOX_NPC
+	release
+	end
+
+LavenderTown_EventScript_Mistico_2::
+	faceplayer
+	msgbox LavenderTown_Text_Mistico_2
+	closemessage
+	call_if_eq VAR_FACING, DIR_EAST, LavenderTown_EventScript_MisticoFacingAlt
+	call_if_ne VAR_FACING, DIR_EAST, LavenderTown_EventScript_MisticoFacingNormal
+	setvar VAR_MAP_SCENE_LAVENDER_TOWN, 5
+	release
+	end
+
+LavenderTown_EventScript_Mistico_3::
+	msgbox LavenderTown_Text_Mistico_2, MSGBOX_NPC
+	end
+
+LavenderTown_EventScript_MisticoFacingNormal::
+	applymovement LOCALID_MISTICO, LavenderTown_Movement_MisticoUnblockTower
+	waitmovement 0
+	return
+	end
+
+LavenderTown_EventScript_MisticoFacingAlt::
+	applymovement LOCALID_MISTICO, LavenderTown_Movement_MisticoUnblockTower_alt
+	waitmovement 0
+	return
+	end
+
+LavenderTown_EventScript_Debug::
+	givemon SPECIES_MEWTWO, 60, ITEM_NONE
+	giveitem ITEM_MAX_REPEL, 50
+	end
+
 LavenderTown_Movement_PlayerTriggerBloqueoCasaFuji::
 	walk_down
 	step_end
@@ -160,6 +210,16 @@ LavenderTown_Movement_MisticoBlockTower::
 	walk_right
 	walk_right
 	walk_up
+	walk_in_place_down
+	step_end
+
+LavenderTown_Movement_MisticoUnblockTower::
+	walk_left
+	walk_in_place_down
+	step_end
+
+LavenderTown_Movement_MisticoUnblockTower_alt::
+	walk_right
 	walk_in_place_down
 	step_end
 

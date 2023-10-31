@@ -33,6 +33,9 @@
 #include "party_menu.h"
 #include "dynamic_placeholder_text_util.h"
 #include "new_menu_helpers.h"
+#include "wild_encounter.h"
+#include "save.h"
+#include "load_save.h"
 #include "constants/songs.h"
 #include "constants/items.h"
 #include "constants/maps.h"
@@ -40,6 +43,7 @@
 #include "constants/moves.h"
 #include "constants/menu.h"
 #include "constants/event_objects.h"
+#include "constants/heal_locations.h"
 #include "constants/metatile_labels.h"
 
 static EWRAM_DATA u8 sElevatorCurrentFloorWindowId = 0;
@@ -1666,6 +1670,45 @@ static void ChangePokemonNickname_CB(void)
 {
     SetMonData(&gPlayerParty[gSpecialVar_0x8004], MON_DATA_NICKNAME, gStringVar2);
     CB2_ReturnToFieldContinueScriptPlayMapMusic();
+}
+
+void SetPlayerNameAtOverworld()
+{
+    DoNamingScreen(NAMING_SCREEN_PLAYER, gSaveBlock2Ptr->playerName, gSaveBlock2Ptr->playerGender, 0, 0, CB2_ReturnToFieldContinueScriptPlayMapMusic);
+}
+
+void GivePlayerUnownTeam()
+{
+    u16 nationalDexNum;
+    int sentToPc;
+    u8 heldItem[2];
+    struct Pokemon *mon = AllocZeroed(sizeof(struct Pokemon));
+    int letter[6] = {14, 25, 12, 8, 1, 4};
+    //                Z   O   M  B  I  E
+    u32 personality = 0;
+    int i;
+
+    for(i = 0; i < 6; i++)
+    {
+        personality = GenerateUnownPersonalityByLetter(letter[i]);
+        CreateMon(mon, SPECIES_UNOWN, 66, 32, TRUE, personality, OT_ID_PLAYER_ID, 0);
+        heldItem[0] = ITEM_SACRED_ASH;
+        heldItem[1] = ITEM_SACRED_ASH >> 8;
+        SetMonData(mon, MON_DATA_HELD_ITEM, heldItem);
+        sentToPc = GiveMonToPlayer(mon);
+    }
+}
+
+void SaveGameSilently()
+{
+    u8 counter = 40;
+    SetContinueGameWarpStatus();
+    SetContinueGameWarpToHealLocation(SPAWN_THE_END);
+    TrySavingData(SAVE_HALL_OF_FAME);
+    while (counter != 0)
+    {
+        counter--;
+    }
 }
 
 void BufferMonNickname(void)

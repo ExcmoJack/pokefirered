@@ -227,7 +227,7 @@
 #define FLAG_POKEMON_TOWER_B2F_GASTLY_1 0x0D1
 #define FLAG_POKEMON_TOWER_B2F_GASTLY_2 0x0D2
 #define FLAG_POKEMON_TOWER_B2F_GASTLY_3 0x0D3
-#define FLAG_0x0D4               0x0D4
+#define FLAG_HIDE_HIKER_MT_PYRE_1F      0x0D4
 #define FLAG_0x0D5               0x0D5
 #define FLAG_0x0D6               0x0D6
 #define FLAG_0x0D7               0x0D7

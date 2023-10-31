@@ -1,15 +1,15 @@
 PokemonTower_2F_Text_RivalIntro::
-    .string "{RIVAL}: Hey, {PLAYER}!\n"
-    .string "What brings you here?\l"
-    .string "Is your POKéMON dead?\p"
-    .string "Hey! It's alive!\p"
-    .string "I can at least make them faint!\n"
-    .string "Let's go!$"
+    .string "{RIVAL}: ¡Hola, {PLAYER}!\n"
+    .string "Veo que te las has apañado para\l"
+    .string "llegar hasta aquí.\p"
+    .string "¡Están pasando cosas muy raras!\p"
+    .string "¡Déjame comprobar que eres\n"
+    .string "suficientemente fuerte!$"
 
 PokemonTower_2F_Text_RivalDefeat::
-    .string "What?\n"
-    .string "You stinker!\p"
-    .string "I took it easy on you, too!$"
+    .string "¿Y ya está?\n"
+    .string "¿Eso es todo?\p"
+    .string "¡Te he dado ventaja!$"
 
 @ Unused. Translated below
 @ Aw, man! They really kicked the bucket! Weak! Do them a favor and raise them more properly.
@@ -20,19 +20,21 @@ PokemonTower_2F_Text_RivalVictory::
     .string "もっと　ちゃんと　そだてて　やれよ$"
 
 PokemonTower_2F_Text_RivalPostBattle::
-    .string "How's your POKéDEX coming?\n"
-    .string "I just caught a CUBONE!\p"
-    .string "I can't find the bigger MAROWAK.\n"
-    .string "Where could they be?\p"
-    .string "I bet there aren't any left!\p"
-    .string "Well, I better get going.\n"
-    .string "I've got a lot to accomplish,\l"
-    .string "unlike you.\p"
-    .string "Smell ya later!$"
+    .string "Mira, acabo de rescatar un\n"
+    .string "Cubone.\p"
+    .string "No he podido localizar a su madre,\n"
+    .string "pero confío en que tú sí.\p"
+    .string "Voy a dejar que te acompañe, pero\n"
+    .string "no dejes que le pase nada.$"
+
+PokemonTower_2F_Text_RivalPostBattle_2::
+    .string "¡Me piro, vampiro!$"
 
 PokemonTower_2F_Text_SilphScopeCouldUnmaskGhosts::
-    .string "Even we could not identify the\n"
-    .string "wayward ghosts.\p"
-    .string "A SILPH SCOPE might be able to\n"
-    .string "unmask them.$"
+    .string "Estos fantasmas no se dejan\n"
+    .string "reconocer.\p"
+    .string "El SILPH SCOPE debería permitir\n"
+    .string "identificarlos.$"
 
+PokemonTower_2F_Text_ObtainedACubone::
+    .string "¡{PLAYER} recibió a Cubone!$"

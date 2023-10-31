@@ -2,17 +2,17 @@
   "id": "MAP_POKEMON_TOWER_B2F",
   "name": "PokemonTower_B2F",
   "layout": "LAYOUT_POKEMON_TOWER_B2F",
-  "music": "MUS_ROCKET_HIDEOUT",
+  "music": "MUS_MT_MOON",
   "region_map_section": "MAPSEC_SEVII_ISLE_8",
   "requires_flash": true,
   "weather": "WEATHER_NONE",
-  "map_type": "MAP_TYPE_NONE",
+  "map_type": "MAP_TYPE_UNKNOWN",
   "allow_cycling": false,
   "allow_escaping": false,
   "allow_running": false,
   "show_map_name": true,
   "floor_number": -30,
-  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "battle_scene": "MAP_BATTLE_SCENE_AGATHA",
   "connections": 0,
   "object_events": [
     {
@@ -56,6 +56,20 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "PokemonTower_B2F_EventScript_Gastly",
       "flag": "FLAG_POKEMON_TOWER_B2F_GASTLY_3"
+    },
+    {
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_CHANNELER",
+      "x": 18,
+      "y": 2,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "PokemonTower_B2F_EventScript_Healing",
+      "flag": "0"
     }
   ],
   "warp_events": [

@@ -1,6 +1,6 @@
 PokemonTower_1F_Text_ErectedInMemoryOfDeadMons::
-    .string "POKéMON TOWER was erected in the\n"
-    .string "memory of POKéMON that died.$"
+    .string "La Torre Pokémon se erigió en\n"
+    .string "memoria de los Pokémon fallecidos.$"
 
 PokemonTower_1F_Text_ComeToPayRespectsSon::
     .string "Did you come to pay respects?\p"
@@ -19,11 +19,11 @@ PokemonTower_1F_Text_CameToPrayForDepartedClefairy::
     .string "I'm awash in tears…$"
 
 PokemonTower_1F_Text_GrowlitheWhyDidYouDie::
-    .string "My GROWLITHE…\n"
-    .string "Why did you die?$"
+    .string "Se han llevado a mi GROWLITHE…\n"
+    .string "¿Por qué?$"
 
 PokemonTower_1F_Text_SenseSpiritsUpToMischief::
-    .string "I am a CHANNELER.\p"
-    .string "There are spirits up to mischief.\n"
-    .string "I sense them high in the TOWER.$"
+    .string "Me encargo de proteger la torre.\p"
+    .string "Los espíritus están descontrolados.\n"
+    .string "El Sr. Fuji ha subido a calmarlos.$"
 

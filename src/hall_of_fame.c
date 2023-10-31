@@ -350,7 +350,7 @@ static bool8 InitHallOfFameScreen(void)
         if (!gPaletteFade.active)
         {
             SetMainCallback2(CB2_HofIdle);
-            PlayBGM(MUS_HALL_OF_FAME);
+            PlayBGM(MUS_POKE_TOWER);
             return FALSE;
         }
         break;
@@ -640,7 +640,7 @@ static void Task_Hof_WaitAndPrintPlayerInfo(u8 taskId)
         FillBgTilemapBufferRect_Palette0(0, 0, 0, 0, 0x20, 0x20);
         HallOfFame_PrintPlayerInfo(1, 2);
         DrawDialogueFrame(0, 0);
-        AddTextPrinterParameterized2(0, FONT_NORMAL, gText_LeagueChamp, 0, NULL, TEXT_COLOR_DARK_GRAY, TEXT_COLOR_WHITE, TEXT_COLOR_LIGHT_GRAY);
+        AddTextPrinterParameterized2(0, FONT_MALE, gText_LeagueChamp, 0, NULL, TEXT_COLOR_DARK_GRAY, TEXT_COLOR_WHITE, TEXT_COLOR_RED);
         CopyWindowToVram(0, COPYWIN_FULL);
         gTasks[taskId].func = Task_Hof_ExitOnKeyPressed;
     }

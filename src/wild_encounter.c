@@ -35,7 +35,6 @@ static EWRAM_DATA struct WildEncounterData sWildEncounterData = {};
 static EWRAM_DATA bool8 sWildEncountersDisabled = FALSE;
 
 static bool8 UnlockedTanobyOrAreNotInTanoby(void);
-static u32 GenerateUnownPersonalityByLetter(u8 letter);
 static bool8 IsWildLevelAllowedByRepel(u8 level);
 static void ApplyFluteEncounterRateMod(u32 *rate);
 static u8 GetFluteEncounterRateModType(void);
@@ -240,7 +239,7 @@ static void GenerateWildMon(u16 species, u8 level, u8 slot)
     }
 }
 
-static u32 GenerateUnownPersonalityByLetter(u8 letter)
+u32 GenerateUnownPersonalityByLetter(u8 letter)
 {
     u32 personality;
     do

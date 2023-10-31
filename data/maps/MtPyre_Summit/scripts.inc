@@ -63,6 +63,7 @@ MtPyre_Summit_EventScript_OnFrame_DusclopsDefeated::
 	textcolor NPC_TEXT_COLOR_MALE
 	msgbox MtPyre_Summit_Text_Trigger_Hiker_1
 	closemessage
+	clearflag FLAG_HIDE_HIKER_MT_PYRE_1F
 	warp MAP_MT_PYRE_1F, 255, 17, 15
 	release
 	end

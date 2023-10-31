@@ -22,7 +22,7 @@ LavenderTown_Text_GhostsAppearedInTower::
     .string "POKéMON pero, ¿qué quieren?$"
 
 LavenderTown_Text_TownSign::
-    .string "PUEBLO LAVANDA\n"
+    .string "PUEBLO LAVANDA {STR_VAR_1}\n"
     .string "El noble pueblo púrpura.$"
 
 LavenderTown_Text_SilphScopeNotice::
@@ -67,3 +67,17 @@ LavenderTown_Text_BloqueoCasaFuji::
     .string "Lo siento, no puedo dejarte entrar.\n"
     .string "Están conjurando un hechizo\l"
     .string "protector en el interior.$"
+
+LavenderTown_Text_Mistico_1::
+    .string "Buenas, {PLAYER}.\p"
+    .string "Veo que aún no has escuchado al\n"
+    .string "Pueblo, por lo que no puedo\l"
+    .string "dejarte entrar a la Torre aún.$"
+
+LavenderTown_Text_Mistico_2::
+    .string "{PLAYER}, ahora conoces las\n"
+    .string "historias del Pueblo.\p"
+    .string "La sabiduría te ha sido\n"
+    .string "transferida y has conseguido\l"
+    .string "buenos aliados.\p"
+    .string "Adelante, la misión te espera.$"

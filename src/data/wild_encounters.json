@@ -25782,6 +25782,75 @@
               }
             ]
           }
+        },
+        {
+          "map": "MAP_POKEMON_TOWER_B2F",
+          "base_label": "gPokemonTower_B2F0",
+          "land_mons": {
+            "encounter_rate": 5,
+            "mons": [
+              {
+                "min_level": 25,
+                "max_level": 28,
+                "species": "SPECIES_GASTLY"
+              },
+              {
+                "min_level": 25,
+                "max_level": 30,
+                "species": "SPECIES_HAUNTER"
+              },
+              {
+                "min_level": 24,
+                "max_level": 28,
+                "species": "SPECIES_SHUPPET"
+              },
+              {
+                "min_level": 24,
+                "max_level": 28,
+                "species": "SPECIES_DUSKULL"
+              },
+              {
+                "min_level": 27,
+                "max_level": 30,
+                "species": "SPECIES_MISDREAVUS"
+              },
+              {
+                "min_level": 24,
+                "max_level": 30,
+                "species": "SPECIES_SABLEYE"
+              },
+              {
+                "min_level": 29,
+                "max_level": 35,
+                "species": "SPECIES_GENGAR"
+              },
+              {
+                "min_level": 24,
+                "max_level": 30,
+                "species": "SPECIES_MISDREAVUS"
+              },
+              {
+                "min_level": 30,
+                "max_level": 35,
+                "species": "SPECIES_DUSCLOPS"
+              },
+              {
+                "min_level": 30,
+                "max_level": 35,
+                "species": "SPECIES_BANETTE"
+              },
+              {
+                "min_level": 30,
+                "max_level": 35,
+                "species": "SPECIES_DUSCLOPS"
+              },
+              {
+                "min_level": 30,
+                "max_level": 35,
+                "species": "SPECIES_BANETTE"
+              }
+            ]
+          }
         }
       ]
     }

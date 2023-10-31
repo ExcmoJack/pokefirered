@@ -12,7 +12,7 @@ IndigoPlateau_Exterior_OnTransition::
 	end
 
 IndigoPlateau_Exterior_EventScript_PlayCreditsMusic::
-	playbgm MUS_CREDITS, 0
+	playbgm MUS_LAVENDER, 0
 	return
 
 IndigoPlateau_Exterior_OnFrame::
@@ -27,6 +27,9 @@ IndigoPlateau_Exterior_OnFrame::
 IndigoPlateau_Exterior_EventScript_Credits::
 	lockall
 	delay 105
+	textcolor NPC_TEXT_COLOR_CREEPY
+	msgbox Text_FinDelJuego
+	closemessage
 
 	@ Rival exits building. Spawn a dummy object to lock the camera.
 	opendoor 11, 6

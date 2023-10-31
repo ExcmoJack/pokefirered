@@ -48,7 +48,7 @@ VermilionCity_Dungeon2_Trigger3::
 	msgbox VermilionCity_Dungeon2_Text_MrMime
 	closemessage
 	waitmoncry
-	givemon SPECIES_MR_MIME, 18, ITEM_TWISTED_SPOON
+	call_if_unset FLAG_GET_MR_MIME_CARMIN, VermilionCity_Dungeon2_GiveMrMime
 	delay 20
 	bufferspeciesname STR_VAR_1, SPECIES_MR_MIME
 	playfanfare MUS_EVOLVED
@@ -63,7 +63,6 @@ VermilionCity_Dungeon2_Trigger3::
 	waitmoncry
 	setwildbattle SPECIES_HAUNTER, 24, ITEM_NONE
 	dowildbattle
-	setflag FLAG_GET_MR_MIME_CARMIN
 	msgbox VermilionCity_Dungeon2_Text_Evil6
 	closemessage
 	applymovement LOCALID_HAUNTER, Common_Movement_Disappear
@@ -94,6 +93,11 @@ VermilionCity_Dungeon2_Trigger3::
 	warpteleport MAP_LAVENDER_TOWN_HOUSE1, 255, 7, 6
 	release
 	end
+
+VermilionCity_Dungeon2_GiveMrMime::
+	setflag FLAG_GET_MR_MIME_CARMIN
+	givemon SPECIES_MR_MIME, 18, ITEM_TWISTED_SPOON
+	return
 
 VermilionCity_Dungeon2_Movement_Player1::
 	walk_down

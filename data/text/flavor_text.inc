@@ -123,3 +123,8 @@ Text_PlayerFacingTVScreen::
 
 Text_PkmnJoinedTeam::
 	.string "¡{STR_VAR_1} se ha unido al equipo!$"
+
+Text_FinDelJuego::
+	.string "El avatar siguió su camino como\n"
+	.string "entrenador Pokémon, a pesar de\l"
+	.string "que {PLAYER} permaneció recluido con\lMissingNo.$"

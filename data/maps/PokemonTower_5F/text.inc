@@ -1,51 +1,51 @@
 PokemonTower_5F_Text_RestHereInPurifiedSpace::
-    .string "Come, child!\n"
-    .string "I have purified this space.\l"
-    .string "You can rest here.$"
+    .string "¡Ven, jóven!\n"
+    .string "Esta zona está protegida.\l"
+    .string "Puedes descansar aquí.$"
 
 PokemonTower_5F_Text_TammyIntro::
-    .string "Give…me…\n"
-    .string "your…all…$"
+    .string "Dame… tu…\n"
+    .string "existencia…$"
 
 PokemonTower_5F_Text_TammyDefeat::
-    .string "Gasp!$"
+    .string "¡Fiuu!$"
 
 PokemonTower_5F_Text_TammyPostBattle::
-    .string "I was under possession.$"
+    .string "Me habían poseído.$"
 
 PokemonTower_5F_Text_RuthIntro::
-    .string "You…shall…\n"
-    .string "join…us…$"
+    .string "Te… está…\n"
+    .string "esperando…$"
 
 PokemonTower_5F_Text_RuthDefeat::
-    .string "What a nightmare!$"
+    .string "¡Qué pesadilla!$"
 
 PokemonTower_5F_Text_RuthPostBattle::
-    .string "I was possessed.$"
+    .string "Algo hablaba y actuaba por mí.$"
 
 PokemonTower_5F_Text_KarinaIntro::
-    .string "Zombies!$"
+    .string "¡Espíritus!$"
 
 PokemonTower_5F_Text_KarinaDefeat::
-    .string "Ha?$"
+    .string "¿Ah?$"
 
 PokemonTower_5F_Text_KarinaPostBattle::
-    .string "I regained my senses.$"
+    .string "He vuelto en mí.$"
 
 PokemonTower_5F_Text_JanaeIntro::
     .string "Urgah…\n"
     .string "Urff…$"
 
 PokemonTower_5F_Text_JanaeDefeat::
-    .string "Whoo!$"
+    .string "¡Uuuh!$"
 
 PokemonTower_5F_Text_JanaePostBattle::
-    .string "I fell to evil spirits despite my\n"
-    .string "training in the mountains…$"
+    .string "Caí en manos de espíritus malignos\n"
+    .string " a pesar de mi entrenamiento…$"
 
 PokemonTower_5F_Text_PurifiedZoneMonsFullyHealed::
-    .string "Entered the purified and protected\n"
-    .string "zone.\p"
-    .string "{PLAYER}'s POKéMON were fully\n"
-    .string "healed.$"
+    .string "{PLAYER} entró en la zona protegida,\n"
+    .string "el conjuro está funcionando.\p"
+    .string "El equipo de {PLAYER} se ha\n"
+    .string "recuperado.$"
 

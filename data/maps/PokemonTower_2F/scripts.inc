@@ -30,10 +30,19 @@ PokemonTower_2F_EventScript_Rival::
 	waitmovement 0
 	msgbox PokemonTower_2F_Text_RivalIntro
 	setvar VAR_LAST_TALKED, LOCALID_RIVAL
-	call_if_eq VAR_STARTER_MON, 2, PokemonTower_2F_EventScript_RivalSquirtle
-	call_if_eq VAR_STARTER_MON, 1, PokemonTower_2F_EventScript_RivalBulbasaur
-	call_if_eq VAR_STARTER_MON, 0, PokemonTower_2F_EventScript_RivalCharmander
+	call_if_eq VAR_STARTER_MON, 2, PokemonTower_2F_EventScript_RivalBulbasaur
+	call_if_eq VAR_STARTER_MON, 1, PokemonTower_2F_EventScript_RivalCharmander
+	call_if_eq VAR_STARTER_MON, 0, PokemonTower_2F_EventScript_RivalSquirtle
 	msgbox PokemonTower_2F_Text_RivalPostBattle
+	closemessage
+	playfanfare MUS_LEVEL_UP
+	givemon SPECIES_CUBONE, 25
+	textcolor NPC_TEXT_COLOR_NEUTRAL
+	message PokemonTower_2F_Text_ObtainedACubone
+	waitmessage
+	waitfanfare
+	textcolor NPC_TEXT_COLOR_MALE
+	msgbox PokemonTower_2F_Text_RivalPostBattle_2
 	closemessage
 	playbgm MUS_RIVAL_EXIT, 0
 	call_if_eq VAR_TEMP_1, 0, PokemonTower_2F_EventScript_RivalExitRight

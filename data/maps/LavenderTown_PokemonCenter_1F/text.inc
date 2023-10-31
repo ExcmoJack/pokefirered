@@ -5,9 +5,10 @@ LavenderTown_PokemonCenter_1F_Text_RocketsDoAnythingForMoney::
     .string "too heinous, no crime too wicked!$"
 
 LavenderTown_PokemonCenter_1F_Text_CubonesMotherKilledByRockets::
-    .string "I saw CUBONE's mother trying to\n"
-    .string "escape from TEAM ROCKET.\p"
-    .string "She was killed trying to get away…$"
+    .string "¿Una mala racha?\n"
+    .string "Permíteme que te devuelva\l"
+    .string "a tu camino.\p"
+    .string "1…{PAUSE 10} 2…{PAUSE 10} y…{PAUSE 20} 3…$"
 
 LavenderTown_PokemonCenter_1F_Text_PeoplePayForCuboneSkulls::
     .string "You know how the CUBONE species\n"

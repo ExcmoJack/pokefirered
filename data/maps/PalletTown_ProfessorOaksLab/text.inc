@@ -1,54 +1,52 @@
 PalletTown_ProfessorOaksLab_Text_RivalGrampsIsntAround::
-    .string "{RIVAL}: What, it's only {PLAYER}?\n"
-    .string "Gramps isn't around.$"
+    .string "{RIVAL}: El abuelo se fue\n"
+    .string "a caprturar Pokémon.$"
 
 PalletTown_ProfessorOaksLab_Text_RivalFedUpWithWaiting::
-    .string "{RIVAL}: Gramps!\n"
-    .string "I'm fed up with waiting!$"
+    .string "{RIVAL}: ¡Abuelo!\n"
+    .string "¡Estoy harto de esperar!$"
 
 PalletTown_ProfessorOaksLab_Text_RivalNoFairWhatAboutMe::
-    .string "{RIVAL}: Hey! Gramps! No fair!\n"
-    .string "What about me?$"
+    .string "{RIVAL}: ¡No es justo!\n"
+    .string "¿Y yo qué?$"
 
 PalletTown_ProfessorOaksLab_Text_RivalGoChoosePlayer::
-    .string "{RIVAL}: Heh, I don't need to be\n"
-    .string "greedy like you. I'm mature!\p"
-    .string "Go ahead and choose, {PLAYER}!$"
+    .string "{RIVAL}: ¡No seas tan tiquismiquis!\n"
+    .string "¡Elige ya, {PLAYER}!$"
 
 PalletTown_ProfessorOaksLab_Text_RivalIllTakeThisOneThen::
     .string "{RIVAL}: I'll take this one, then!$"
 
 PalletTown_ProfessorOaksLab_Text_RivalReceivedMonFromOak::
-    .string "{RIVAL} received the {STR_VAR_1}\n"
-    .string "from PROF. OAK!$"
+    .string "{RIVAL} recibió el {STR_VAR_1}\n"
+    .string "del PROF. OAK!$"
 
 PalletTown_ProfessorOaksLab_Text_RivalMyMonLooksTougher::
-    .string "{RIVAL}: My POKéMON looks a lot\n"
-    .string "tougher than yours.$"
+    .string "{RIVAL}: Mi POKéMON parece\n"
+    .string "más fuerte que el tuyo.$"
 
 PalletTown_ProfessorOaksLab_Text_RivalLetsCheckOutMons::
-    .string "{RIVAL}: Wait, {PLAYER}!\n"
-    .string "Let's check out our POKéMON!\p"
-    .string "Come on, I'll take you on!$"
+    .string "{RIVAL}: ¡Espera, {PLAYER}!\n"
+    .string "¡Veamos quién es más fuerte!$"
 
 PalletTown_ProfessorOaksLab_Text_RivalDefeat::
-    .string "WHAT?\n"
-    .string "Unbelievable!\l"
-    .string "I picked the wrong POKéMON!$"
+    .string "¿Qué?\n"
+    .string "¡No puede ser!\l"
+    .string "¡Elegí el Pokémon equivocado!$"
 
 @ Also used for early Route 22 battle
 Text_RivalVictory::
-    .string "{RIVAL}: Yeah!\n"
-    .string "Am I great or what?$"
+    .string "{RIVAL}: ¡Sí!\n"
+    .string "¡Soy genial!$"
 
 PalletTown_ProfessorOaksLab_Text_RivalGoToughenMyMon::
-    .string "{RIVAL}: Okay! I'll make my\n"
-    .string "POKéMON battle to toughen it up!\p"
-    .string "{PLAYER}! Gramps!\n"
-    .string "Smell you later!$"
+    .string "{RIVAL}: ¡Bien!\n"
+    .string "¡Entrenaré para ser mejor que tú!\p"
+    .string "{PLAYER}, Abuelo,\n"
+    .string "¡Nos vemos!$"
 
 PalletTown_ProfessorOaksLab_Text_RivalGramps::
-    .string "{RIVAL}: Gramps!$"
+    .string "{RIVAL}: ¡Abuelo!$"
 
 PalletTown_ProfessorOaksLab_Text_RivalWhatDidYouCallMeFor::
     .string "{RIVAL}: I almost forgot!\n"
@@ -69,73 +67,65 @@ PalletTown_ProfessorOaksLab_Text_RivalTellSisNotToGiveYouMap::
     .string "my place after this!$"
 
 PalletTown_ProfessorOaksLab_Text_OakThreeMonsChooseOne::
-    .string "OAK: {RIVAL}?\n"
-    .string "Let me think…\p"
-    .string "Oh, that's right, I told you to\n"
-    .string "come! Just wait!\p"
-    .string "Here, {PLAYER}.\p"
-    .string "There are three POKéMON here.\p"
-    .string "Haha!\p"
-    .string "The POKéMON are held inside\n"
-    .string "these POKé BALLS.\p"
-    .string "When I was young, I was a serious\n"
-    .string "POKéMON TRAINER.\p"
-    .string "But now, in my old age, I have\n"
-    .string "only these three left.\p"
-    .string "You can have one.\n"
-    .string "Go on, choose!$"
+    .string "OAK: ¿{RIVAL}?\n"
+    .string "Déjame pensar…\p"
+    .string "Oh, eso es correcto, te dije que\n"
+    .string "vinieras. ¡Solo espera!\p"
+    .string "Aquí, {PLAYER}.\p"
+    .string "Aquí hay tres POKéMON.\p"
+    .string "¡Jaja!\p"
+    .string "Los POKéMON están dentro de\n"
+    .string "estas POKé BALLS.\p"
+    .string "Cuando era joven, fui un entrenador de\n"
+    .string "POKéMON serio.\p"
+    .string "Pero ahora, en mi vejez, solo me\n"
+    .string "quedan estos tres.\p"
+    .string "Puedes elegir uno.\n"
+    .string "¡Adelante, elige!$"
 
 PalletTown_ProfessorOaksLab_Text_OakBePatientRival::
-    .string "OAK: Be patient, {RIVAL}.\n"
-    .string "You can have one, too!$"
+    .string "OAK: Tranquilo, {RIVAL}.\n"
+    .string "Tú tendrás otro!$"
 
 PalletTown_ProfessorOaksLab_Text_OakWhichOneWillYouChoose::
-    .string "OAK: Now, {PLAYER}.\p"
-    .string "Inside those three POKé BALLS are\n"
+    .string "OAK: Ahora, {PLAYER}.\p"
+    .string "Dentro de esas tres POKé BALLS hay\n"
     .string "POKéMON.\p"
-    .string "Which one will you choose for\n"
-    .string "yourself?$"
+    .string "¿Cuál elegirás para ti?$"
 
 PalletTown_ProfessorOaksLab_Text_OakHeyDontGoAwayYet::
-    .string "OAK: Hey!\n"
-    .string "Don't go away yet!$"
+    .string "OAK: ¡Hey!\n"
+    .string "¡No te vayas aún!$"
 
 PalletTown_ProfessorOaksLab_Text_OakChoosingCharmander::
-    .string "Ah! CHARMANDER is your choice.\n"
-    .string "You should raise it patiently.\p"
-    .string "So, {PLAYER}, you're claiming the\n"
-    .string "FIRE POKéMON CHARMANDER?$"
+    .string "Bien, {PLAYER}, ¿Entonces eliges\n"
+    .string "a CHARMANDER?$"
 
 PalletTown_ProfessorOaksLab_Text_OakChoosingSquirtle::
-    .string "Hm! SQUIRTLE is your choice.\n"
-    .string "It's one worth raising.\p"
-    .string "So, {PLAYER}, you've decided on the\n"
-    .string "WATER POKéMON SQUIRTLE?$"
+    .string "Bien, {PLAYER}, ¿Entonces eliges\n"
+    .string "a SQUIRTLE?$"
 
 PalletTown_ProfessorOaksLab_Text_OakChoosingBulbasaur::
-    .string "I see! BULBASAUR is your choice.\n"
-    .string "It's very easy to raise.\p"
-    .string "So, {PLAYER}, you want to go with\n"
-    .string "the GRASS POKéMON BULBASAUR?$"
+    .string "Bien, {PLAYER}, ¿Entonces eliges\n"
+    .string "a BULBASAUR?$"
 
 PalletTown_ProfessorOaksLab_Text_OakThisMonIsEnergetic::
-    .string "This POKéMON is really quite\n"
-    .string "energetic!$"
+    .string "¡Buena elección!$"
 
 PalletTown_ProfessorOaksLab_Text_ReceivedMonFromOak::
-    .string "{PLAYER} received the {STR_VAR_1}\n"
-    .string "from PROF. OAK!$"
+    .string "¡{PLAYER} recibió el {STR_VAR_1}\n"
+    .string "de manos del PROF. OAK!$"
 
 PalletTown_ProfessorOaksLab_Text_OakCanReachNextTownWithMon::
-    .string "OAK: If a wild POKéMON appears,\n"
-    .string "your POKéMON can battle it.\p"
-    .string "With it at your side, you should be\n"
-    .string "able to reach the next town.$"
+    .string "OAK: Si aparece un POKéMON salvaje,\n"
+    .string "tus POKéMON pueden luchar contra él.\p"
+    .string "Con él a tu lado, deberías poder\n"
+    .string "llegar a la próxima ciudad.$"
 
 PalletTown_ProfessorOaksLab_Text_OakBattleMonForItToGrow::
-    .string "OAK: {PLAYER}, raise your young\n"
-    .string "POKéMON by making it battle.\p"
-    .string "It has to battle for it to grow.$"
+    .string "OAK: {PLAYER}, haz que tu joven\n"
+    .string "POKéMON crezca haciendo que luche.\p"
+    .string "Debe luchar para crecer.$"
 
 PalletTown_ProfessorOaksLab_Text_OakHaveSomethingForMe::
     .string "OAK: Oh, {PLAYER}!\n"

@@ -19,7 +19,12 @@ LavenderTown_PokemonCenter_1F_EventScript_Gentleman::
 	end
 
 LavenderTown_PokemonCenter_1F_EventScript_Lass::
-	msgbox LavenderTown_PokemonCenter_1F_Text_CubonesMotherKilledByRockets, MSGBOX_NPC
+	lock
+	faceplayer
+	msgbox LavenderTown_PokemonCenter_1F_Text_CubonesMotherKilledByRockets
+	closemessage
+	warpteleport MAP_POKEMON_TOWER_B2F, 255, 18, 3
+	release
 	end
 
 LavenderTown_PokemonCenter_1F_EventScript_Youngster::

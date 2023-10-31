@@ -91,6 +91,7 @@ PokemonTower_B2F_EventScript_Button5::
 	setflag FLAG_POKEMON_TOWER_B2F_BUTTON_5
 	call PokemonTower_B2F_EventScript_ButtonFx
 	call PokemonTower_B2F_EventScript_Button5Action
+	clearflag FLAG_HIDE_LORELEI_IN_HER_HOUSE
 	release
 	end
 
@@ -137,5 +138,16 @@ PokemonTower_B2F_EventScript_Gastly::
 	dowildbattle
 	applymovement VAR_LAST_TALKED Common_Movement_Disappear
 	removeobject VAR_LAST_TALKED
+	release
+	end
+
+PokemonTower_B2F_EventScript_Healing::
+	lock
+	faceplayer
+	msgbox PokemonTower_B2F_Text_Healing_1
+	closemessage
+	call EventScript_OutOfCenterPartyHeal
+	msgbox PokemonTower_B2F_Text_Healing_2
+	closemessage
 	release
 	end

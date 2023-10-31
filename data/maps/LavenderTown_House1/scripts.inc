@@ -79,7 +79,7 @@ LavenderTown_House1_EventScript_DesactivarPortal::
 	applymovement LOCALID_PORTAL, Common_Movement_Disappear
 	waitmovement 0
 	setflag FLAG_PORTAL_HOUSE1
-	call_if_eq VAR_MAP_SCENE_LAVENDER_TOWN, 2, LavenderTown_EventScript_UnblockTriggerCasaFuji
+	call_if_eq VAR_MAP_SCENE_LAVENDER_TOWN, 3, LavenderTown_EventScript_UnblockTriggerCasaFuji
 	release
 	end
 

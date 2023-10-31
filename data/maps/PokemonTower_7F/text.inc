@@ -35,16 +35,27 @@ PokemonTower_7F_Text_Grunt3PostBattle::
     .string "You're not getting away with this!$"
 
 PokemonTower_7F_Text_MrFujiThankYouFollowMe::
-    .string "MR. FUJI: Heh?\n"
-    .string "You came to save me?\p"
-    .string "Thank you. But, I came here of my\n"
-    .string "own free will.\p"
-    .string "I came to calm the spirit of\n"
-    .string "CUBONE's mother.\p"
-    .string "I think MAROWAK's spirit has\n"
-    .string "finally left us.\p"
-    .string "I must thank you for your kind\n"
-    .string "concern.\p"
-    .string "Follow me to my home, POKéMON\n"
-    .string "HOUSE, at the foot of this tower.$"
+    .string "¡Ah! ¡{PLAYER}!\p"
+    .string "Cuando desapareciste con toda\n"
+    .string "esa luz aparecieron un montón de\l"
+    .string "fantasmas y cuando me dí cuenta,\l"
+    .string "había aparecido aquí.$"
 
+PokemonTower_7F_Text_MrFujiThankYouFollowMe_2::
+    .string "¿Has oído eso?\p"
+    .string "¡Te han seguido!\n"
+    .string "¡Tienes que huir!\p"
+    .string "¡Esto te permitirá enfrentarte\n"
+    .string "a los fantasmas!$"
+
+PokemonTower_7F_Text_MrFujiThankYouFollowMe_3::
+    .string "¡Noooooo!$"
+
+PokemonTower_7F_Text_EvilGhost::
+    .string "¡{PLAYER}!\p"
+    .string "¡Ven a buscarme!\n"
+    .string "¡Te espero al final!$"
+
+PokemonTower_7F_Text_Ghost::
+    .string "Debes salvar al pueblo…\n"
+    .string "Rescata al Sr. Fuji…$"

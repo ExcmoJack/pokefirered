@@ -1,6 +1,5 @@
-.set LOCALID_GRUNT1, 2
-.set LOCALID_GRUNT2, 3
-.set LOCALID_GRUNT3, 4
+.set LOCALID_GHOST, 2
+
 
 PokemonTower_7F_MapScripts::
 	.byte 0
@@ -8,227 +7,64 @@ PokemonTower_7F_MapScripts::
 PokemonTower_7F_EventScript_MrFuji::
 	lock
 	faceplayer
-	famechecker FAMECHECKER_MRFUJI, FCPICKSTATE_COLORED, UpdatePickStateFromSpecialVar8005
 	setflag FLAG_HIDE_TOWER_FUJI
 	clearflag FLAG_HIDE_POKEHOUSE_FUJI
 	setflag FLAG_RESCUED_MR_FUJI
+	setvar VAR_MAP_SCENE_POKEMON_TOWER, 1
 	msgbox PokemonTower_7F_Text_MrFujiThankYouFollowMe
 	closemessage
-	warp MAP_LAVENDER_TOWN_VOLUNTEER_POKEMON_HOUSE, 4, 7
+	delay 20
+	playse SE_THUNDERSTORM_STOP
+	setvar VAR_0x8004, 0  @ Vertical pan
+	setvar VAR_0x8005, 3  @ Horizontal pan
+	setvar VAR_0x8006, 4  @ Num shakes
+	setvar VAR_0x8007, 2  @ Shake delay
+	special ShakeScreen
+	delay 20
+	applymovement LOCALID_GHOST, PokemonTower_7F_Movement_GhostAppear
+	waitmovement 0
+	applymovement LOCALID_GHOST, Common_Movement_Appear
+	applymovement VAR_LAST_TALKED, Common_Movement_WalkInPlaceFasterUp
+	waitmovement 0
+	textcolor NPC_TEXT_COLOR_EVIL
+	msgbox PokemonTower_7F_Text_EvilGhost
+	closemessage
+	textcolor NPC_TEXT_COLOR_MALE
+	applymovement VAR_LAST_TALKED, Common_Movement_FacePlayer
+	waitmovement 0
+	msgbox PokemonTower_7F_Text_MrFujiThankYouFollowMe_2
+	closemessage
+	giveitem ITEM_SILPH_SCOPE, 1
+	msgbox PokemonTower_7F_Text_MrFujiThankYouFollowMe_3
+	applymovement LOCALID_GHOST, PokemonTower_7F_Movement_GhostApproaches
+	waitmovement 0
+	playse SE_M_TELEPORT
+	applymovement VAR_LAST_TALKED, Common_Movement_Disappear
+	waitmovement 0
+	waitse
+	closemessage
+	applymovement LOCALID_GHOST, Common_Movement_Disappear
+	waitmovement 0
+	removeobject VAR_LAST_TALKED
+	removeobject LOCALID_GHOST
+	setwildbattle SPECIES_MAROWAK, 30
+	special StartMarowakBattle
 	waitstate
-	release
-	end
-
-PokemonTower_7F_EventScript_Grunt1::
-	trainerbattle_single TRAINER_TEAM_ROCKET_GRUNT_19, PokemonTower_7F_Text_Grunt1Intro, PokemonTower_7F_Text_Grunt1Defeat, PokemonTower_7F_EventScript_DefeatedGrunt1
-	msgbox PokemonTower_7F_Text_Grunt1PostBattle, MSGBOX_AUTOCLOSE
-	end
-
-PokemonTower_7F_EventScript_DefeatedGrunt1::
-	msgbox PokemonTower_7F_Text_Grunt1PostBattle
+	textcolor NPC_TEXT_COLOR_CREEPY
+	msgbox PokemonTower_7F_Text_Ghost
 	closemessage
-	getplayerxy VAR_0x8004, VAR_0x8005
-	goto_if_eq VAR_0x8004, 10, PokemonTower_7F_EventScript_Grunt1ExitMid
-	goto_if_eq VAR_0x8004, 11, PokemonTower_7F_EventScript_Grunt1ExitRight
-	goto_if_eq VAR_0x8004, 9, PokemonTower_7F_EventScript_Grunt1ExitLeft
-	applymovement LOCALID_GRUNT1, PokemonTower_7F_Movement_Grunt1Exit
-	waitmovement 0
-	goto PokemonTower_7F_EventScript_RemoveGrunt1
-	end
-
-PokemonTower_7F_EventScript_Grunt1ExitMid::
-	applymovement LOCALID_GRUNT1, PokemonTower_7F_Movement_Grunt1ExitMid
-	waitmovement 0
-	goto PokemonTower_7F_EventScript_RemoveGrunt1
-	end
-
-PokemonTower_7F_EventScript_Grunt1ExitRight::
-	applymovement LOCALID_GRUNT1, PokemonTower_7F_Movement_Grunt1ExitRight
-	waitmovement 0
-	goto PokemonTower_7F_EventScript_RemoveGrunt1
-	end
-
-PokemonTower_7F_EventScript_Grunt1ExitLeft::
-	applymovement LOCALID_GRUNT1, PokemonTower_7F_Movement_Grunt1ExitLeft
-	waitmovement 0
-	playse SE_EXIT
-	delay 25
-	goto PokemonTower_7F_EventScript_RemoveGrunt1
-	end
-
-PokemonTower_7F_EventScript_RemoveGrunt1::
-	removeobject LOCALID_GRUNT1
 	release
 	end
 
-PokemonTower_7F_Movement_Grunt1ExitMid::
-	walk_down
+PokemonTower_7F_Movement_GhostAppear::
+	walk_right
 	walk_right
 	walk_down
 	walk_down
 	walk_down
-	walk_right
-	walk_down
-	walk_down
 	step_end
 
-PokemonTower_7F_Movement_Grunt1ExitRight::
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	walk_right
-	walk_down
-	walk_down
-	step_end
-
-PokemonTower_7F_Movement_Grunt1Exit::
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	step_end
-
-PokemonTower_7F_Movement_Grunt1ExitLeft::
-	walk_right
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	walk_right
-	walk_down
-	walk_down
-	walk_in_place_faster_left
-	step_end
-
-PokemonTower_7F_EventScript_Grunt2::
-	trainerbattle_single TRAINER_TEAM_ROCKET_GRUNT_20, PokemonTower_7F_Text_Grunt2Intro, PokemonTower_7F_Text_Grunt2Defeat, PokemonTower_7F_EventScript_DefeatedGrunt2
-	msgbox PokemonTower_7F_Text_Grunt2PostBattle, MSGBOX_AUTOCLOSE
-	end
-
-PokemonTower_7F_EventScript_DefeatedGrunt2::
-	famechecker FAMECHECKER_MRFUJI, 1
-	msgbox PokemonTower_7F_Text_Grunt2PostBattle
-	closemessage
-	getplayerxy VAR_0x8004, VAR_0x8005
-	goto_if_eq VAR_0x8004, 12, PokemonTower_7F_EventScript_Grunt2ExitLeft
-	goto_if_eq VAR_0x8004, 13, PokemonTower_7F_EventScript_Grunt2ExitRight
-	applymovement LOCALID_GRUNT2, PokemonTower_7F_Movement_Grunt2Exit
-	waitmovement 0
-	goto PokemonTower_7F_EventScript_RemoveGrunt2
-	end
-
-PokemonTower_7F_EventScript_Grunt2ExitLeft::
-	applymovement LOCALID_GRUNT2, PokemonTower_7F_Movement_Grunt2ExitLeft
-	waitmovement 0
-	goto PokemonTower_7F_EventScript_RemoveGrunt2
-	end
-
-PokemonTower_7F_EventScript_Grunt2ExitRight::
-	applymovement LOCALID_GRUNT2, PokemonTower_7F_Movement_Grunt2ExitRight
-	waitmovement 0
-	goto PokemonTower_7F_EventScript_RemoveGrunt2
-	end
-
-PokemonTower_7F_EventScript_RemoveGrunt2::
-	removeobject LOCALID_GRUNT2
-	release
-	end
-
-PokemonTower_7F_Movement_Grunt2ExitLeft::
-	walk_down
-	walk_down
-	walk_down
-	walk_left
-	walk_down
-	walk_down
-	walk_down
-	step_end
-
-PokemonTower_7F_Movement_Grunt2Exit::
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	step_end
-
-PokemonTower_7F_Movement_Grunt2ExitRight::
-	walk_left
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	step_end
-
-PokemonTower_7F_EventScript_Grunt3::
-	trainerbattle_single TRAINER_TEAM_ROCKET_GRUNT_21, PokemonTower_7F_Text_Grunt3Intro, PokemonTower_7F_Text_Grunt3Defeat, PokemonTower_7F_EventScript_DefeatedGrunt3
-	msgbox PokemonTower_7F_Text_Grunt3PostBattle, MSGBOX_AUTOCLOSE
-	end
-
-PokemonTower_7F_EventScript_DefeatedGrunt3::
-	msgbox PokemonTower_7F_Text_Grunt3PostBattle
-	closemessage
-	getplayerxy VAR_0x8004, VAR_0x8005
-	goto_if_eq VAR_0x8004, 10, PokemonTower_7F_EventScript_Grunt3ExitRight
-	goto_if_eq VAR_0x8004, 9, PokemonTower_7F_EventScript_Grunt3ExitLeft
-	applymovement LOCALID_GRUNT3, PokemonTower_7F_Movement_Grunt3Exit
-	waitmovement 0
-	goto PokemonTower_7F_EventScript_RemoveGrunt3
-	end
-
-PokemonTower_7F_EventScript_Grunt3ExitRight::
-	applymovement LOCALID_GRUNT3, PokemonTower_7F_Movement_Grunt3ExitRight
-	waitmovement 0
-	goto PokemonTower_7F_EventScript_RemoveGrunt3
-	end
-
-PokemonTower_7F_EventScript_Grunt3ExitLeft::
-	applymovement LOCALID_GRUNT3, PokemonTower_7F_Movement_Grunt3ExitLeft
-	waitmovement 0
-	goto PokemonTower_7F_EventScript_RemoveGrunt3
-	end
-
-PokemonTower_7F_EventScript_RemoveGrunt3::
-	removeobject LOCALID_GRUNT3
-	release
-	end
-
-PokemonTower_7F_EventScript_Unused::
-	release
-	end
-
-PokemonTower_7F_Movement_Grunt3ExitRight::
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	walk_right
-	walk_down
-	step_end
-
-PokemonTower_7F_Movement_Grunt3Exit::
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	step_end
-
-PokemonTower_7F_Movement_Grunt3ExitLeft::
-	walk_right
-	walk_down
-	walk_down
-	walk_down
-	walk_down
+PokemonTower_7F_Movement_GhostApproaches::
 	walk_down
 	walk_down
 	walk_down

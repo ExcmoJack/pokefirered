@@ -4560,6 +4560,18 @@
       "secondary_tileset": "gTileset_MtEmber",
       "border_filepath": "data/layouts/PokemonTower_B3F/border.bin",
       "blockdata_filepath": "data/layouts/PokemonTower_B3F/map.bin"
+    },
+    {
+      "id": "LAYOUT_THE_END",
+      "name": "TheEnd_Layout",
+      "width": 20,
+      "height": 20,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_HoennBuilding",
+      "border_filepath": "data/layouts/TheEnd/border.bin",
+      "blockdata_filepath": "data/layouts/TheEnd/map.bin"
     }
   ]
 }
