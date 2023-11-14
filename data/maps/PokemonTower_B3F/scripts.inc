@@ -166,6 +166,7 @@ PokemonTower_B3F_EventScript_MissingNo_Action2::
 	msgbox PokemonTower_B3F_Text_MissingnoLoop_Intro_2
 	random SPECIES_HO_OH
 	addvar VAR_RESULT, 1
+	bufferspeciesname STR_VAR_1, VAR_RESULT
 	playmoncry VAR_RESULT, CRY_MODE_NORMAL
 	waitmoncry
 	closemessage
