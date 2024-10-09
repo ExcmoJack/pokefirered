@@ -230,6 +230,54 @@ IllexForest_EventScript_Celebi_MustAppear::
 	release
 	end
 
+IllexForest_EventScript_TriggerEscape::
+	lock
+	specialvar VAR_RESULT, GetPlayerFacingDirection
+	switch VAR_RESULT
+	case DIR_SOUTH, IllexForest_EventScript_TriggerEscapeSouth
+	case DIR_NORTH, IllexForest_EventScript_TriggerEscapeNorth
+	case DIR_EAST, IllexForest_EventScript_TriggerEscapeEast
+	case DIR_WEST, IllexForest_EventScript_TriggerEscapeWest
+	end
+IllexForest_EventScript_TriggerEscapeSouth::
+	applymovement OBJ_EVENT_ID_PLAYER, IllexForest_Movement_PlayerTriggerEscapingSouth
+	waitmovement 0
+	goto IllexForest_EventScript_TriggerEscapeEnd
+
+IllexForest_EventScript_TriggerEscapeNorth::
+	applymovement OBJ_EVENT_ID_PLAYER, IllexForest_Movement_PlayerTriggerEscapingNorth
+	waitmovement 0
+	goto IllexForest_EventScript_TriggerEscapeEnd
+
+IllexForest_EventScript_TriggerEscapeEast::
+	applymovement OBJ_EVENT_ID_PLAYER, IllexForest_Movement_PlayerTriggerEscapingEast
+	waitmovement 0
+	goto IllexForest_EventScript_TriggerEscapeEnd
+
+IllexForest_EventScript_TriggerEscapeWest::
+	applymovement OBJ_EVENT_ID_PLAYER, IllexForest_Movement_PlayerTriggerEscapingWest
+	waitmovement 0
+	goto IllexForest_EventScript_TriggerEscapeEnd
+
+IllexForest_EventScript_TriggerEscapeEnd::
+	msgbox LavenderTown_Text_TriggerEscape
+	closemessage
+	fadescreen FADE_TO_BLACK
+	delay 10
+	addvar VAR_TEMP_0, 1
+	goto_if_eq VAR_TEMP_0, 5, IllexForest_EventScript_TriggerEscapeBlackout
+	fadescreen FADE_FROM_BLACK
+	msgbox LavenderTown_Text_TriggerEscape1
+	closemessage
+	release
+	end
+
+IllexForest_EventScript_TriggerEscapeBlackout::
+	msgbox LavenderTown_Text_TriggerEscapeBlackout
+	warpsilent MAP_ILLEX_FOREST, 255, 3, 38
+	release
+	end
+
 IllexForest_EventScript_Cartel::
 	msgbox IllexForest_Text_Cartel, MSGBOX_SIGN
 	end
@@ -241,4 +289,28 @@ IllexForest_Movement_Celebi_Appear::
 	walk_down
 	walk_down
 	walk_down
+
+IllexForest_Movement_PlayerTriggerEscapingNorth::
+	lock_facing_direction
+	slide_down
+	unlock_facing_direction
+	step_end
+
+IllexForest_Movement_PlayerTriggerEscapingSouth::
+	lock_facing_direction
+	slide_up
+	unlock_facing_direction
+	step_end
+
+IllexForest_Movement_PlayerTriggerEscapingEast::
+	lock_facing_direction
+	slide_left
+	unlock_facing_direction
+	step_end
+
+IllexForest_Movement_PlayerTriggerEscapingWest::
+	lock_facing_direction
+	slide_right
+	unlock_facing_direction
+	step_end
 	step_end

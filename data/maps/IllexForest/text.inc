@@ -7,12 +7,15 @@ IllexForest_Text_Cesar_1::
     .string "Pokéballs.\p"
     .string "Había fabricado una Pokéball\n"
     .string "especial para honrar al\l"
-    .string "guardian del Encinar, ¡pero ese\l"
+    .string "Guardián del Encinar, ¡pero ese\l"
     .string "fantasma me la ha robado!$"
 
 IllexForest_Text_Cesar_2::
     .string "Perdón, no quería aburrirte con mis\n"
-    .string "historias…\n"
+    .string "historias…\p"
+    .string "El Guardián siempre se muestra\n"
+    .string "agradecido con quien libera el Encinar\l"
+    .string "de los malos espíritus.$"
 
 IllexForest_Text_Cesar_3::
     .string "¿Tus Pokémon necesitan un descanso?$"

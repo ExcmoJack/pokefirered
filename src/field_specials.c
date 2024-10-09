@@ -1683,7 +1683,7 @@ void GivePlayerUnownTeam()
     int sentToPc;
     u8 heldItem[2];
     struct Pokemon *mon = AllocZeroed(sizeof(struct Pokemon));
-    int letter[6] = {14, 25, 12, 8, 1, 4};
+    int letter[6] = {14, 25, 12, 4, 1, 8};
     //                Z   O   M  B  I  E
     u32 personality = 0;
     int i;

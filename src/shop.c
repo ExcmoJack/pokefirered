@@ -207,9 +207,9 @@ static u8 CreateShopMenu(u8 martType)
     sShopData.martType = GetMartTypeFromItemList(martType);
     sShopData.selectedRow = 0;
     if (ContextNpcGetTextColor() == NPC_TEXT_COLOR_MALE)
-        gShopData.fontId = FONT_NORMAL;
+        sShopData.fontId = FONT_NORMAL;
     else
-        gShopData.fontId = FONT_NORMAL;
+        sShopData.fontId = FONT_NORMAL;
     
     sShopMenuWindowId = AddWindow(&sShopMenuWindowTemplate);
     SetStdWindowBorderStyle(sShopMenuWindowId, 0);

@@ -209,7 +209,7 @@
       "elevation": 0,
       "var": "VAR_TEMP_F",
       "var_value": "0",
-      "script": "VermilionCity_EventScript_TriggerEscape"
+      "script": "IllexForest_EventScript_TriggerEscape"
     },
     {
       "type": "trigger",
@@ -218,7 +218,7 @@
       "elevation": 0,
       "var": "VAR_TEMP_F",
       "var_value": "0",
-      "script": "VermilionCity_EventScript_TriggerEscape"
+      "script": "IllexForest_EventScript_TriggerEscape"
     },
     {
       "type": "trigger",
@@ -227,7 +227,7 @@
       "elevation": 0,
       "var": "VAR_TEMP_F",
       "var_value": "0",
-      "script": "VermilionCity_EventScript_TriggerEscape"
+      "script": "IllexForest_EventScript_TriggerEscape"
     }
   ],
   "bg_events": [
