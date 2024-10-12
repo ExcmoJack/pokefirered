@@ -4572,6 +4572,90 @@
       "secondary_tileset": "gTileset_HoennBuilding",
       "border_filepath": "data/layouts/TheEnd/border.bin",
       "blockdata_filepath": "data/layouts/TheEnd/map.bin"
+    },
+    {
+      "id": "LAYOUT_RUINS_OF_ALPH_EXTERIOR",
+      "name": "RuinsOfAlph_Exterior_Layout",
+      "width": 34,
+      "height": 48,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_SeviiIslands67",
+      "border_filepath": "data/layouts/RuinsOfAlph_Exterior/border.bin",
+      "blockdata_filepath": "data/layouts/RuinsOfAlph_Exterior/map.bin"
+    },
+    {
+      "id": "LAYOUT_RUINS_OF_ALPH_MAIN_CHAMBER",
+      "name": "RuinsOfAlph_MainChamber_Layout",
+      "width": 23,
+      "height": 32,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_TanobyRuins",
+      "border_filepath": "data/layouts/RuinsOfAlph_MainChamber/border.bin",
+      "blockdata_filepath": "data/layouts/RuinsOfAlph_MainChamber/map.bin"
+    },
+    {
+      "id": "LAYOUT_RUINS_OF_ALPH_KABUTO",
+      "name": "RuinsOfAlph_Kabuto_Layout",
+      "width": 10,
+      "height": 10,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_TanobyRuins",
+      "border_filepath": "data/layouts/RuinsOfAlph_Kabuto/border.bin",
+      "blockdata_filepath": "data/layouts/RuinsOfAlph_Kabuto/map.bin"
+    },
+    {
+      "id": "LAYOUT_RUINS_OF_ALPH_OMANYTE",
+      "name": "RuinsOfAlph_Omanyte_Layout",
+      "width": 10,
+      "height": 10,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_TanobyRuins",
+      "border_filepath": "data/layouts/RuinsOfAlph_Omanyte/border.bin",
+      "blockdata_filepath": "data/layouts/RuinsOfAlph_Omanyte/map.bin"
+    },
+    {
+      "id": "LAYOUT_RUINS_OF_ALPH_AERODACTYL",
+      "name": "RuinsOfAlph_Aerodactyl_Layout",
+      "width": 10,
+      "height": 10,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_TanobyRuins",
+      "border_filepath": "data/layouts/RuinsOfAlph_Aerodactyl/border.bin",
+      "blockdata_filepath": "data/layouts/RuinsOfAlph_Aerodactyl/map.bin"
+    },
+    {
+      "id": "LAYOUT_RUINS_OF_ALPH_HOO_H",
+      "name": "RuinsOfAlph_HooH_Layout",
+      "width": 10,
+      "height": 10,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_TanobyRuins",
+      "border_filepath": "data/layouts/RuinsOfAlph_HooH/border.bin",
+      "blockdata_filepath": "data/layouts/RuinsOfAlph_HooH/map.bin"
+    },
+    {
+      "id": "LAYOUT_UNION_CAVE",
+      "name": "UnionCave_Layout",
+      "width": 20,
+      "height": 20,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_DiglettsCave",
+      "border_filepath": "data/layouts/UnionCave/border.bin",
+      "blockdata_filepath": "data/layouts/UnionCave/map.bin"
     }
   ]
 }

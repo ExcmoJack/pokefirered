@@ -572,6 +572,13 @@
     "PokemonTower_B1F",
     "PokemonTower_B2F",
     "PokemonTower_B3F",
-    "TheEnd"
+    "TheEnd",
+    "RuinsOfAlph_Exterior",
+    "RuinsOfAlph_MainChamber",
+    "RuinsOfAlph_Kabuto",
+    "RuinsOfAlph_Omanyte",
+    "RuinsOfAlph_Aerodactyl",
+    "RuinsOfAlph_HooH",
+    "UnionCave"
   ]
 }

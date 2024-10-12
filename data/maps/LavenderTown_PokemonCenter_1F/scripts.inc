@@ -30,3 +30,13 @@ LavenderTown_PokemonCenter_1F_EventScript_Lass::
 LavenderTown_PokemonCenter_1F_EventScript_Youngster::
 	msgbox LavenderTown_PokemonCenter_1F_Text_PeoplePayForCuboneSkulls, MSGBOX_NPC
 	end
+
+LavenderTown_PokemonCenter_1F_EventScript_SendPlayerToRuins::
+	lock
+	setrespawn SPAWN_LAVENDER_TOWN
+	delay 20
+	playse SE_THUNDER
+	waitse
+	warpteleport MAP_RUINS_OF_ALPH_EXTERIOR, 0, 0, 0
+	release
+	end

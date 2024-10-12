@@ -1422,3 +1422,24 @@ Text_TestMsg::
 
 	.include "data/maps/TheEnd/scripts.inc"
 	.include "data/maps/TheEnd/text.inc"
+
+	.include "data/maps/RuinsOfAlph_Exterior/scripts.inc"
+	.include "data/maps/RuinsOfAlph_Exterior/text.inc"
+
+	.include "data/maps/RuinsOfAlph_MainChamber/scripts.inc"
+	.include "data/maps/RuinsOfAlph_MainChamber/text.inc"
+
+	.include "data/maps/RuinsOfAlph_Kabuto/scripts.inc"
+	.include "data/maps/RuinsOfAlph_Kabuto/text.inc"
+
+	.include "data/maps/RuinsOfAlph_Omanyte/scripts.inc"
+	.include "data/maps/RuinsOfAlph_Omanyte/text.inc"
+
+	.include "data/maps/RuinsOfAlph_Aerodactyl/scripts.inc"
+	.include "data/maps/RuinsOfAlph_Aerodactyl/text.inc"
+
+	.include "data/maps/RuinsOfAlph_HooH/scripts.inc"
+	.include "data/maps/RuinsOfAlph_HooH/text.inc"
+
+	.include "data/maps/UnionCave/scripts.inc"
+	.include "data/maps/UnionCave/text.inc"
