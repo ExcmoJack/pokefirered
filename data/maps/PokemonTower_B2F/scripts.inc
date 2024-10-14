@@ -146,8 +146,14 @@ PokemonTower_B2F_EventScript_Healing::
 	faceplayer
 	msgbox PokemonTower_B2F_Text_Healing_1
 	closemessage
-	call EventScript_OutOfCenterPartyHeal
+	yesnobox
+	goto_if_eq VAR_RESULT, 0, PokemonTower_B2F_EventScript_Teleport
 	msgbox PokemonTower_B2F_Text_Healing_2
 	closemessage
+	release
+	end
+
+PokemonTower_B2F_EventScript_Teleport::
+	warpteleport MAP_POKEMON_TOWER_B2F, 255, 18, 3
 	release
 	end

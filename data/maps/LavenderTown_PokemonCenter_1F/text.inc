@@ -5,8 +5,7 @@ LavenderTown_PokemonCenter_1F_Text_RocketsDoAnythingForMoney::
     .string "too heinous, no crime too wicked!$"
 
 LavenderTown_PokemonCenter_1F_Text_CubonesMotherKilledByRockets::
-    .string "¿Una mala racha?\n"
-    .string "Permíteme que te devuelva\l"
+    .string "Permíteme que te devuelva\n"
     .string "a tu camino.\p"
     .string "1…{PAUSE 10} 2…{PAUSE 10} y…{PAUSE 20} 3…$"
 

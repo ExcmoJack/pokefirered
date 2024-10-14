@@ -1,8 +1,8 @@
 
 PokemonTower_B2F_Text_Healing_1::
-    .string "Ya te falta poco para acabar\n"
-    .string "viaje.\p"
-    .string "Déjame curar a tu equipo.$"
+    .string "Ya falta poco para acabar\n"
+    .string "tu viaje.\p"
+    .string "¿Necesitas volver al Centro Pokémon?$"
 
 PokemonTower_B2F_Text_Healing_2::
     .string "Buena suerte.$"
