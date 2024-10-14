@@ -13,6 +13,8 @@ IllexForest_EventScript_Cesar::
 	lock
 	faceplayer
 	call_if_unset FLAG_TALKED_CESAR, IllexForest_EventScript_Cesar_1
+	checkitem ITEM_GS_BALL, 1
+	call_if_eq VAR_RESULT, 1, IllexForest_EventScript_Cesar_2
 	msgbox IllexForest_Text_Cesar_3, MSGBOX_YESNO
 	call_if_eq VAR_RESULT, YES, EventScript_OutOfCenterPartyHeal
 	msgbox IllexForest_Text_Cesar_4
@@ -25,6 +27,11 @@ IllexForest_EventScript_Cesar_1::
 	msgbox IllexForest_Text_Cesar_1
 	closemessage
 	msgbox IllexForest_Text_Cesar_2
+	closemessage
+	return
+
+IllexForest_EventScript_Cesar_2::
+	msgbox IllexForest_Text_Cesar_5
 	closemessage
 	return
 

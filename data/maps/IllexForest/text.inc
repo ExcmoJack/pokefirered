@@ -23,6 +23,11 @@ IllexForest_Text_Cesar_3::
 IllexForest_Text_Cesar_4::
     .string "Muy bien, ten cuidado por el bosque.$"
 
+IllexForest_Text_Cesar_5::
+    .string "¡Oh, veo que tienes mi Pokéball!\n"
+    .string "¿Por qué no se la presentas al\l"
+    .string "guardián?$"
+
 IllexForest_Text_Gastly_1::
     .string "¡Quiero… devorar tu ser!$"
 
