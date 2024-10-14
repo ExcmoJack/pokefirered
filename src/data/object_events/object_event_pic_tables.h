@@ -1562,15 +1562,15 @@ static const struct SpriteFrameImage sPicTable_Mew[] = {
 };
 
 static const struct SpriteFrameImage sPicTable_Entei[] = {
-    overworld_frame(gObjectEventPic_Entei, 2, 2, 0),
-    overworld_frame(gObjectEventPic_Entei, 2, 2, 0),
-    overworld_frame(gObjectEventPic_Entei, 2, 2, 0),
-    overworld_frame(gObjectEventPic_Entei, 2, 2, 0),
-    overworld_frame(gObjectEventPic_Entei, 2, 2, 0),
-    overworld_frame(gObjectEventPic_Entei, 2, 2, 0),
-    overworld_frame(gObjectEventPic_Entei, 2, 2, 0),
-    overworld_frame(gObjectEventPic_Entei, 2, 2, 0),
-    overworld_frame(gObjectEventPic_Entei, 2, 2, 0),
+    overworld_frame(gObjectEventPic_Entei, 4, 4, 0),
+    overworld_frame(gObjectEventPic_Entei, 4, 4, 1),
+    overworld_frame(gObjectEventPic_Entei, 4, 4, 2),
+    overworld_frame(gObjectEventPic_Entei, 4, 4, 0),
+    overworld_frame(gObjectEventPic_Entei, 4, 4, 0),
+    overworld_frame(gObjectEventPic_Entei, 4, 4, 1),
+    overworld_frame(gObjectEventPic_Entei, 4, 4, 1),
+    overworld_frame(gObjectEventPic_Entei, 4, 4, 2),
+    overworld_frame(gObjectEventPic_Entei, 4, 4, 2),
 };
 
 static const struct SpriteFrameImage sPicTable_Raikou[] = {
@@ -1850,13 +1850,13 @@ static const struct SpriteFrameImage sPicTable_MissingNo[] = {
 };
 
 static const struct SpriteFrameImage sPicTable_Portal[] = {
-    overworld_frame(gObjectEventPic_Portal, 2, 4, 0),
-    overworld_frame(gObjectEventPic_Portal, 2, 4, 0),
-    overworld_frame(gObjectEventPic_Portal, 2, 4, 0),
-    overworld_frame(gObjectEventPic_Portal, 2, 4, 1),
-    overworld_frame(gObjectEventPic_Portal, 2, 4, 2),
-    overworld_frame(gObjectEventPic_Portal, 2, 4, 1),
-    overworld_frame(gObjectEventPic_Portal, 2, 4, 2),
-    overworld_frame(gObjectEventPic_Portal, 2, 4, 1),
-    overworld_frame(gObjectEventPic_Portal, 2, 4, 2),
+    overworld_frame(gObjectEventPic_Portal, 4, 4, 0),
+    overworld_frame(gObjectEventPic_Portal, 4, 4, 2),
+    overworld_frame(gObjectEventPic_Portal, 4, 4, 1),
+    overworld_frame(gObjectEventPic_Portal, 4, 4, 1),
+    overworld_frame(gObjectEventPic_Portal, 4, 4, 2),
+    overworld_frame(gObjectEventPic_Portal, 4, 4, 1),
+    overworld_frame(gObjectEventPic_Portal, 4, 4, 2),
+    overworld_frame(gObjectEventPic_Portal, 4, 4, 2),
+    overworld_frame(gObjectEventPic_Portal, 4, 4, 2),
 };
