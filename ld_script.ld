@@ -610,6 +610,7 @@ SECTIONS {
         data/mystery_event_msg.o(.rodata);
         src/m4a_tables.o(.rodata);
         data/sound_data.o(.rodata);
+        src/sliding_puzzles.o(.rodata);
     } > ROM =0
 
     song_data :
