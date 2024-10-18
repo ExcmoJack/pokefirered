@@ -57,5 +57,11 @@ PokemonTower_7F_Text_EvilGhost::
     .string "¡Te espero al final!$"
 
 PokemonTower_7F_Text_Ghost::
+    .string "Gracias por aceptar a mi hijo…\n"
+    .string "Ahora tu misión continúa…\p"
     .string "Debes salvar al pueblo…\n"
     .string "Rescata al Sr. Fuji…$"
+
+PokemonTower_7F_Text_Ghost_0::
+    .string "{PLAYER}…\n"
+    .string "Debo comprobar tu valía…$"

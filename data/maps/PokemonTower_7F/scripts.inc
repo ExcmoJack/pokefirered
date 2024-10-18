@@ -47,6 +47,11 @@ PokemonTower_7F_EventScript_MrFuji::
 	waitmovement 0
 	removeobject VAR_LAST_TALKED
 	removeobject LOCALID_GHOST
+	delay 5
+	playse SE_M_COSMIC_POWER
+	msgbox PokemonTower_7F_Text_Ghost_0
+	waitse
+	closemessage
 	setwildbattle SPECIES_MAROWAK, 30
 	special StartMarowakBattle
 	waitstate
