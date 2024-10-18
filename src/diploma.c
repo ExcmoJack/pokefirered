@@ -1,6 +1,7 @@
 #include "global.h"
 #include "gflib.h"
 #include "dynamic_placeholder_text_util.h"
+#include "event_data.h"
 #include "menu.h"
 #include "new_menu_helpers.h"
 #include "overworld.h"
@@ -9,6 +10,7 @@
 #include "strings.h"
 #include "task.h"
 #include "constants/sound.h"
+#include "constants/songs.h"
 
 struct Diploma
 {
@@ -42,6 +44,12 @@ static void Task_DiplomaExit(u8);
 static const u32 sDiplomaGfx[] = INCBIN_U32("graphics/diploma/diploma.4bpp.lz");
 static const u32 sDiplomaTilemap[] = INCBIN_U32("graphics/diploma/diploma.bin.lz");
 static const u16 sDiplomaPal[] = INCBIN_U16("graphics/diploma/diploma.gbapal");
+
+static const u32 sDungeonGfx[] = INCBIN_U32("graphics/diploma/dungeon_map_tiles.4bpp.lz");
+static const u32 sDungeon1Tilemap[] = INCBIN_U32("graphics/diploma/dungeon_map_1.bin.lz");
+static const u32 sDungeon2Tilemap[] = INCBIN_U32("graphics/diploma/dungeon_map_2.bin.lz");
+static const u32 sDungeon3Tilemap[] = INCBIN_U32("graphics/diploma/dungeon_map_3.bin.lz");
+static const u16 sDungeonPal[] = INCBIN_U16("graphics/diploma/dungeon_map_tiles.gbapal");
 
 // Leftover text from RSE (some of which is also unused there)
 static const u8 sText_Player[] = _("{HIGHLIGHT TRANSPARENT}プレイヤー");
@@ -118,6 +126,8 @@ static void CB2_Diploma(void)
 
 static void Task_DiplomaInit(u8 taskId)
 {
+    int dungeonYcoord = 0;
+    
     switch (sDiploma->initState)
     {
     case 0:
@@ -131,16 +141,41 @@ static void Task_DiplomaInit(u8 taskId)
             return;
         break;
     case 3:
-        CopyToBgTilemapBuffer(BG_DIPLOMA, sDiplomaTilemap, 0, 0);
+        if (gSpecialVar_0x8008 == 1)
+        {
+            CopyToBgTilemapBuffer(BG_DIPLOMA, sDungeon1Tilemap, 0, 0);
+        }
+        else if (gSpecialVar_0x8008 == 2)
+        {
+            CopyToBgTilemapBuffer(BG_DIPLOMA, sDungeon2Tilemap, 0, 0);
+        }
+        else if (gSpecialVar_0x8008 == 3)
+        {
+            CopyToBgTilemapBuffer(BG_DIPLOMA, sDungeon3Tilemap, 0, 0);
+        }
+        else
+        {
+            CopyToBgTilemapBuffer(BG_DIPLOMA, sDiplomaTilemap, 0, 0);
+        }
         break;
     case 4:
-        if (HasAllMons())
-            SetGpuReg(REG_OFFSET_BG1HOFS, 0x100);
+        if(gSpecialVar_0x8008 > 0 && gSpecialVar_0x8008 < 4)
+        {
+            if(gSaveBlock2Ptr->playerGender == FEMALE)
+                SetGpuReg(REG_OFFSET_BG1HOFS, 0x100);
+            else
+                SetGpuReg(REG_OFFSET_BG1HOFS, 0x0);
+        }
         else
-            SetGpuReg(REG_OFFSET_BG1HOFS, 0);
+        {
+            if (HasAllMons())
+                SetGpuReg(REG_OFFSET_BG1HOFS, 0x100);
+            else
+                SetGpuReg(REG_OFFSET_BG1HOFS, 0);
+        }
         break;
     case 5:
-        DiplomaPrintText();
+        // DiplomaPrintText();
         break;
     case 6:
         CopyBgTilemapBufferToVram(BG_TEXT);
@@ -155,7 +190,7 @@ static void Task_DiplomaInit(u8 taskId)
     default:
         if (gPaletteFade.active)
             break;
-        PlayFanfareByFanfareNum(FANFARE_OBTAIN_BADGE);
+        PlaySE(SE_M_COSMIC_POWER);
         gTasks[taskId].func = Task_HandleDiplomaInput;
     }
     sDiploma->initState++;
@@ -166,7 +201,7 @@ static void Task_HandleDiplomaInput(u8 taskId)
     switch (sDiploma->mainState)
     {
     case 0:
-        if (WaitFanfare(FALSE))
+        if (!IsSEPlaying())
             sDiploma->mainState++;
         break;
     case 1:
@@ -236,14 +271,28 @@ static bool8 DiplomaLoadGfx(void)
         ResetTempTileDataBuffers();
         break;
     case 1:
-        DecompressAndCopyTileDataToVram(BG_DIPLOMA, sDiplomaGfx, 0, 0, 0);
+        if(gSpecialVar_0x8008 > 0 && gSpecialVar_0x8008 < 4)
+        {
+            DecompressAndCopyTileDataToVram(BG_DIPLOMA, sDungeonGfx, 0, 0, 0);
+        }
+        else
+        {
+            DecompressAndCopyTileDataToVram(BG_DIPLOMA, sDiplomaGfx, 0, 0, 0);
+        }
         break;
     case 2:
         if (FreeTempTileDataBuffersIfPossible() == TRUE)
             return FALSE;
         break;
     case 3:
-        LoadPalette(sDiplomaPal, BG_PLTT_ID(0), sizeof(sDiplomaPal));
+        if(gSpecialVar_0x8008 > 0 && gSpecialVar_0x8008 < 4)
+        {
+            LoadPalette(sDungeonPal, BG_PLTT_ID(0), sizeof(sDungeonPal));
+        }
+        else
+        {
+            LoadPalette(sDiplomaPal, BG_PLTT_ID(0), sizeof(sDiplomaPal));
+        }
         // fallthrough
     default:
         // Finished
