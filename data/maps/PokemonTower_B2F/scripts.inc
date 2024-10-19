@@ -141,19 +141,34 @@ PokemonTower_B2F_EventScript_Gastly::
 	release
 	end
 
+PokemonTower_B2F_EventScript_Healing_North::
+	setvar VAR_MAP_SCENE_POKEMON_TOWER_B2F_SET_WARP_BACK, 1
+	goto PokemonTower_B2F_EventScript_Healing
+	end
+
+PokemonTower_B2F_EventScript_Healing_South::
+	setvar VAR_MAP_SCENE_POKEMON_TOWER_B2F_SET_WARP_BACK, 0
+	goto PokemonTower_B2F_EventScript_Healing
+	end
+
 PokemonTower_B2F_EventScript_Healing::
 	lock
+	call_if_set FLAG_HIDE_LORELEI_IN_HER_HOUSE, PokemonTower_B1F_EventScript_ShowChannelerInPokeCenter
 	faceplayer
-	msgbox PokemonTower_B2F_Text_Healing_1
+	msgbox PokemonTower_B2F_Text_Healing_1, MSGBOX_YESNO
 	closemessage
-	yesnobox
-	goto_if_eq VAR_RESULT, 0, PokemonTower_B2F_EventScript_Teleport
+	goto_if_eq VAR_RESULT, YES, PokemonTower_B2F_EventScript_Teleport
 	msgbox PokemonTower_B2F_Text_Healing_2
 	closemessage
 	release
 	end
 
 PokemonTower_B2F_EventScript_Teleport::
-	warpteleport MAP_POKEMON_TOWER_B2F, 255, 18, 3
+	warpteleport MAP_LAVENDER_TOWN_POKEMON_CENTER_1F, 255, 3, 4
 	release
+	end
+
+PokemonTower_B1F_EventScript_ShowChannelerInPokeCenter::
+	clearflag FLAG_HIDE_LORELEI_IN_HER_HOUSE
+	return
 	end

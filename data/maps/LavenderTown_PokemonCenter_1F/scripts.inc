@@ -23,7 +23,8 @@ LavenderTown_PokemonCenter_1F_EventScript_Lass::
 	faceplayer
 	msgbox LavenderTown_PokemonCenter_1F_Text_CubonesMotherKilledByRockets
 	closemessage
-	warpteleport MAP_POKEMON_TOWER_B2F, 255, 18, 3
+	goto_if_eq VAR_MAP_SCENE_POKEMON_TOWER_B2F_SET_WARP_BACK, 1, LavenderTown_PokemonCenter_1F_EventScript_SendPlayerBackToDungeon_North
+	goto_if_eq VAR_MAP_SCENE_POKEMON_TOWER_B2F_SET_WARP_BACK, 0, LavenderTown_PokemonCenter_1F_EventScript_SendPlayerBackToDungeon_South
 	release
 	end
 
@@ -31,12 +32,13 @@ LavenderTown_PokemonCenter_1F_EventScript_Youngster::
 	msgbox LavenderTown_PokemonCenter_1F_Text_PeoplePayForCuboneSkulls, MSGBOX_NPC
 	end
 
-LavenderTown_PokemonCenter_1F_EventScript_SendPlayerToRuins::
-	lock
-	setrespawn SPAWN_LAVENDER_TOWN
-	delay 20
-	playse SE_THUNDER
-	waitse
-	warpteleport MAP_RUINS_OF_ALPH_EXTERIOR, 0, 0, 0
+LavenderTown_PokemonCenter_1F_EventScript_SendPlayerBackToDungeon_North::
+	warpteleport MAP_POKEMON_TOWER_B2F, 255, 18, 3
+	release
+	end
+
+
+LavenderTown_PokemonCenter_1F_EventScript_SendPlayerBackToDungeon_South::
+	warpteleport MAP_POKEMON_TOWER_B2F, 255, 20, 20
 	release
 	end
