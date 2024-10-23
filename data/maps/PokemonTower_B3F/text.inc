@@ -1,7 +1,16 @@
 PokemonTower_B3F_Text_Gengar::
+    .string "Aún tengo algo guardado.$"
+
+PokemonTower_B3F_Text_Gengar_1::
+    .string "¡Ja ja ja!$"
+
+PokemonTower_B3F_Text_Gengar_2::
     .string "Él te espera.$"
 
 PokemonTower_B3F_Text_Dusclops::
+    .string "¿Un combate más?$"
+
+PokemonTower_B3F_Text_Dusclops_2::
     .string "No le hagas esperar.$"
 
 PokemonTower_B3F_Text_MissingnoIntro_1::

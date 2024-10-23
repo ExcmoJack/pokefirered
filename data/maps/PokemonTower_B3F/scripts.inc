@@ -1,5 +1,7 @@
 .equ LOCALID_MISSINGNO, 1
+.equ LOCALID_GENGAR, 3
 .equ LOCALID_REAL_PLAYER, 4
+.equ LOCALID_PORTAL_1, 5
 
 PokemonTower_B3F_MapScripts::
 	map_script MAP_SCRIPT_ON_LOAD, PokemonTower_B3F_OnLoad
@@ -17,7 +19,63 @@ PokemonTower_B3F_OnLoad_1::
 
 PokemonTower_B3F_EventScript_Gengar::
 	textcolor NPC_TEXT_COLOR_EVIL
-	msgbox PokemonTower_B3F_Text_Gengar, MSGBOX_NPC
+	msgbox PokemonTower_B3F_Text_Gengar_2, MSGBOX_NPC
+	end
+
+PokemonTower_B3F_EventScript_Gengar_Trigger::
+	lock
+	textcolor NPC_TEXT_COLOR_EVIL
+	msgbox PokemonTower_B3F_Text_Gengar
+	closemessage
+	delay 20
+	playse SE_THUNDERSTORM_STOP
+	setvar VAR_0x8004, 0  @ Vertical pan
+	setvar VAR_0x8005, 3  @ Horizontal pan
+	setvar VAR_0x8006, 4  @ Num shakes
+	setvar VAR_0x8007, 2  @ Shake delay
+	special ShakeScreen
+	clearflag FLAG_HIDE_LOSTELLE_IN_HER_HOME
+	msgbox PokemonTower_B3F_Text_Gengar_1
+	closemessage
+	delay 20
+	playse SE_THUNDERSTORM_STOP
+	setvar VAR_0x8004, 0  @ Vertical pan
+	setvar VAR_0x8005, 3  @ Horizontal pan
+	setvar VAR_0x8006, 4  @ Num shakes
+	setvar VAR_0x8007, 2  @ Shake delay
+	special ShakeScreen
+	playse SE_M_TELEPORT
+	addobject LOCALID_PORTAL_1
+	applymovement LOCALID_PORTAL_1, Common_Movement_Appear
+	waitmovement 0
+	applymovement LOCALID_GENGAR, PokemonTower_B3F_Movement_Gengar_1
+	waitmovement 0
+	applymovement LOCALID_GENGAR, Common_Movement_Disappear
+	waitmovement 0
+	removeobject LOCALID_GENGAR
+	setflag FLAG_TEMP_1
+	setvar VAR_MAP_SCENE_POKEMON_TOWER_B3F_TRIGGERS, 1
+	release
+	end
+
+PokemonTower_B3F_EventScript_Gengar_SendPlayerToRuins::
+	setrespawn SPAWN_RUINS_OF_ALPH
+	delay 20
+	playse SE_THUNDER
+	waitse
+	warpteleport MAP_RUINS_OF_ALPH_EXTERIOR, 255, 26, 17
+	release
+	end
+
+PokemonTower_B3F_EventScript_Gengar_DesactivarPortal::
+	lock
+	setrespawn SPAWN_LAVENDER_TOWN
+	setvar VAR_MAP_SCENE_POKEMON_TOWER_B3F_TRIGGERS, 2
+	playse SE_M_TELEPORT
+	applymovement LOCALID_PORTAL_1, Common_Movement_Disappear
+	waitmovement 0
+	setflag FLAG_PORTAL_HOUSE1
+	release
 	end
 
 PokemonTower_B3F_EventScript_Dusclops::
@@ -181,6 +239,13 @@ PokemonTower_B3F_EventScript_MissingNo_Action3::
 	waitse
 	closemessage
 	goto PokemonTower_B3F_EventScript_MissingNo_LoopMain
+
+PokemonTower_B3F_Movement_Gengar_1::
+	walk_right
+	walk_right
+	walk_up
+	walk_up
+	step_end
 
 PokemonTower_B3F_Movement_Player_1::
 	walk_up

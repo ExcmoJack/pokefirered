@@ -4588,8 +4588,8 @@
     {
       "id": "LAYOUT_RUINS_OF_ALPH_MAIN_CHAMBER",
       "name": "RuinsOfAlph_MainChamber_Layout",
-      "width": 23,
-      "height": 32,
+      "width": 25,
+      "height": 34,
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_Building",
@@ -4600,8 +4600,8 @@
     {
       "id": "LAYOUT_RUINS_OF_ALPH_KABUTO",
       "name": "RuinsOfAlph_Kabuto_Layout",
-      "width": 10,
-      "height": 10,
+      "width": 25,
+      "height": 36,
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_Building",
@@ -4612,8 +4612,8 @@
     {
       "id": "LAYOUT_RUINS_OF_ALPH_OMANYTE",
       "name": "RuinsOfAlph_Omanyte_Layout",
-      "width": 10,
-      "height": 10,
+      "width": 25,
+      "height": 36,
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_Building",
@@ -4624,8 +4624,8 @@
     {
       "id": "LAYOUT_RUINS_OF_ALPH_AERODACTYL",
       "name": "RuinsOfAlph_Aerodactyl_Layout",
-      "width": 10,
-      "height": 10,
+      "width": 25,
+      "height": 36,
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_Building",
@@ -4636,8 +4636,8 @@
     {
       "id": "LAYOUT_RUINS_OF_ALPH_HOO_H",
       "name": "RuinsOfAlph_HooH_Layout",
-      "width": 10,
-      "height": 10,
+      "width": 25,
+      "height": 36,
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_Building",
@@ -4656,6 +4656,18 @@
       "secondary_tileset": "gTileset_DiglettsCave",
       "border_filepath": "data/layouts/UnionCave/border.bin",
       "blockdata_filepath": "data/layouts/UnionCave/map.bin"
+    },
+    {
+      "id": "LAYOUT_RUINS_OF_ALPH_OFFICE",
+      "name": "RuinsOfAlph_Office_Layout",
+      "width": 10,
+      "height": 9,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Lab",
+      "border_filepath": "data/layouts/RuinsOfAlph_Office/border.bin",
+      "blockdata_filepath": "data/layouts/RuinsOfAlph_Office/map.bin"
     }
   ]
 }

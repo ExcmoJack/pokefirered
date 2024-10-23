@@ -1444,3 +1444,6 @@ Text_TestMsg::
 
 	.include "data/maps/UnionCave/scripts.inc"
 	.include "data/maps/UnionCave/text.inc"
+
+	.include "data/maps/RuinsOfAlph_Office/scripts.inc"
+	.include "data/maps/RuinsOfAlph_Office/text.inc"

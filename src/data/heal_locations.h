@@ -23,6 +23,7 @@ static const struct HealLocation sSpawnPoints[] =
     [SPAWN_MT_PYRE - 1] = {MAP_GROUP(MT_PYRE_1F), MAP_NUM(MT_PYRE_1F), 20, 9},
     [SPAWN_ILLEX_FOREST - 1] = {MAP_GROUP(ILLEX_FOREST), MAP_NUM(ILLEX_FOREST), 7, 31},
     [SPAWN_THE_END - 1] = {MAP_GROUP(THE_END), MAP_NUM(THE_END), 10, 10},
+    [SPAWN_RUINS_OF_ALPH - 1] = {MAP_GROUP(RUINS_OF_ALPH_EXTERIOR), MAP_NUM(RUINS_OF_ALPH_EXTERIOR), 26, 17},
 };
 
 static const u16 sWhiteoutRespawnHealCenterMapIdxs[][2] =
@@ -50,6 +51,7 @@ static const u16 sWhiteoutRespawnHealCenterMapIdxs[][2] =
     [SPAWN_MT_PYRE - 1] = {MAP_GROUP(MT_PYRE_1F), MAP_NUM(MT_PYRE_1F)},
     [SPAWN_ILLEX_FOREST - 1] = {MAP_GROUP(ILLEX_FOREST), MAP_NUM(ILLEX_FOREST)},
     [SPAWN_THE_END - 1] = {MAP_GROUP(THE_END), MAP_NUM(THE_END)},
+    [SPAWN_RUINS_OF_ALPH - 1] = {MAP_GROUP(RUINS_OF_ALPH_EXTERIOR), MAP_NUM(RUINS_OF_ALPH_EXTERIOR)},
 };
 
 static const u8 sWhiteoutRespawnHealerNpcIds[] =
@@ -77,4 +79,5 @@ static const u8 sWhiteoutRespawnHealerNpcIds[] =
     [SPAWN_MT_PYRE - 1] = 1,
     [SPAWN_ILLEX_FOREST - 1] = 9,
     [SPAWN_THE_END - 1] = 1,
+    [SPAWN_RUINS_OF_ALPH - 1] = 1,
 };
