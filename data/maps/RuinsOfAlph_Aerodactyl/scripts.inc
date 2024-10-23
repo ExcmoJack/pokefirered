@@ -21,6 +21,7 @@ RuinsOfAlph_Aerodactyl_EventScript_PuzzleSolved::
 	special DrawWholeMapView
 	playse SE_UNLOCK
 	setflag FLAG_RUINS_OF_ALPH_AERODACTYL_DONE
+	addvar VAR_MAP_SCENE_RUINS_OF_ALPH_UNOWN_AMOUNT, 1
 	waitse
 	delay 10
 	setvar VAR_0x8004, 1  @ Vertical pan

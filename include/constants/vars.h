@@ -206,7 +206,7 @@
 #define VAR_MAP_SCENE_POKEMON_TOWER_B1F_TIMES_ASKED      0x4098
 #define VAR_MAP_SCENE_POKEMON_TOWER_B2F_SET_WARP_BACK    0x4099
 #define VAR_MAP_SCENE_POKEMON_TOWER_B3F_TRIGGERS         0x409A
-#define VAR_0x409B                 0x409B
+#define VAR_MAP_SCENE_RUINS_OF_ALPH_UNOWN_AMOUNT         0x409B
 #define VAR_0x409C                 0x409C
 #define VAR_0x409D                 0x409D
 #define VAR_0x409E                 0x409E

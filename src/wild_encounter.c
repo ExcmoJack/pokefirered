@@ -206,19 +206,25 @@ static u16 GetCurrentMapWildMonHeaderId(void)
 
 static bool8 UnlockedTanobyOrAreNotInTanoby(void)
 {
-    if (FlagGet(FLAG_SYS_UNLOCKED_TANOBY_RUINS))
+    if (VarGet(VAR_MAP_SCENE_RUINS_OF_ALPH_UNOWN_AMOUNT) > 0)
         return TRUE;
-    if (gSaveBlock1Ptr->location.mapGroup != MAP_GROUP(SEVEN_ISLAND_TANOBY_RUINS_DILFORD_CHAMBER))
+    if (gSaveBlock1Ptr->location.mapGroup != MAP_GROUP(RUINS_OF_ALPH_MAIN_CHAMBER))
         return TRUE;
-    if (!(gSaveBlock1Ptr->location.mapNum == MAP_NUM(SEVEN_ISLAND_TANOBY_RUINS_MONEAN_CHAMBER)
-    ||  gSaveBlock1Ptr->location.mapNum == MAP_NUM(SEVEN_ISLAND_TANOBY_RUINS_LIPTOO_CHAMBER)
-    ||  gSaveBlock1Ptr->location.mapNum == MAP_NUM(SEVEN_ISLAND_TANOBY_RUINS_WEEPTH_CHAMBER)
-    ||  gSaveBlock1Ptr->location.mapNum == MAP_NUM(SEVEN_ISLAND_TANOBY_RUINS_DILFORD_CHAMBER)
-    ||  gSaveBlock1Ptr->location.mapNum == MAP_NUM(SEVEN_ISLAND_TANOBY_RUINS_SCUFIB_CHAMBER)
-    ||  gSaveBlock1Ptr->location.mapNum == MAP_NUM(SEVEN_ISLAND_TANOBY_RUINS_RIXY_CHAMBER)
-    ||  gSaveBlock1Ptr->location.mapNum == MAP_NUM(SEVEN_ISLAND_TANOBY_RUINS_VIAPOIS_CHAMBER)
-    ))
+    if (gSaveBlock1Ptr->location.mapNum != MAP_NUM(RUINS_OF_ALPH_MAIN_CHAMBER))
         return TRUE;
+    // if (FlagGet(FLAG_SYS_UNLOCKED_TANOBY_RUINS))
+    //     return TRUE;
+    // if (gSaveBlock1Ptr->location.mapGroup != MAP_GROUP(SEVEN_ISLAND_TANOBY_RUINS_DILFORD_CHAMBER))
+    // //     return TRUE;
+    // if (!(gSaveBlock1Ptr->location.mapNum == MAP_NUM(SEVEN_ISLAND_TANOBY_RUINS_MONEAN_CHAMBER)
+    // ||  gSaveBlock1Ptr->location.mapNum == MAP_NUM(SEVEN_ISLAND_TANOBY_RUINS_LIPTOO_CHAMBER)
+    // ||  gSaveBlock1Ptr->location.mapNum == MAP_NUM(SEVEN_ISLAND_TANOBY_RUINS_WEEPTH_CHAMBER)
+    // ||  gSaveBlock1Ptr->location.mapNum == MAP_NUM(SEVEN_ISLAND_TANOBY_RUINS_DILFORD_CHAMBER)
+    // ||  gSaveBlock1Ptr->location.mapNum == MAP_NUM(SEVEN_ISLAND_TANOBY_RUINS_SCUFIB_CHAMBER)
+    // ||  gSaveBlock1Ptr->location.mapNum == MAP_NUM(SEVEN_ISLAND_TANOBY_RUINS_RIXY_CHAMBER)
+    // ||  gSaveBlock1Ptr->location.mapNum == MAP_NUM(SEVEN_ISLAND_TANOBY_RUINS_VIAPOIS_CHAMBER)
+    // ))
+    //     return TRUE;
     return FALSE;
 }
 
@@ -226,6 +232,9 @@ static void GenerateWildMon(u16 species, u8 level, u8 slot)
 {
     u32 personality;
     s8 chamber;
+    u8 letter = 0;
+    u8 amount = 0;
+    u16 ruinsOfAlphStatus = VarGet(VAR_MAP_SCENE_RUINS_OF_ALPH_UNOWN_AMOUNT);
     ZeroEnemyPartyMons();
     if (species != SPECIES_UNOWN)
     {
@@ -233,8 +242,26 @@ static void GenerateWildMon(u16 species, u8 level, u8 slot)
     }
     else
     {
-        chamber = gSaveBlock1Ptr->location.mapNum - MAP_NUM(SEVEN_ISLAND_TANOBY_RUINS_MONEAN_CHAMBER);
-        personality = GenerateUnownPersonalityByLetter(sUnownLetterSlots[chamber][slot]);
+        switch(ruinsOfAlphStatus)
+        {
+            case 1:
+                amount = 10;
+                break;
+            case 2:
+                amount = 18;
+                break;
+            case 3:
+                amount = 23;
+                break;
+            default:
+                amount = NUM_UNOWN_FORMS - 1;
+                break;
+        }
+        letter = Random() % amount;
+        VarSet(VAR_0x409C, letter);
+        personality = GenerateUnownPersonalityByLetter(letter);
+        // chamber = gSaveBlock1Ptr->location.mapNum - MAP_NUM(SEVEN_ISLAND_TANOBY_RUINS_MONEAN_CHAMBER);
+        // personality = GenerateUnownPersonalityByLetter(sUnownLetterSlots[chamber][slot]);
         CreateMon(&gEnemyParty[0], species, level, USE_RANDOM_IVS, TRUE, personality, FALSE, 0);
     }
 }
