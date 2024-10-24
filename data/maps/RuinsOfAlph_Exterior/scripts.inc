@@ -1,2 +1,81 @@
+.set LOCALID_LAPRAS_N, 2
+.set LOCALID_LAPRAS_S, 3
+
 RuinsOfAlph_Exterior_MapScripts::
 	.byte 0
+
+RuinsOfAlph_Exterior_EventScript_Lapras_N::
+	lock
+	msgbox RuinsOfAlph_Exterior_Text_Lapras MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, YES, RuinsOfAlph_Exterior_EventScript_LaprasMovement_N
+	release
+	end
+
+RuinsOfAlph_Exterior_EventScript_LaprasMovement_N::
+	applymovement OBJ_EVENT_ID_PLAYER, RuinsOfAlph_Exterior_Movement_PlayerMovement_Down
+	waitmovement OBJ_EVENT_ID_PLAYER
+	applymovement OBJ_EVENT_ID_PLAYER, RuinsOfAlph_Exterior_Movement_PlayerMovement_Hide
+	waitmovement OBJ_EVENT_ID_PLAYER
+	applymovement LOCALID_LAPRAS_N, RuinsOfAlph_Exterior_Movement_LaprasMovement_Down
+	applymovement OBJ_EVENT_ID_PLAYER, RuinsOfAlph_Exterior_Movement_LaprasMovement_Down
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, RuinsOfAlph_Exterior_Movement_PlayerMovement_Show
+	waitmovement OBJ_EVENT_ID_PLAYER
+	applymovement OBJ_EVENT_ID_PLAYER, RuinsOfAlph_Exterior_Movement_PlayerMovement_Down
+	waitmovement OBJ_EVENT_ID_PLAYER
+	clearflag FLAG_HIDE_LAPRAS_S_RUINS_OF_ALPH
+	setflag FLAG_HIDE_LAPRAS_N_RUINS_OF_ALPH
+	release
+	end
+
+RuinsOfAlph_Exterior_EventScript_Lapras_S::
+	lock
+	msgbox RuinsOfAlph_Exterior_Text_Lapras MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, YES, RuinsOfAlph_Exterior_EventScript_LaprasMovement_S
+	release
+	end
+
+RuinsOfAlph_Exterior_EventScript_LaprasMovement_S::
+	applymovement OBJ_EVENT_ID_PLAYER, RuinsOfAlph_Exterior_Movement_PlayerMovement_Up
+	waitmovement OBJ_EVENT_ID_PLAYER
+	applymovement OBJ_EVENT_ID_PLAYER, RuinsOfAlph_Exterior_Movement_PlayerMovement_Hide
+	waitmovement OBJ_EVENT_ID_PLAYER
+	applymovement LOCALID_LAPRAS_S, RuinsOfAlph_Exterior_Movement_LaprasMovement_Up
+	applymovement OBJ_EVENT_ID_PLAYER, RuinsOfAlph_Exterior_Movement_LaprasMovement_Up
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, RuinsOfAlph_Exterior_Movement_PlayerMovement_Show
+	waitmovement OBJ_EVENT_ID_PLAYER
+	applymovement OBJ_EVENT_ID_PLAYER, RuinsOfAlph_Exterior_Movement_PlayerMovement_Up
+	waitmovement OBJ_EVENT_ID_PLAYER
+	clearflag FLAG_HIDE_LAPRAS_N_RUINS_OF_ALPH
+	setflag FLAG_HIDE_LAPRAS_S_RUINS_OF_ALPH
+	release
+	end
+
+RuinsOfAlph_Exterior_Movement_LaprasMovement_Down::
+	walk_down
+	walk_down
+	walk_down
+	step_end
+
+RuinsOfAlph_Exterior_Movement_LaprasMovement_Up::
+	walk_up
+	walk_up
+	walk_up
+	step_end
+
+RuinsOfAlph_Exterior_Movement_PlayerMovement_Down::
+	walk_down
+	step_end
+
+RuinsOfAlph_Exterior_Movement_PlayerMovement_Up::
+	walk_up
+	step_end
+
+RuinsOfAlph_Exterior_Movement_PlayerMovement_Hide::
+	set_invisible
+	step_end
+
+RuinsOfAlph_Exterior_Movement_PlayerMovement_Show::
+	set_visible
+	step_end

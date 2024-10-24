@@ -13,7 +13,17 @@
 .set LOCALID_ENTEI,		13
 
 RuinsOfAlph_MainChamber_MapScripts::
+	map_script MAP_SCRIPT_ON_LOAD, RuinsOfAlph_MainChamber_OnLoad
 	.byte 0
+
+RuinsOfAlph_MainChamber_OnLoad::
+	goto_if_set FLAG_HIDE_FISHER_RUINS_OF_ALPH, RuinsOfAlph_MainChamber_ShowLaprasN
+	end
+
+RuinsOfAlph_MainChamber_ShowLaprasN::
+	clearflag FLAG_HIDE_LAPRAS_N_RUINS_OF_ALPH
+	setflag FLAG_HIDE_LAPRAS_S_RUINS_OF_ALPH
+	end
 
 RuinsOfAlph_MainChamber_EventScript_Fisherman::
 	goto_if_set FLAG_HIDE_GHOSTS_1_RUINS_OF_ALPH, RuinsOfAlph_MainChamber_EventScript_SaveFisherman
@@ -33,6 +43,7 @@ RuinsOfAlph_MainChamber_EventScript_SaveFisherman::
 	fadescreen FADE_TO_BLACK
 	setflag FLAG_HIDE_FISHER_RUINS_OF_ALPH
 	clearflag FLAG_HIDE_FISHER_RUINS_OF_ALPH_EXT
+	clearflag FLAG_HIDE_LAPRAS_N_RUINS_OF_ALPH
 	removeobject LOCALID_FISHER
 	fadescreen FADE_FROM_BLACK
 	end
