@@ -5,6 +5,7 @@
 
 PokemonTower_B3F_MapScripts::
 	map_script MAP_SCRIPT_ON_LOAD, PokemonTower_B3F_OnLoad
+	map_script MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE, PokemonTower_B3F_OnWarpTable
 	.byte 0
 
 PokemonTower_B3F_OnLoad::
@@ -16,6 +17,10 @@ PokemonTower_B3F_OnLoad::
 PokemonTower_B3F_OnLoad_1::
 	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_WOMAN_2
 	end
+
+PokemonTower_B3F_OnWarpTable::
+	map_script_2 VAR_MAP_SCENE_POKEMON_TOWER_B3F_TRIGGERS, 2, PokemonTower_B3F_EventScript_Gengar_DesactivarPortal
+	.2byte 0
 
 PokemonTower_B3F_EventScript_Gengar::
 	textcolor NPC_TEXT_COLOR_EVIL
@@ -34,7 +39,7 @@ PokemonTower_B3F_EventScript_Gengar_Trigger::
 	setvar VAR_0x8006, 4  @ Num shakes
 	setvar VAR_0x8007, 2  @ Shake delay
 	special ShakeScreen
-	clearflag FLAG_HIDE_LOSTELLE_IN_HER_HOME
+	clearflag FLAG_PORTAL_1_POKEMON_TOWER_B3F
 	msgbox PokemonTower_B3F_Text_Gengar_1
 	closemessage
 	delay 20
@@ -53,13 +58,13 @@ PokemonTower_B3F_EventScript_Gengar_Trigger::
 	applymovement LOCALID_GENGAR, Common_Movement_Disappear
 	waitmovement 0
 	removeobject LOCALID_GENGAR
-	setflag FLAG_TEMP_1
+	setflag FLAG_GENGAR_POKEMON_TOWER_B3F
 	setvar VAR_MAP_SCENE_POKEMON_TOWER_B3F_TRIGGERS, 1
 	release
 	end
 
 PokemonTower_B3F_EventScript_Gengar_SendPlayerToRuins::
-	setrespawn SPAWN_RUINS_OF_ALPH
+	setrespawn SPAWN_LAVENDER_TOWN
 	delay 20
 	playse SE_THUNDER
 	waitse
@@ -70,11 +75,11 @@ PokemonTower_B3F_EventScript_Gengar_SendPlayerToRuins::
 PokemonTower_B3F_EventScript_Gengar_DesactivarPortal::
 	lock
 	setrespawn SPAWN_LAVENDER_TOWN
-	setvar VAR_MAP_SCENE_POKEMON_TOWER_B3F_TRIGGERS, 2
+	setvar VAR_MAP_SCENE_POKEMON_TOWER_B3F_TRIGGERS, 3
 	playse SE_M_TELEPORT
 	applymovement LOCALID_PORTAL_1, Common_Movement_Disappear
 	waitmovement 0
-	setflag FLAG_PORTAL_HOUSE1
+	setflag FLAG_PORTAL_1_POKEMON_TOWER_B3F
 	release
 	end
 

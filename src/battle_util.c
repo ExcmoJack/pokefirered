@@ -1721,13 +1721,13 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                     }
                     break;
                 case WEATHER_SANDSTORM:
-                    if (!(gBattleWeather & B_WEATHER_SANDSTORM))
-                    {
-                        gBattleWeather = B_WEATHER_SANDSTORM;
-                        gBattleScripting.animArg1 = B_ANIM_SANDSTORM_CONTINUES;
-                        gBattleScripting.battler = battler;
-                        effect++;
-                    }
+                    // if (!(gBattleWeather & B_WEATHER_SANDSTORM))
+                    // {
+                    //     gBattleWeather = B_WEATHER_SANDSTORM;
+                    //     gBattleScripting.animArg1 = B_ANIM_SANDSTORM_CONTINUES;
+                    //     gBattleScripting.battler = battler;
+                    //     effect++;
+                    // }
                     break;
                 case WEATHER_DROUGHT:
                     if (!(gBattleWeather & B_WEATHER_SUN))

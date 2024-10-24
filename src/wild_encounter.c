@@ -258,7 +258,6 @@ static void GenerateWildMon(u16 species, u8 level, u8 slot)
                 break;
         }
         letter = Random() % amount;
-        VarSet(VAR_0x409C, letter);
         personality = GenerateUnownPersonalityByLetter(letter);
         // chamber = gSaveBlock1Ptr->location.mapNum - MAP_NUM(SEVEN_ISLAND_TANOBY_RUINS_MONEAN_CHAMBER);
         // personality = GenerateUnownPersonalityByLetter(sUnownLetterSlots[chamber][slot]);
