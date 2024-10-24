@@ -135,7 +135,7 @@ LavenderTown_VolunteerPokemonHouse_EventScript_HistoriaFuji::
 	end
 	
 	LavenderTown_VolunteerPokemonHouse_EventScript_SendPlayerToMtPyre::
-	setrespawn SPAWN_MT_PYRE
+	setrespawn SPAWN_LAVENDER_TOWN
 	delay 20
 	playse SE_THUNDER
 	waitse

@@ -130,7 +130,7 @@ LavenderTown_House2_EventScript_InspectorHistoria::
 	end
 
 LavenderTown_House2_EventScript_SendPlayerToIlexForest::
-	setrespawn SPAWN_ILLEX_FOREST
+	setrespawn SPAWN_LAVENDER_TOWN
 	delay 20
 	playse SE_THUNDER
 	waitse
