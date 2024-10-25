@@ -31,11 +31,12 @@ RuinsOfAlph_MainChamber_EventScript_Fisherman::
 	end
 
 RuinsOfAlph_MainChamber_EventScript_Lady::
+	goto_if_set FLAG_HIDE_GHOSTS_2_RUINS_OF_ALPH, RuinsOfAlph_MainChamber_EventScript_SaveLady
 	msgbox RuinsOfAlph_MainChamber_Text_Lady_1 MSGBOX_NPC
 	end
 
 RuinsOfAlph_MainChamber_EventScript_MrFuji::
-	msgbox RuinsOfAlph_MainChamber_Text_MrFuji_1 MSGBOX_NPC
+	goto_if_set FLAG_HIDE_GHOSTS_4_RUINS_OF_ALPH, RuinsOfAlph_MainChamber_EventScript_SaveFuji
 	end
 
 RuinsOfAlph_MainChamber_EventScript_SaveFisherman::
@@ -109,6 +110,10 @@ RuinsOfAlph_MainChamber_EventScript_HaunterBattle::
 	setvar VAR_MAP_SCENE_RUINS_OF_ALPH_STATUS, 4
 	release
 	end
+RuinsOfAlph_MainChamber_EventScript_EnteiEvent_L::
+	setflag FLAG_TEMP_A
+	goto RuinsOfAlph_MainChamber_EventScript_EnteiEvent
+	end
 
 RuinsOfAlph_MainChamber_EventScript_EnteiEvent::
 	lock
@@ -117,6 +122,7 @@ RuinsOfAlph_MainChamber_EventScript_EnteiEvent::
 	special SpawnCameraObject
 	applymovement OBJ_EVENT_ID_CAMERA, RuinsOfAlph_MainChamber_Movement_Cam_1
 	waitmovement OBJ_EVENT_ID_CAMERA
+	call_if_set FLAG_TEMP_A, RuinsOfAlph_MainChamber_EventScript_EnteiEvent_MoveRight_1
 	clearflag FLAG_HIDE_ENTEI_RUINS_OF_ALPH
 	addobject LOCALID_ENTEI
 	applymovement LOCALID_ENTEI, Common_Movement_Appear
@@ -133,6 +139,9 @@ RuinsOfAlph_MainChamber_EventScript_EnteiEvent::
 	delay 1
 	fadescreen FADE_FROM_WHITE
 	applymovement OBJ_EVENT_ID_PLAYER, RuinsOfAlph_MainChamber_Movement_Cam_1
+	waitmovement OBJ_EVENT_ID_PLAYER
+	call_if_set FLAG_TEMP_A, RuinsOfAlph_MainChamber_EventScript_EnteiEvent_MoveRight_2
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterUp
 	waitmovement OBJ_EVENT_ID_PLAYER
 	textcolor NPC_TEXT_COLOR_EVIL
 	msgbox RuinsOfAlph_MainChamber_Text_Entei_1
@@ -201,6 +210,18 @@ RuinsOfAlph_MainChamber_EventScript_EnteiEvent::
 	release
 	end
 
+RuinsOfAlph_MainChamber_EventScript_EnteiEvent_MoveRight_1::
+	applymovement OBJ_EVENT_ID_CAMERA, RuinsOfAlph_MainChamber_Movement_Cam_2
+	waitmovement OBJ_EVENT_ID_CAMERA
+	return
+	end
+
+RuinsOfAlph_MainChamber_EventScript_EnteiEvent_MoveRight_2::
+	applymovement OBJ_EVENT_ID_PLAYER, RuinsOfAlph_MainChamber_Movement_Cam_2
+	waitmovement OBJ_EVENT_ID_PLAYER
+	return
+	end
+
 RuinsOfAlph_MainChamber_EventScript_GastlyBattle::
 	setwildbattle SPECIES_GASTLY, 30, ITEM_BRIGHT_POWDER
 	dowildbattle
@@ -264,6 +285,6 @@ RuinsOfAlph_Movement_PlayerTriggerEscapingSouth::
 
 RuinsOfAlph_Movement_PlayerTriggerEscapingWest::
 	lock_facing_direction
-	slide_up
+	slide_right
 	unlock_facing_direction
 	step_end
