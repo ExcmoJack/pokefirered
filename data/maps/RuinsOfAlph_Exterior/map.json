@@ -56,6 +56,34 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
       "flag": "FLAG_HIDE_LAPRAS_S_RUINS_OF_ALPH"
+    },
+    {
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_UNOWN_EXCLAM",
+      "x": 20,
+      "y": 40,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_ROTATE_CLOCKWISE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "RuinsOfAlph_Exterior_EventScript_UnownExclam",
+      "flag": "FLAG_HIDE_UNOWN_EXCLAM_RUINS_OF_ALPH"
+    },
+    {
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_UNOWN_QUESTION",
+      "x": 4,
+      "y": 42,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_ROTATE_CLOCKWISE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "RuinsOfAlph_Exterior_EventScript_UnownQuestion",
+      "flag": "FLAG_HIDE_UNOWN_QUESTION_RUINS_OF_ALPH"
     }
   ],
   "warp_events": [

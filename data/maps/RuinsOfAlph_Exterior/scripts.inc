@@ -12,6 +12,7 @@ RuinsOfAlph_Exterior_EventScript_Lapras_N::
 	end
 
 RuinsOfAlph_Exterior_EventScript_LaprasMovement_N::
+	closemessage
 	applymovement OBJ_EVENT_ID_PLAYER, RuinsOfAlph_Exterior_Movement_PlayerMovement_Down
 	waitmovement OBJ_EVENT_ID_PLAYER
 	applymovement OBJ_EVENT_ID_PLAYER, RuinsOfAlph_Exterior_Movement_PlayerMovement_Hide
@@ -36,6 +37,7 @@ RuinsOfAlph_Exterior_EventScript_Lapras_S::
 	end
 
 RuinsOfAlph_Exterior_EventScript_LaprasMovement_S::
+	closemessage
 	applymovement OBJ_EVENT_ID_PLAYER, RuinsOfAlph_Exterior_Movement_PlayerMovement_Up
 	waitmovement OBJ_EVENT_ID_PLAYER
 	applymovement OBJ_EVENT_ID_PLAYER, RuinsOfAlph_Exterior_Movement_PlayerMovement_Hide
@@ -49,6 +51,46 @@ RuinsOfAlph_Exterior_EventScript_LaprasMovement_S::
 	waitmovement OBJ_EVENT_ID_PLAYER
 	clearflag FLAG_HIDE_LAPRAS_N_RUINS_OF_ALPH
 	setflag FLAG_HIDE_LAPRAS_S_RUINS_OF_ALPH
+	release
+	end
+
+RuinsOfAlph_Exterior_EventScript_UnownExclam::
+	lock
+	playse SE_ROTATING_GATE
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
+	waitmovement OBJ_EVENT_ID_PLAYER
+	waitse
+	delay 10
+	playse SE_WARP_IN
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_Disappear
+	waitmovement OBJ_EVENT_ID_PLAYER
+	waitse
+	applymovement OBJ_EVENT_ID_PLAYER, RuinsOfAlph_Exterior_Movement_PlayerMovement_UnownExclam
+	waitmovement OBJ_EVENT_ID_PLAYER
+	playse SE_WARP_OUT
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_Appear
+	waitmovement OBJ_EVENT_ID_PLAYER
+	waitse
+	release
+	end
+
+RuinsOfAlph_Exterior_EventScript_UnownQuestion::
+	lock
+	playse SE_ROTATING_GATE
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_QuestionMark
+	waitmovement OBJ_EVENT_ID_PLAYER
+	waitse
+	delay 10
+	playse SE_WARP_IN
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_Disappear
+	waitmovement OBJ_EVENT_ID_PLAYER
+	waitse
+	applymovement OBJ_EVENT_ID_PLAYER, RuinsOfAlph_Exterior_Movement_PlayerMovement_UnownQuestion
+	waitmovement OBJ_EVENT_ID_PLAYER
+	playse SE_WARP_OUT
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_Appear
+	waitmovement OBJ_EVENT_ID_PLAYER
+	waitse
 	release
 	end
 
@@ -78,4 +120,35 @@ RuinsOfAlph_Exterior_Movement_PlayerMovement_Hide::
 
 RuinsOfAlph_Exterior_Movement_PlayerMovement_Show::
 	set_visible
+	step_end
+
+RuinsOfAlph_Exterior_Movement_PlayerMovement_UnownExclam::
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_down
+	step_end
+
+RuinsOfAlph_Exterior_Movement_PlayerMovement_UnownQuestion::
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
 	step_end

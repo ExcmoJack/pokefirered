@@ -159,6 +159,8 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Dusclops;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Farfetchd;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_MissingNo;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Portal;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Unown_Exclam;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Unown_Question;
 
 
 const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM_OBJ_EVENT_GFX] = {
@@ -323,4 +325,6 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_FARFETCHD]                = &gObjectEventGraphicsInfo_Farfetchd,
     [OBJ_EVENT_GFX_MISSINGNO]                = &gObjectEventGraphicsInfo_MissingNo,
     [OBJ_EVENT_GFX_PORTAL]                   = &gObjectEventGraphicsInfo_Portal,
+    [OBJ_EVENT_GFX_UNOWN_EXCLAM]             = &gObjectEventGraphicsInfo_Unown_Exclam,
+    [OBJ_EVENT_GFX_UNOWN_QUESTION]           = &gObjectEventGraphicsInfo_Unown_Question,
 };

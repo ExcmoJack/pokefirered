@@ -162,8 +162,10 @@
 #define OBJ_EVENT_GFX_FARFETCHD 158
 #define OBJ_EVENT_GFX_MISSINGNO 159
 #define OBJ_EVENT_GFX_PORTAL 160
+#define OBJ_EVENT_GFX_UNOWN_EXCLAM 161
+#define OBJ_EVENT_GFX_UNOWN_QUESTION 162
 
-#define NUM_OBJ_EVENT_GFX     161
+#define NUM_OBJ_EVENT_GFX     163
 
 // These are dynamic object gfx ids.
 // They correspond with the values of the VAR_OBJ_GFX_ID_X vars.

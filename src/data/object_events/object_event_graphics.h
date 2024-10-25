@@ -240,3 +240,5 @@ const u16 gObjectEventPic_MrMime[] = INCBIN_U16("graphics/object_events/pics/pok
 const u16 gObjectEventPic_Dusclops[] = INCBIN_U16("graphics/object_events/pics/pokemon/dusclops.4bpp");
 const u16 gObjectEventPic_MissingNo[] = INCBIN_U16("graphics/object_events/pics/pokemon/missingno.4bpp");
 const u16 gObjectEventPic_Portal[] = INCBIN_U16("graphics/object_events/pics/people/portal.4bpp");
+const u16 gObjectEventPic_Unown_Exclam[] = INCBIN_U16("graphics/object_events/pics/pokemon/unown_exclam.4bpp");
+const u16 gObjectEventPic_Unown_Question[] = INCBIN_U16("graphics/object_events/pics/pokemon/unown_question.4bpp");

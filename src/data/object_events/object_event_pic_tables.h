@@ -1860,3 +1860,27 @@ static const struct SpriteFrameImage sPicTable_Portal[] = {
     overworld_frame(gObjectEventPic_Portal, 4, 4, 2),
     overworld_frame(gObjectEventPic_Portal, 4, 4, 2),
 };
+
+static const struct SpriteFrameImage sPicTable_Unown_Exclam[] = {
+    overworld_frame(gObjectEventPic_Unown_Exclam, 4, 4, 0),
+    overworld_frame(gObjectEventPic_Unown_Exclam, 4, 4, 1),
+    overworld_frame(gObjectEventPic_Unown_Exclam, 4, 4, 2),
+    overworld_frame(gObjectEventPic_Unown_Exclam, 4, 4, 0),
+    overworld_frame(gObjectEventPic_Unown_Exclam, 4, 4, 0),
+    overworld_frame(gObjectEventPic_Unown_Exclam, 4, 4, 1),
+    overworld_frame(gObjectEventPic_Unown_Exclam, 4, 4, 1),
+    overworld_frame(gObjectEventPic_Unown_Exclam, 4, 4, 2),
+    overworld_frame(gObjectEventPic_Unown_Exclam, 4, 4, 2),
+};
+
+static const struct SpriteFrameImage sPicTable_Unown_Question[] = {
+    overworld_frame(gObjectEventPic_Unown_Question, 4, 4, 0),
+    overworld_frame(gObjectEventPic_Unown_Question, 4, 4, 1),
+    overworld_frame(gObjectEventPic_Unown_Question, 4, 4, 2),
+    overworld_frame(gObjectEventPic_Unown_Question, 4, 4, 0),
+    overworld_frame(gObjectEventPic_Unown_Question, 4, 4, 0),
+    overworld_frame(gObjectEventPic_Unown_Question, 4, 4, 1),
+    overworld_frame(gObjectEventPic_Unown_Question, 4, 4, 1),
+    overworld_frame(gObjectEventPic_Unown_Question, 4, 4, 2),
+    overworld_frame(gObjectEventPic_Unown_Question, 4, 4, 2),
+};
