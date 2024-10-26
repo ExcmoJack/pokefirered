@@ -4,6 +4,10 @@
 RuinsOfAlph_Exterior_MapScripts::
 	.byte 0
 
+RuinsOfAlph_Exterior_EventScript_Fisher::
+	msgbox RuinsOfAlph_Exterior_Text_Fisher, MSGBOX_NPC
+	end
+
 RuinsOfAlph_Exterior_EventScript_Lapras_N::
 	lock
 	msgbox RuinsOfAlph_Exterior_Text_Lapras MSGBOX_YESNO
@@ -26,6 +30,8 @@ RuinsOfAlph_Exterior_EventScript_LaprasMovement_N::
 	waitmovement OBJ_EVENT_ID_PLAYER
 	clearflag FLAG_HIDE_LAPRAS_S_RUINS_OF_ALPH
 	setflag FLAG_HIDE_LAPRAS_N_RUINS_OF_ALPH
+	addobject LOCALID_LAPRAS_S
+	removeobject LOCALID_LAPRAS_N
 	release
 	end
 
@@ -51,6 +57,8 @@ RuinsOfAlph_Exterior_EventScript_LaprasMovement_S::
 	waitmovement OBJ_EVENT_ID_PLAYER
 	clearflag FLAG_HIDE_LAPRAS_N_RUINS_OF_ALPH
 	setflag FLAG_HIDE_LAPRAS_S_RUINS_OF_ALPH
+	addobject LOCALID_LAPRAS_N
+	removeobject LOCALID_LAPRAS_S
 	release
 	end
 
@@ -91,6 +99,37 @@ RuinsOfAlph_Exterior_EventScript_UnownQuestion::
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_Appear
 	waitmovement OBJ_EVENT_ID_PLAYER
 	waitse
+	release
+	end
+
+RuinsOfAlph_Exterior_EventScript_TriggerEscapeNorth::
+	lock
+	applymovement OBJ_EVENT_ID_PLAYER, RuinsOfAlph_Exterior_Movement_PlayerTriggerEscapingNorth
+	waitmovement 0
+	goto RuinsOfAlph_Exterior_EventScript_TriggerEscapeEnd
+
+RuinsOfAlph_Exterior_EventScript_TriggerEscapeEast::
+	lock
+	applymovement OBJ_EVENT_ID_PLAYER, RuinsOfAlph_Exterior_Movement_PlayerTriggerEscapingEast
+	waitmovement 0
+	goto RuinsOfAlph_Exterior_EventScript_TriggerEscapeEnd
+
+RuinsOfAlph_Exterior_EventScript_TriggerEscapeEnd::
+	msgbox LavenderTown_Text_TriggerEscape
+	closemessage
+	fadescreen FADE_TO_BLACK
+	delay 10
+	addvar VAR_TEMP_0, 1
+	goto_if_eq VAR_TEMP_0, 5, RuinsOfAlph_Exterior_EventScript_TriggerEscapeBlackout
+	fadescreen FADE_FROM_BLACK
+	msgbox LavenderTown_Text_TriggerEscape1
+	closemessage
+	release
+	end
+
+RuinsOfAlph_Exterior_EventScript_TriggerEscapeBlackout::
+	msgbox LavenderTown_Text_TriggerEscapeBlackout
+	warpsilent MAP_RUINS_OF_ALPH_EXTERIOR, 255, 26, 17
 	release
 	end
 
@@ -151,4 +190,16 @@ RuinsOfAlph_Exterior_Movement_PlayerMovement_UnownQuestion::
 	walk_fast_up
 	walk_fast_up
 	walk_fast_up
+	step_end
+
+RuinsOfAlph_Exterior_Movement_PlayerTriggerEscapingNorth::
+	lock_facing_direction
+	slide_down
+	unlock_facing_direction
+	step_end
+
+RuinsOfAlph_Exterior_Movement_PlayerTriggerEscapingEast::
+	lock_facing_direction
+	slide_left
+	unlock_facing_direction
 	step_end
