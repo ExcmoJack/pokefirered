@@ -34,10 +34,10 @@ RuinsOfAlph_HooH_EventScript_PuzzleSolved::
 	end
 
 RuinsOfAlph_HooH_EventScript_SetMetatiles::
-	setmetatile 4, 30, 0x2F3, 0
-	setmetatile 5, 30, 0x2F4, 0
-	setmetatile 4, 31, 0x2FB, 0
-	setmetatile 5, 31, 0x2FC, 0
+	setmetatile 4, 27, 0x2F3, 0
+	setmetatile 5, 27, 0x2F4, 0
+	setmetatile 4, 28, 0x2FB, 0
+	setmetatile 5, 28, 0x2FC, 0
 	return
 
 RuinsOfAlph_HooH_EventScript_Description::
