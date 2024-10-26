@@ -11,13 +11,23 @@
 .set LOCALID_LADY, 		11
 .set LOCALID_FUJI, 		12
 .set LOCALID_ENTEI,		13
+.set LOCALID_GASTLY_7,  15
+.set LOCALID_GASTLY_8,  16
+.set LOCALID_GASTLY_9,  17
 
 RuinsOfAlph_MainChamber_MapScripts::
 	map_script MAP_SCRIPT_ON_LOAD, RuinsOfAlph_MainChamber_OnLoad
 	.byte 0
 
 RuinsOfAlph_MainChamber_OnLoad::
+	call_if_eq VAR_MAP_SCENE_RUINS_OF_ALPH_STATUS, 5, RuinsOfAlph_MainChamber_OnLoad_Weather
 	goto_if_set FLAG_HIDE_FISHER_RUINS_OF_ALPH, RuinsOfAlph_MainChamber_ShowLaprasN
+	end
+
+RuinsOfAlph_MainChamber_OnLoad_Weather::
+	setweather WEATHER_SANDSTORM
+	doweather
+	return
 	end
 
 RuinsOfAlph_MainChamber_ShowLaprasN::
@@ -37,6 +47,7 @@ RuinsOfAlph_MainChamber_EventScript_Lady::
 
 RuinsOfAlph_MainChamber_EventScript_MrFuji::
 	goto_if_set FLAG_HIDE_GHOSTS_4_RUINS_OF_ALPH, RuinsOfAlph_MainChamber_EventScript_SaveFuji
+	msgbox RuinsOfAlph_MainChamber_Text_MrFuji_1 MSGBOX_NPC
 	end
 
 RuinsOfAlph_MainChamber_EventScript_SaveFisherman::
@@ -53,12 +64,15 @@ RuinsOfAlph_MainChamber_EventScript_SaveLady::
 	msgbox RuinsOfAlph_MainChamber_Text_Lady_2 MSGBOX_NPC
 	fadescreen FADE_TO_BLACK
 	setflag FLAG_HIDE_LADY_RUINS_OF_ALPH
+	clearflag FLAG_HIDE_UNOWN_EXCLAM_RUINS_OF_ALPH
 	removeobject LOCALID_LADY
 	fadescreen FADE_FROM_BLACK
 	end
 
 RuinsOfAlph_MainChamber_EventScript_SaveFuji::
 	msgbox RuinsOfAlph_MainChamber_Text_MrFuji_2 MSGBOX_NPC
+	call EventScript_OutOfCenterPartyHeal
+	msgbox RuinsOfAlph_MainChamber_Text_MrFuji_3 MSGBOX_NPC
 	fadescreen FADE_TO_BLACK
 	setflag FLAG_HIDE_MR_FUJI_RUINS_OF_ALPH
 	removeobject LOCALID_FUJI
@@ -70,6 +84,7 @@ RuinsOfAlph_MainChamber_EventScript_GastlyBattle_1::
 	call RuinsOfAlph_MainChamber_EventScript_GastlyBattle
 	removeobject LOCALID_GASTLY_1
 	removeobject LOCALID_GASTLY_2
+	removeobject LOCALID_GASTLY_7
 	setflag FLAG_HIDE_GHOSTS_1_RUINS_OF_ALPH
 	setvar VAR_MAP_SCENE_RUINS_OF_ALPH_STATUS, 1
 	release
@@ -80,6 +95,7 @@ RuinsOfAlph_MainChamber_EventScript_GastlyBattle_2::
 	call RuinsOfAlph_MainChamber_EventScript_GastlyBattle
 	removeobject LOCALID_GASTLY_3
 	removeobject LOCALID_GASTLY_4
+	removeobject LOCALID_GASTLY_8
 	setflag FLAG_HIDE_GHOSTS_2_RUINS_OF_ALPH
 	setvar VAR_MAP_SCENE_RUINS_OF_ALPH_STATUS, 2
 	release
@@ -90,13 +106,17 @@ RuinsOfAlph_MainChamber_EventScript_GastlyBattle_3::
 	call RuinsOfAlph_MainChamber_EventScript_GastlyBattle
 	removeobject LOCALID_GASTLY_5
 	removeobject LOCALID_GASTLY_6
+	removeobject LOCALID_GASTLY_9
 	setflag FLAG_HIDE_GHOSTS_3_RUINS_OF_ALPH
+	clearflag FLAG_HIDE_UNOWN_QUESTION_RUINS_OF_ALPH
 	setvar VAR_MAP_SCENE_RUINS_OF_ALPH_STATUS, 3
 	release
 	end
 
 RuinsOfAlph_MainChamber_EventScript_HaunterBattle::
 	lock
+	faceplayer
+	setflag(FLAG_WILDBATTLE_DISABLE_RUN)
 	setwildbattle SPECIES_HAUNTER, 30, ITEM_SPELL_TAG
 	dowildbattle
 	setwildbattle SPECIES_HAUNTER, 30, ITEM_SPELL_TAG
@@ -106,6 +126,7 @@ RuinsOfAlph_MainChamber_EventScript_HaunterBattle::
 	removeobject LOCALID_HAUNTER_1
 	removeobject LOCALID_HAUNTER_2
 	removeobject LOCALID_HAUNTER_3
+	clearflag(FLAG_WILDBATTLE_DISABLE_RUN)
 	setflag FLAG_HIDE_GHOSTS_4_RUINS_OF_ALPH
 	setvar VAR_MAP_SCENE_RUINS_OF_ALPH_STATUS, 4
 	release
@@ -119,6 +140,7 @@ RuinsOfAlph_MainChamber_EventScript_EnteiEvent::
 	lock
 	setweather WEATHER_SANDSTORM
 	doweather
+	setvar VAR_MAP_SCENE_RUINS_OF_ALPH_STATUS, 5
 	special SpawnCameraObject
 	applymovement OBJ_EVENT_ID_CAMERA, RuinsOfAlph_MainChamber_Movement_Cam_1
 	waitmovement OBJ_EVENT_ID_CAMERA
@@ -143,6 +165,12 @@ RuinsOfAlph_MainChamber_EventScript_EnteiEvent::
 	call_if_set FLAG_TEMP_A, RuinsOfAlph_MainChamber_EventScript_EnteiEvent_MoveRight_2
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterUp
 	waitmovement OBJ_EVENT_ID_PLAYER
+	goto RuinsOfAlph_MainChamber_EventScript_EnteiEvent_1
+	release
+	end
+
+RuinsOfAlph_MainChamber_EventScript_EnteiEvent_1::
+	lock
 	textcolor NPC_TEXT_COLOR_EVIL
 	msgbox RuinsOfAlph_MainChamber_Text_Entei_1
 	applymovement LOCALID_ENTEI, Common_Movement_WalkInPlaceFasterUp
@@ -154,10 +182,12 @@ RuinsOfAlph_MainChamber_EventScript_EnteiEvent::
 	applymovement LOCALID_ENTEI, Common_Movement_WalkInPlaceFasterDown
 	waitmovement LOCALID_ENTEI
 	closemessage
+	setflag(FLAG_WILDBATTLE_DISABLE_RUN)
 	seteventmon SPECIES_ENTEI, 30
 	setflag FLAG_SYS_SPECIAL_WILD_BATTLE
 	special StartLegendaryBattle
 	waitstate
+	clearflag(FLAG_WILDBATTLE_DISABLE_RUN)
 	delay 2
 	applymovement LOCALID_ENTEI, Common_Movement_WalkInPlaceFasterLeft
 	waitmovement LOCALID_ENTEI
@@ -195,12 +225,23 @@ RuinsOfAlph_MainChamber_EventScript_EnteiEvent::
 	waitfanfare
 	delay 20
 	msgbox RuinsOfAlph_MainChamber_Text_Entei_4
+	closemessage
+	applymovement LOCALID_ENTEI, Common_Movement_WalkInPlaceFasterUp
+	waitmovement LOCALID_ENTEI
+	playmoncry SPECIES_ENTEI, CRY_MODE_HIGH_PITCH
+	waitmoncry
 	delay 20
 	playse SE_THUNDERSTORM_STOP
 	setvar VAR_0x8004, 0  @ Vertical pan
 	setvar VAR_0x8005, 3  @ Horizontal pan
 	setvar VAR_0x8006, 4  @ Num shakes
 	setvar VAR_0x8007, 2  @ Shake delay
+	special ShakeScreen
+	delay 10
+	playse SE_THUNDERSTORM_STOP
+	special ShakeScreen
+	delay 10
+	playse SE_THUNDERSTORM_STOP
 	special ShakeScreen
 	delay 10
 	playse SE_THUNDER
@@ -223,10 +264,15 @@ RuinsOfAlph_MainChamber_EventScript_EnteiEvent_MoveRight_2::
 	end
 
 RuinsOfAlph_MainChamber_EventScript_GastlyBattle::
+	faceplayer
+	setflag(FLAG_WILDBATTLE_DISABLE_RUN)
 	setwildbattle SPECIES_GASTLY, 30, ITEM_BRIGHT_POWDER
 	dowildbattle
 	setwildbattle SPECIES_GASTLY, 30, ITEM_BRIGHT_POWDER
 	dowildbattle
+	setwildbattle SPECIES_GASTLY, 30, ITEM_BRIGHT_POWDER
+	dowildbattle
+	clearflag(FLAG_WILDBATTLE_DISABLE_RUN)
 	return
 	end
 

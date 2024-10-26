@@ -105,7 +105,7 @@
       "x": 9,
       "y": 30,
       "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_WALK_IN_PLACE_LEFT",
+      "movement_type": "MOVEMENT_TYPE_WANDER_RIGHT_AND_LEFT",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
@@ -116,10 +116,10 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_HAUNTER",
-      "x": 10,
+      "x": 9,
       "y": 28,
       "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_WALK_IN_PLACE_LEFT",
+      "movement_type": "MOVEMENT_TYPE_WANDER_RIGHT_AND_LEFT",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
@@ -133,7 +133,7 @@
       "x": 9,
       "y": 27,
       "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_WALK_IN_PLACE_LEFT",
+      "movement_type": "MOVEMENT_TYPE_WANDER_RIGHT_AND_LEFT",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
@@ -194,7 +194,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "RuinsOfAlph_MainChamber_EventScript_EnteiEvent_1",
       "flag": "FLAG_HIDE_ENTEI_RUINS_OF_ALPH"
     },
     {
@@ -210,6 +210,48 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "VictoryRoad_3F_EventScript_ItemTM50",
       "flag": "FLAG_HIDE_VICTORY_ROAD_3F_TM50"
+    },
+    {
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_GASTLY",
+      "x": 8,
+      "y": 4,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "RuinsOfAlph_MainChamber_EventScript_GastlyBattle_1",
+      "flag": "FLAG_HIDE_GHOSTS_1_RUINS_OF_ALPH"
+    },
+    {
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_GASTLY",
+      "x": 11,
+      "y": 23,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "RuinsOfAlph_MainChamber_EventScript_GastlyBattle_1",
+      "flag": "FLAG_HIDE_GHOSTS_1_RUINS_OF_ALPH"
+    },
+    {
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_GASTLY",
+      "x": 16,
+      "y": 29,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "RuinsOfAlph_MainChamber_EventScript_GastlyBattle_3",
+      "flag": "FLAG_HIDE_GHOSTS_3_RUINS_OF_ALPH"
     }
   ],
   "warp_events": [
@@ -412,6 +454,33 @@
       "var": "VAR_MAP_SCENE_RUINS_OF_ALPH_STATUS",
       "var_value": "2",
       "script": "RuinsOfAlph_MainChamber_EventScript_GastlyBlock_South"
+    },
+    {
+      "type": "trigger",
+      "x": 11,
+      "y": 27,
+      "elevation": 0,
+      "var": "VAR_MAP_SCENE_RUINS_OF_ALPH_STATUS",
+      "var_value": "2",
+      "script": "RuinsOfAlph_MainChamber_EventScript_GastlyBlock_West"
+    },
+    {
+      "type": "trigger",
+      "x": 11,
+      "y": 28,
+      "elevation": 0,
+      "var": "VAR_MAP_SCENE_RUINS_OF_ALPH_STATUS",
+      "var_value": "2",
+      "script": "RuinsOfAlph_MainChamber_EventScript_GastlyBlock_West"
+    },
+    {
+      "type": "trigger",
+      "x": 11,
+      "y": 30,
+      "elevation": 0,
+      "var": "VAR_MAP_SCENE_RUINS_OF_ALPH_STATUS",
+      "var_value": "2",
+      "script": "RuinsOfAlph_MainChamber_EventScript_GastlyBlock_West"
     }
   ],
   "bg_events": [

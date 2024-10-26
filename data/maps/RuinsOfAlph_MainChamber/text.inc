@@ -11,15 +11,18 @@ RuinsOfAlph_MainChamber_Text_Lady_2::
     .string "¿Me has salvado tú?$"
 
 RuinsOfAlph_MainChamber_Text_MrFuji_1::
-    .string "¡Ah! ¡{PLAYER}, eres tú!\n"
-    .string "De repente aparecí aquí, rodeado de\n"
-    .string "fantasmas.\p"
-    .string "No estoy a favor de la violencia, pero\n"
-    .string "por favor, sácame de aquí.$"
+    .string "¡Ah! ¡{PLAYER}, eres tú!\p"
+    .string "De repente aparecí aquí,\n"
+    .string "rodeado de fantasmas.\p"
+    .string "No me gusta de la violencia, pero\n"
+    .string "por favor, ¡Sácame de aquí!$"
 
 RuinsOfAlph_MainChamber_Text_MrFuji_2::
     .string "¡Genial! ¡Parece que tenemos vía\n"
     .string "libre!\p"
+    .string "¡Curaré a tus POKÉMON!$"
+    
+RuinsOfAlph_MainChamber_Text_MrFuji_3::
     .string "¡Salgamos fuera de este lugar!$"
 
 RuinsOfAlph_MainChamber_Text_Entei_1::
