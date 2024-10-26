@@ -1421,7 +1421,7 @@ static void LoadMonIconGfx(void)
         TintPalette_CustomTone(sTrainerCardDataPtr->monIconPals, 96, 0, 0, 0);
         break;
     case MON_ICON_TINT_PINK:
-        TintPalette_CustomTone(sTrainerCardDataPtr->monIconPals, 96, 500, 330, 310);
+        TintPalette_CustomTone(sTrainerCardDataPtr->monIconPals, 96, 300, 300, 300);
         break;
     case MON_ICON_TINT_SEPIA:
         TintPalette_SepiaTone(sTrainerCardDataPtr->monIconPals, 96);
