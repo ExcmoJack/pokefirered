@@ -20,7 +20,7 @@ RuinsOfAlph_MainChamber_MapScripts::
 	.byte 0
 
 RuinsOfAlph_MainChamber_OnLoad::
-	call_if_eq VAR_MAP_SCENE_RUINS_OF_ALPH_STATUS, 5, RuinsOfAlph_MainChamber_OnLoad_Weather
+	call_if_eq VAR_MAP_SCENE_RUINS_OF_ALPH_STATUS, 6, RuinsOfAlph_MainChamber_OnLoad_Weather
 	goto_if_set FLAG_HIDE_FISHER_RUINS_OF_ALPH, RuinsOfAlph_MainChamber_ShowLaprasN
 	end
 
@@ -75,6 +75,7 @@ RuinsOfAlph_MainChamber_EventScript_SaveFuji::
 	msgbox RuinsOfAlph_MainChamber_Text_MrFuji_3 MSGBOX_NPC
 	fadescreen FADE_TO_BLACK
 	setflag FLAG_HIDE_MR_FUJI_RUINS_OF_ALPH
+	setvar VAR_MAP_SCENE_RUINS_OF_ALPH_STATUS, 5
 	removeobject LOCALID_FUJI
 	fadescreen FADE_FROM_BLACK
 	end
@@ -131,6 +132,7 @@ RuinsOfAlph_MainChamber_EventScript_HaunterBattle::
 	setvar VAR_MAP_SCENE_RUINS_OF_ALPH_STATUS, 4
 	release
 	end
+
 RuinsOfAlph_MainChamber_EventScript_EnteiEvent_L::
 	setflag FLAG_TEMP_A
 	goto RuinsOfAlph_MainChamber_EventScript_EnteiEvent
@@ -140,7 +142,7 @@ RuinsOfAlph_MainChamber_EventScript_EnteiEvent::
 	lock
 	setweather WEATHER_SANDSTORM
 	doweather
-	setvar VAR_MAP_SCENE_RUINS_OF_ALPH_STATUS, 5
+	setvar VAR_MAP_SCENE_RUINS_OF_ALPH_STATUS, 6
 	special SpawnCameraObject
 	applymovement OBJ_EVENT_ID_CAMERA, RuinsOfAlph_MainChamber_Movement_Cam_1
 	waitmovement OBJ_EVENT_ID_CAMERA
@@ -246,6 +248,7 @@ RuinsOfAlph_MainChamber_EventScript_EnteiEvent_1::
 	delay 10
 	playse SE_THUNDER
 	waitse
+	clearflag FLAG_GENGAR_POKEMON_TOWER_B3F
 	setvar VAR_MAP_SCENE_POKEMON_TOWER_B3F_TRIGGERS, 2
 	warpteleport MAP_POKEMON_TOWER_B3F, 255, 8, 28
 	release
