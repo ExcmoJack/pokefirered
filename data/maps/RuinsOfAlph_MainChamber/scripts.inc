@@ -184,12 +184,12 @@ RuinsOfAlph_MainChamber_EventScript_EnteiEvent_1::
 	applymovement LOCALID_ENTEI, Common_Movement_WalkInPlaceFasterDown
 	waitmovement LOCALID_ENTEI
 	closemessage
-	setflag(FLAG_WILDBATTLE_DISABLE_RUN)
+	setflag FLAG_WILDBATTLE_DISABLE_RUN
 	seteventmon SPECIES_ENTEI, 30
 	setflag FLAG_SYS_SPECIAL_WILD_BATTLE
 	special StartLegendaryBattle
 	waitstate
-	clearflag(FLAG_WILDBATTLE_DISABLE_RUN)
+	clearflag FLAG_WILDBATTLE_DISABLE_RUN
 	delay 2
 	applymovement LOCALID_ENTEI, Common_Movement_WalkInPlaceFasterLeft
 	waitmovement LOCALID_ENTEI

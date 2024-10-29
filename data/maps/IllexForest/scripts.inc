@@ -48,8 +48,10 @@ IllexForest_EventScript_Gastly_1::
 	textcolor NPC_TEXT_COLOR_EVIL
 	msgbox IllexForest_Text_Gastly_1
 	closemessage
+	setflag FLAG_WILDBATTLE_DISABLE_RUN
 	setwildbattle SPECIES_GASTLY, 10, ITEM_NONE
 	dowildbattle
+	clearflag FLAG_WILDBATTLE_DISABLE_RUN
 	call IllexForest_EventScript_CommonDisapearNpc
 	release
 	end
@@ -61,8 +63,10 @@ IllexForest_EventScript_Gastly_2::
 	textcolor NPC_TEXT_COLOR_EVIL
 	msgbox IllexForest_Text_Gastly_2
 	closemessage
+	setflag FLAG_WILDBATTLE_DISABLE_RUN
 	setwildbattle SPECIES_GASTLY, 10, ITEM_NONE
 	dowildbattle
+	clearflag FLAG_WILDBATTLE_DISABLE_RUN
 	call IllexForest_EventScript_CommonDisapearNpc
 	release
 	end
@@ -74,8 +78,10 @@ IllexForest_EventScript_Gastly_3::
 	textcolor NPC_TEXT_COLOR_EVIL
 	msgbox IllexForest_Text_Gastly_3
 	closemessage
+	setflag FLAG_WILDBATTLE_DISABLE_RUN
 	setwildbattle SPECIES_GASTLY, 15, ITEM_NONE
 	dowildbattle
+	clearflag FLAG_WILDBATTLE_DISABLE_RUN
 	call IllexForest_EventScript_CommonDisapearNpc
 	release
 	end
@@ -87,8 +93,10 @@ IllexForest_EventScript_Gastly_4::
 	textcolor NPC_TEXT_COLOR_EVIL
 	msgbox IllexForest_Text_Gastly_4
 	closemessage
+	setflag FLAG_WILDBATTLE_DISABLE_RUN
 	setwildbattle SPECIES_GASTLY, 15, ITEM_NONE
 	dowildbattle
+	clearflag FLAG_WILDBATTLE_DISABLE_RUN
 	call IllexForest_EventScript_CommonDisapearNpc
 	release
 	end
@@ -100,8 +108,10 @@ IllexForest_EventScript_Gastly_5::
 	textcolor NPC_TEXT_COLOR_EVIL
 	msgbox IllexForest_Text_Gastly_5
 	closemessage
+	setflag FLAG_WILDBATTLE_DISABLE_RUN
 	setwildbattle SPECIES_GASTLY, 15, ITEM_NONE
 	dowildbattle
+	clearflag FLAG_WILDBATTLE_DISABLE_RUN
 	call IllexForest_EventScript_CommonDisapearNpc
 	release
 	end
@@ -113,8 +123,10 @@ IllexForest_EventScript_Haunter::
 	textcolor NPC_TEXT_COLOR_EVIL
 	msgbox IllexForest_Text_Haunter
 	closemessage
+	setflag FLAG_WILDBATTLE_DISABLE_RUN
 	setwildbattle SPECIES_HAUNTER, 15, ITEM_NONE
 	dowildbattle
+	clearflag FLAG_WILDBATTLE_DISABLE_RUN
 	call IllexForest_EventScript_CommonDisapearNpc
 	release
 	end
@@ -158,8 +170,10 @@ IllexForest_EventScript_Gengar::
 	msgbox IllexForest_Text_Gengar_1
 	closemessage
 	waitmoncry
+	setflag FLAG_WILDBATTLE_DISABLE_RUN
 	setwildbattle SPECIES_GENGAR, 25
 	dowildbattle
+	clearflag FLAG_WILDBATTLE_DISABLE_RUN
 	msgbox IllexForest_Text_Gengar_2
 	closemessage
 	applymovement LOCALID_GENGAR, Common_Movement_Disappear
