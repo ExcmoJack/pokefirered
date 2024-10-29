@@ -439,6 +439,10 @@
 #define FACILITY_CLASS_ELITE_FOUR_LANCE       148
 #define FACILITY_CLASS_CHAMPION_RIVAL_2       149
 
+// Personalizar sprites LAVENDER TALES
+#define PLAYER_SPRITE_MALE        FACILITY_CLASS_COOLTRAINER_M
+#define PLAYER_SPRITE_FEMALE      FACILITY_CLASS_LASS
+
 #define F_TRAINER_FEMALE (1 << 7)
 
 // All trainer parties specify the IV, level, and species for each Pokémon in the

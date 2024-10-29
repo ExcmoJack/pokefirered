@@ -154,6 +154,24 @@
       "var": "VAR_MAP_SCENE_POKEMON_TOWER_B3F_TRIGGERS",
       "var_value": "3",
       "script": "PokemonTower_B3F_EventScript_Dusclops_Trigger"
+    },
+    {
+      "type": "trigger",
+      "x": 13,
+      "y": 18,
+      "elevation": 0,
+      "var": "VAR_MAP_SCENE_POKEMON_TOWER_B3F_TRIGGERS",
+      "var_value": "3",
+      "script": "PokemonTower_B3F_EventScript_Dusclops_Trigger"
+    },
+    {
+      "type": "trigger",
+      "x": 15,
+      "y": 18,
+      "elevation": 0,
+      "var": "VAR_MAP_SCENE_POKEMON_TOWER_B3F_TRIGGERS",
+      "var_value": "3",
+      "script": "PokemonTower_B3F_EventScript_Dusclops_Trigger"
     }
   ],
   "bg_events": [

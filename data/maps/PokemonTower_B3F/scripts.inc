@@ -4,6 +4,10 @@
 .equ LOCALID_PORTAL_1, 5
 .equ LOCALID_OAK, 6
 
+@ Personalizar sprites LAVENDER TALES
+.equ PLAYER_OVERWORLD_MALE,     OBJ_EVENT_GFX_BOY
+.equ PLAYER_OVERWORLD_FEMALE,   OBJ_EVENT_GFX_WOMAN_2
+
 PokemonTower_B3F_MapScripts::
 	map_script MAP_SCRIPT_ON_LOAD, PokemonTower_B3F_OnLoad
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, PokemonTower_B3F_OnFrameTable
@@ -12,11 +16,11 @@ PokemonTower_B3F_MapScripts::
 PokemonTower_B3F_OnLoad::
 	checkplayergender
 	goto_if_eq VAR_RESULT, FEMALE, PokemonTower_B3F_OnLoad_1
-	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_BOY
+	setvar VAR_OBJ_GFX_ID_0, PLAYER_OVERWORLD_MALE
 	end
 
 PokemonTower_B3F_OnLoad_1::
-	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_WOMAN_2
+	setvar VAR_OBJ_GFX_ID_0, PLAYER_OVERWORLD_FEMALE
 	end
 
 PokemonTower_B3F_OnFrameTable::
