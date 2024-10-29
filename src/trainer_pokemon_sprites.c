@@ -290,9 +290,9 @@ u16 PlayerGenderToFrontPlayerPicId(u8 gender, bool8 getClass)
     if (getClass == TRUE)
     {
         if (gender != MALE)
-            return gFacilityClassToPicIndex[FACILITY_CLASS_LASS];
+            return gFacilityClassToPicIndex[PLAYER_SPRITE_FEMALE];
         else
-            return gFacilityClassToPicIndex[FACILITY_CLASS_COOLTRAINER_M];
+            return gFacilityClassToPicIndex[PLAYER_SPRITE_MALE];
     }
     return gender;
 }
