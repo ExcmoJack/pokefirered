@@ -4,7 +4,7 @@ PalletTown_Text_OakDontGoOut::
 
 PalletTown_Text_OakGrassUnsafeNeedMon::
     .string "OAK: ¡Es peligroso!\n"
-    .string "Necesitas un Pokémon para\n"
+    .string "Necesitas un Pokémon para\l"
     .string "que te proteja.\p"
     .string "¡Ya sé!\n"
     .string "¡Vamos al laboratorio!$"
@@ -15,18 +15,18 @@ PalletTown_Text_RaisingMonsToo::
     .string "protect me.$"
 
 PalletTown_Text_CanStoreItemsAndMonsInPC::
-    .string "Technology is incredible!\p"
-    .string "You can now store and recall items\n"
-    .string "and POKéMON as data via PC.$"
+    .string "¡La tecnología es increíble!\p"
+    .string "Puedes almacenar POKÉMON y\n"
+    .string "objetos via PC.$"
 
 PalletTown_Text_OakPokemonResearchLab::
-    .string "OAK POKéMON RESEARCH LAB$"
+    .string "LABORATORIO POKéMON$"
 
 PalletTown_Text_PlayersHouse::
-    .string "{PLAYER}'s house$"
+    .string "Casa de {PLAYER}$"
 
 PalletTown_Text_RivalsHouse::
-    .string "{RIVAL}'s house$"
+    .string "Casa de {RIVAL}$"
 
 PalletTown_Text_TownSign::
     .string "PALLET TOWN\n"

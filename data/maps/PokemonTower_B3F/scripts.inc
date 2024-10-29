@@ -94,7 +94,7 @@ PokemonTower_B3F_EventScript_Dusclops_Trigger::
 	textcolor NPC_TEXT_COLOR_EVIL
 	msgbox PokemonTower_B3F_Text_Dusclops
 	closemessage
-	clearflag FLAG_HIDE_LORELEIS_HOUSE_LAPRAS_DOLL
+	clearflag FLAG_POKEMON_TOWER_B3F_OAK
 	addobject LOCALID_OAK
 	applymovement LOCALID_OAK, Common_Movement_Appear
 	waitmovement 0
@@ -121,7 +121,7 @@ PokemonTower_B3F_EventScript_Dusclops_Trigger::
 	closemessage
 	waitse
 	removeobject LOCALID_OAK
-	setflag FLAG_HIDE_LORELEIS_HOUSE_LAPRAS_DOLL
+	setflag FLAG_POKEMON_TOWER_B3F_OAK
 	textcolor NPC_TEXT_COLOR_EVIL
 	msgbox PokemonTower_B3F_Text_Dusclops_2
 	closemessage

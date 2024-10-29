@@ -249,7 +249,7 @@
 #define FLAG_HIDE_UNOWN_EXCLAM_RUINS_OF_ALPH   0x0E7
 #define FLAG_HIDE_UNOWN_QUESTION_RUINS_OF_ALPH 0x0E8
 #define FLAG_WILDBATTLE_DISABLE_RUN            0x0E9
-#define FLAG_0x0EA               0x0EA
+#define FLAG_POKEMON_TOWER_B3F_OAK             0x0EA
 #define FLAG_0x0EB               0x0EB
 #define FLAG_0x0EC               0x0EC
 #define FLAG_0x0ED               0x0ED

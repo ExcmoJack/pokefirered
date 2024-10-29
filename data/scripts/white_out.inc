@@ -1,5 +1,6 @@
 EventScript_AfterWhiteOutHeal::
 	lockall
+	clearflag FLAG_WILDBATTLE_DISABLE_RUN
 	textcolor NPC_TEXT_COLOR_FEMALE
 	msgbox Text_FirstShouldRestoreMonsHealth
 	call EventScript_PkmnCenterNurse_TakeAndHealPkmn

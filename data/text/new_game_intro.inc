@@ -125,119 +125,115 @@ gNameChoice_Suzi::
     .string "SUZI$"
 
 gControlsGuide_Text_Intro::
-    .string "The various buttons will be explained in\n"
-    .string "the order of their importance.$"
+    .string "Los botones se explicarán por\n"
+    .string "orden de importancia.$"
 
 gControlsGuide_Text_DPad::
-    .string "Moves the main character.\n"
-    .string "Also used to choose various data\n"
-    .string "headings.$"
+    .string "Mueve al protagonista.\n"
+    .string "Se usa para desplazarte por\n"
+    .string "los menús.$"
 
 gControlsGuide_Text_AButton::
-    .string "Used to confirm a choice, check\n"
-    .string "things, chat, and scroll text.$"
+    .string "Se usa para aceptar, interactuar\n"
+    .string "con objetos, conversar y leer.$"
 
 gControlsGuide_Text_BButton::
-    .string "Used to exit, cancel a choice,\n"
-    .string "and cancel a mode.$"
+    .string "Se usar para salir o cancelar.$"
 
 gControlsGuide_Text_StartButton::
-    .string "Press this button to open the\n"
+    .string "Pulsa este botón para abrir el\n"
     .string "MENU.$"
 
 gControlsGuide_Text_SelectButton::
-    .string "Used to shift items and to use\n"
-    .string "a registered item.$"
+    .string "Se usa para ordenar objetos y\n"
+    .string "usar un objeto registrado.$"
 
 gControlsGuide_Text_LRButtons::
-    .string "If you need help playing the\n"
-    .string "game, or on how to do things,\n"
-    .string "press the L or R Button.$"
+    .string "Si necesitas ayuda con el juego\n"
+    .string "pulsa los botones L o R.$"
 
 gOakSpeech_Text_AskPlayerGender::
-    .string "Now tell me. Are you a boy?\n"
-    .string "Or are you a girl?$"
+    .string "Cuéntame. ¿Eres chico?\n"
+    .string "¿O eres chica?$"
 
 gPikachuIntro_Text_Page1::
-    .string "In the world which you are about to\n"
-    .string "enter, you will embark on a grand\n"
-    .string "adventure with you as the hero.\n"
+    .string "En el mundo al que estás a punto de\n"
+    .string "entrar, te embarcarás en una gran\n"
+    .string "aventura en la que serás protagonista.\n"
     .string "\n"
-    .string "Speak to people and check things\n"
-    .string "wherever you go, be it towns, roads,\n"
-    .string "or caves. Gather information and\n"
-    .string "hints from every source.$"
+    .string "Habla con la gente y comprueba\n"
+    .string "lo que ocurre donde vayas,\n"
+    .string "ya sean pueblos, rutas o cuevas.\n"
+    .string "Busca pistas por todas partes.$\n"
 
 gPikachuIntro_Text_Page2::
-    .string "New paths will open to you by helping\n"
-    .string "people in need, overcoming challenges,\n"
-    .string "and solving mysteries.\n"
+    .string "Se abrirán nuevos caminos ayudando\n"
+    .string "a los personajes, superando desafíos\n"
+    .string "y resolviendo misterios.\n"
     .string "\n"
-    .string "At times, you will be challenged by\n"
-    .string "others and attacked by wild creatures.\n"
-    .string "Be brave and keep pushing on.$"
+    .string "A veces, otros te desafiarán\n"
+    .string "y te atacarán criaturas salvajes.\n"
+    .string "Sé valiente y sigue adelante.$"
 
 gPikachuIntro_Text_Page3::
-    .string "Through your adventure, we hope\n"
-    .string "that you will interact with all sorts\n"
-    .string "of people and achieve personal growth.\n"
-    .string "That is our biggest objective.\n"
+    .string "Recuerda, habla con todo el mundo,\n"
+    .string "crecerás como persona, y ese es\n"
+    .string "tu principal objetivo.\n"
     .string "\n"
-    .string "Press the A Button, and let your\n"
-    .string "adventure begin!$"
+    .string "Pulsa el botón A y…\n"
+    .string "¡que comience la aventura!$"
 
 gOakSpeech_Text_WelcomeToTheWorld::
-    .string "Hello, there!\n"
-    .string "Glad to meet you!\p"
-    .string "Welcome to the world of POKéMON!\p"
-    .string "My name is OAK.\p"
-    .string "People affectionately refer to me\n"
-    .string "as the POKéMON PROFESSOR.\p$"
+    .string "¡Hola!\n"
+    .string "¡Encantado de conocerte!\p"
+    .string "¡Bienvenido al mundo de POKéMON!\p"
+    .string "Mi nombre es OAK.\p"
+    .string "Pero la gente se refiere a mí\n"
+    .string "como el PROFESOR POKéMON.\p$"
 
 gOakSpeech_Text_ThisWorld::
-    .string "This world…$"
+    .string "¡Este mundo está…$"
 
 gOakSpeech_Text_IsInhabitedFarAndWide::
-    .string "…is inhabited far and wide by\n"
-    .string "creatures called POKéMON.\p$"
+    .string "…habitado por unas criaturas\n"
+    .string "llamadas POKéMON!\p$"
 
 gOakSpeech_Text_IStudyPokemon::
-    .string "For some people, POKéMON are pets.\n"
-    .string "Others use them for battling.\p"
-    .string "As for myself…\p"
-    .string "I study POKéMON as a profession.\p$"
+    .string "Para algunos, los POKéMON son\n"
+    .string "mascotas. Pero otros los usan\l"
+    .string "para pelear.\p"
+    .string "En cuanto a mí…\n"
+    .string "Estudio POKéMON como profesión.\p$"
 
 gOakSpeech_Text_TellMeALittleAboutYourself::
-    .string "But first, tell me a little about\n"
-    .string "yourself.\p$"
+    .string "Bueno cuéntame algo de ti.\p$"
 
 gOakSpeech_Text_YourNameWhatIsIt::
-    .string "Let's begin with your name.\n"
-    .string "What is it?\p$"
+    .string "Pero primero dime cómo te llamas.\p$"
 
 gOakSpeech_Text_SoYourNameIsPlayer::
-    .string "Right…\n"
-    .string "So your name is {PLAYER}.$"
+    .string "Bien…\n"
+    .string "¿Te llamas {PLAYER}?$"
 
 gOakSpeech_Text_WhatWasHisName::
-    .string "This is my grandson.\p"
-    .string "He's been your rival since you both\n"
-    .string "were babies.\p"
-    .string "…Erm, what was his name now?$"
+    .string "Este es mi nieto.\p"
+    .string "Ha sido tu rival desde que ambos\n"
+    .string "erais bebés.\p"
+    .string "…Eh… ¿cómo se llamaba?$"
 
 gOakSpeech_Text_YourRivalsNameWhatWasIt::
-    .string "Your rival's name, what was it now?$"
+    .string "¿Cómo era su nombre?$"
 
 gOakSpeech_Text_ConfirmRivalName::
-    .string "…Er, was it {RIVAL}?$"
+    .string "…¿Era {RIVAL}?$"
 
 gOakSpeech_Text_RememberRivalsName::
-    .string "That's right! I remember now!\n"
-    .string "His name is {RIVAL}!\p$"
+    .string "¡Eso es! ¡Ya me acuerdo!\n"
+    .string "¡Se llamaba {RIVAL}!\p$"
 
 gOakSpeech_Text_LetsGo::
-    .string "{PLAYER}!\p"
-    .string "Your very own POKéMON legend is\n"
-    .string "about to unfold!\p"
-    .string "A world of dreams and adventures\n"
-    .string "with POKéMON awaits! Let's go!$"
+    .string "¡{PLAYER}!\p"
+    .string "¡Tu propia leyenda de POKéMON está\n"
+    .string "a punto de comenzar!\p"
+    .string "¡Te espera un mundo de sueños \n"
+    .string "y aventuras con POKéMON! ¡Vamos!$"
