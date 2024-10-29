@@ -3,9 +3,9 @@
 
 #define TRAINER_NONE                               0
 // Dummy trainers for all the RS trainer classes
-#define TRAINER_AQUA_LEADER                        1
-#define TRAINER_AQUA_GRUNT_M                       2
-#define TRAINER_AQUA_GRUNT_F                       3
+#define TRAINER_PROF_OAK_BULBASAUR                        1
+#define TRAINER_PROF_OAK_CHARMANDER                       2
+#define TRAINER_PROF_OAK_SQUIRTLE                       3
 #define TRAINER_RS_AROMA_LADY                      4
 #define TRAINER_RS_RUIN_MANIAC                     5
 #define TRAINER_INTERVIEWER                        6

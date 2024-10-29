@@ -2,10 +2,11 @@
 .equ LOCALID_GENGAR, 3
 .equ LOCALID_REAL_PLAYER, 4
 .equ LOCALID_PORTAL_1, 5
+.equ LOCALID_OAK, 6
 
 PokemonTower_B3F_MapScripts::
 	map_script MAP_SCRIPT_ON_LOAD, PokemonTower_B3F_OnLoad
-	map_script MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE, PokemonTower_B3F_OnWarpTable
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, PokemonTower_B3F_OnFrameTable
 	.byte 0
 
 PokemonTower_B3F_OnLoad::
@@ -18,7 +19,7 @@ PokemonTower_B3F_OnLoad_1::
 	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_WOMAN_2
 	end
 
-PokemonTower_B3F_OnWarpTable::
+PokemonTower_B3F_OnFrameTable::
 	map_script_2 VAR_MAP_SCENE_POKEMON_TOWER_B3F_TRIGGERS, 2, PokemonTower_B3F_EventScript_Gengar_DesactivarPortal
 	.2byte 0
 
@@ -79,13 +80,68 @@ PokemonTower_B3F_EventScript_Gengar_DesactivarPortal::
 	playse SE_M_TELEPORT
 	applymovement LOCALID_PORTAL_1, Common_Movement_Disappear
 	waitmovement 0
+	removeobject LOCALID_PORTAL_1
 	setflag FLAG_PORTAL_1_POKEMON_TOWER_B3F
 	release
 	end
 
+PokemonTower_B3F_EventScript_Dusclops_Trigger::
+	lock
+	textcolor NPC_TEXT_COLOR_EVIL
+	msgbox PokemonTower_B3F_Text_Dusclops
+	closemessage
+	clearflag FLAG_HIDE_LORELEIS_HOUSE_LAPRAS_DOLL
+	addobject LOCALID_OAK
+	applymovement LOCALID_OAK, Common_Movement_Appear
+	waitmovement 0
+	textcolor NPC_TEXT_COLOR_MALE
+	msgbox PokemonTower_B3F_Text_Oak_1
+	closemessage
+	textcolor NPC_TEXT_COLOR_EVIL
+	msgbox PokemonTower_B3F_Text_Oak_2
+	textcolor NPC_TEXT_COLOR_MALE
+	closemessage
+	call_if_eq VAR_STARTER_MON, 2, PokemonTower_B3F_EventScript_BattleCharmander
+	call_if_eq VAR_STARTER_MON, 1, PokemonTower_B3F_EventScript_BattleSquirtle
+	call_if_eq VAR_STARTER_MON, 0, PokemonTower_B3F_EventScript_BattleBulbasaur
+	setvar VAR_MAP_SCENE_POKEMON_TOWER_B3F_TRIGGERS, 4
+	textcolor NPC_TEXT_COLOR_EVIL
+	msgbox PokemonTower_B3F_Text_Dusclops_3
+	closemessage
+	playse SE_M_SWEET_SCENT
+	textcolor NPC_TEXT_COLOR_MALE
+	msgbox PokemonTower_B3F_Text_Oak_3
+	applymovement LOCALID_OAK, PokemonTower_B3F_Movement_Oak_4
+	waitmovement LOCALID_OAK
+	playse SE_FALL
+	closemessage
+	waitse
+	removeobject LOCALID_OAK
+	setflag FLAG_HIDE_LORELEIS_HOUSE_LAPRAS_DOLL
+	textcolor NPC_TEXT_COLOR_EVIL
+	msgbox PokemonTower_B3F_Text_Dusclops_2
+	closemessage
+	release
+	end
+
+PokemonTower_B3F_EventScript_BattleSquirtle::
+	trainerbattle_no_intro TRAINER_PROF_OAK_SQUIRTLE, PokemonTower_B3F_Text_Oak_3
+	return
+	end
+
+PokemonTower_B3F_EventScript_BattleBulbasaur::
+	trainerbattle_no_intro TRAINER_PROF_OAK_BULBASAUR, PokemonTower_B3F_Text_Oak_3
+	return
+	end
+
+PokemonTower_B3F_EventScript_BattleCharmander::
+	trainerbattle_no_intro TRAINER_PROF_OAK_CHARMANDER, PokemonTower_B3F_Text_Oak_3
+	return
+	end
+
 PokemonTower_B3F_EventScript_Dusclops::
 	textcolor NPC_TEXT_COLOR_EVIL
-	msgbox PokemonTower_B3F_Text_Dusclops, MSGBOX_NPC
+	msgbox PokemonTower_B3F_Text_Dusclops_2, MSGBOX_NPC
 	end
 
 PokemonTower_B3F_EventScript_MissingNo_Trigger_R::
@@ -215,21 +271,22 @@ PokemonTower_B3F_EventScript_MissingNo_Comment4::
 
 PokemonTower_B3F_EventScript_MissingNo_Action1::
 	textcolor NPC_TEXT_COLOR_EVIL
-	msgbox PokemonTower_B3F_Text_MissingnoLoop_Intro_1
 	random 82
 	addvar VAR_RESULT, 264
-	fadenewbgm VAR_RESULT
+	buffernumberstring 0, VAR_RESULT
+	msgbox PokemonTower_B3F_Text_MissingnoLoop_Intro_1
+	playbgm VAR_RESULT, 0
 	delay 255
-	fadeoutbgm 0
+	playbgm MUS_NONE, 0
 	closemessage
 	goto PokemonTower_B3F_EventScript_MissingNo_LoopMain
 
 PokemonTower_B3F_EventScript_MissingNo_Action2::
 	textcolor NPC_TEXT_COLOR_EVIL
-	msgbox PokemonTower_B3F_Text_MissingnoLoop_Intro_2
 	random SPECIES_HO_OH
 	addvar VAR_RESULT, 1
 	bufferspeciesname STR_VAR_1, VAR_RESULT
+	msgbox PokemonTower_B3F_Text_MissingnoLoop_Intro_2
 	playmoncry VAR_RESULT, CRY_MODE_NORMAL
 	waitmoncry
 	closemessage
@@ -237,9 +294,10 @@ PokemonTower_B3F_EventScript_MissingNo_Action2::
 
 PokemonTower_B3F_EventScript_MissingNo_Action3::
 	textcolor NPC_TEXT_COLOR_EVIL
-	msgbox PokemonTower_B3F_Text_MissingnoLoop_Intro_3
 	random SE_POKE_JUMP_SUCCESS
 	addvar VAR_RESULT, 1
+	buffernumberstring 0, VAR_RESULT
+	msgbox PokemonTower_B3F_Text_MissingnoLoop_Intro_3
 	playse VAR_RESULT
 	waitse
 	closemessage
@@ -307,4 +365,21 @@ PokemonTower_B3F_Movement_Cam::
 	walk_right
 	walk_up
 	walk_up
+	step_end
+
+PokemonTower_B3F_Movement_Oak_1::
+PokemonTower_B3F_Movement_Oak_2::
+PokemonTower_B3F_Movement_Oak_3::
+PokemonTower_B3F_Movement_Oak_4::
+	lock_facing_direction
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	slide_down
+	slide_down
+	slide_down
+	slide_down
+	set_invisible
 	step_end

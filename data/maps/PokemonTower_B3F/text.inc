@@ -13,6 +13,22 @@ PokemonTower_B3F_Text_Dusclops::
 PokemonTower_B3F_Text_Dusclops_2::
     .string "No le hagas esperar.$"
 
+PokemonTower_B3F_Text_Dusclops_3::
+    .string "Vaya, ya no necesitamos más\n"
+    .string "al Profesor.$"
+
+PokemonTower_B3F_Text_Oak_1::
+    .string "¿Qué es esto?\n¿Dónde estoy?$"
+
+PokemonTower_B3F_Text_Oak_2::
+    .string "¡Vamos…{PAUSE 10} a…{PAUSE 10} COMBATIR!$"
+
+PokemonTower_B3F_Text_Oak_3::
+    .string "Aaah… ¿Qué ha pasado?$"
+
+PokemonTower_B3F_Text_Oak_4::
+    .string "Espera… ¿Qué?$"
+
 PokemonTower_B3F_Text_MissingnoIntro_1::
     .string "Jugador, ¿puedes sentirme en la\n"
     .string "sombra de tu pantalla? ¿Eres\l"
@@ -233,11 +249,11 @@ PokemonTower_B3F_Text_MissingnoLoop_Comment_4::
     .string "¡Es {PLAYER}, mi mayor amistad!$"
 
 PokemonTower_B3F_Text_MissingnoLoop_Intro_1::
-    .string "¡Escuchemos algo de música!$"
+    .string "¡Escuchemos algo de música! {STR_VAR_1}$"
 
 PokemonTower_B3F_Text_MissingnoLoop_Intro_2::
     .string "¡Mira, sé imitar el grito de\n"
     .string "{STR_VAR_1}.$"
 
 PokemonTower_B3F_Text_MissingnoLoop_Intro_3::
-    .string "¡Juguemos a las onomatopeyas!$"
+    .string "¡Juguemos a las onomatopeyas!{STR_VAR_1}$"

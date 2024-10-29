@@ -21,9 +21,120 @@
         .species = SPECIES_STARMIE, \
     }
 
-static const struct TrainerMonNoItemDefaultMoves sParty_AquaLeader[] = {DUMMY_TRAINER_MON};
-static const struct TrainerMonNoItemDefaultMoves sParty_AquaGruntM[] = {DUMMY_TRAINER_MON};
-static const struct TrainerMonNoItemDefaultMoves sParty_AquaGruntF[] = {DUMMY_TRAINER_MON};
+static const struct TrainerMonItemCustomMoves sParty_AquaLeader[] = {
+    {
+        .iv = 0,
+        .lvl = 30,
+        .species = SPECIES_TAUROS,
+        .heldItem = ITEM_PERSIM_BERRY,
+        .moves = {MOVE_TAKE_DOWN, MOVE_LEER, MOVE_FURY_ATTACK, MOVE_TAIL_WHIP},
+    },
+    {
+        .iv = 0,
+        .lvl = 30,
+        .species = SPECIES_EXEGGUTOR,
+        .heldItem = ITEM_PERSIM_BERRY,
+        .moves = {MOVE_STOMP, MOVE_BARRAGE, MOVE_HYPNOSIS, MOVE_NONE},
+    },
+    {
+        .iv = 0,
+        .lvl = 30,
+        .species = SPECIES_ARCANINE,
+        .heldItem = ITEM_RAWST_BERRY,
+        .moves = {MOVE_TAKE_DOWN, MOVE_EMBER, MOVE_ROAR, MOVE_LEER},
+    },
+    {
+        .iv = 0,
+        .lvl = 30,
+        .species = SPECIES_WARTORTLE,
+        .heldItem = ITEM_PERSIM_BERRY,
+        .moves = {MOVE_BITE, MOVE_WITHDRAW, MOVE_SKULL_BASH, MOVE_HYDRO_PUMP},
+    },
+    {
+        .iv = 0,
+        .lvl = 30,
+        .species = SPECIES_GYARADOS,
+        .heldItem = ITEM_PERSIM_BERRY,
+        .moves = {MOVE_HYDRO_PUMP, MOVE_DRAGON_RAGE, MOVE_LEER, MOVE_HYPER_BEAM},
+    },
+};
+
+static const struct TrainerMonItemCustomMoves sParty_AquaGruntM[] = {
+    {
+        .iv = 0,
+        .lvl = 30,
+        .species = SPECIES_TAUROS,
+        .heldItem = ITEM_PERSIM_BERRY,
+        .moves = {MOVE_TAKE_DOWN, MOVE_LEER, MOVE_FURY_ATTACK, MOVE_TAIL_WHIP},
+    },
+    {
+        .iv = 0,
+        .lvl = 30,
+        .species = SPECIES_EXEGGUTOR,
+        .heldItem = ITEM_PERSIM_BERRY,
+        .moves = {MOVE_STOMP, MOVE_BARRAGE, MOVE_HYPNOSIS, MOVE_NONE},
+    },
+    {
+        .iv = 0,
+        .lvl = 30,
+        .species = SPECIES_ARCANINE,
+        .heldItem = ITEM_RAWST_BERRY,
+        .moves = {MOVE_TAKE_DOWN, MOVE_EMBER, MOVE_ROAR, MOVE_LEER},
+    },
+    {
+        .iv = 0,
+        .lvl = 30,
+        .species = SPECIES_IVYSAUR,
+        .heldItem = ITEM_PERSIM_BERRY,
+        .moves = {MOVE_RAZOR_LEAF, MOVE_GROWTH, MOVE_SLEEP_POWDER, MOVE_SOLAR_BEAM},
+    },
+    {
+        .iv = 0,
+        .lvl = 30,
+        .species = SPECIES_GYARADOS,
+        .heldItem = ITEM_PERSIM_BERRY,
+        .moves = {MOVE_HYDRO_PUMP, MOVE_DRAGON_RAGE, MOVE_LEER, MOVE_HYPER_BEAM},
+    },
+};
+
+static const struct TrainerMonItemCustomMoves sParty_AquaGruntF[] = {
+    {
+        .iv = 0,
+        .lvl = 30,
+        .species = SPECIES_TAUROS,
+        .heldItem = ITEM_PERSIM_BERRY,
+        .moves = {MOVE_TAKE_DOWN, MOVE_LEER, MOVE_FURY_ATTACK, MOVE_TAIL_WHIP},
+    },
+    {
+        .iv = 0,
+        .lvl = 30,
+        .species = SPECIES_EXEGGUTOR,
+        .heldItem = ITEM_PERSIM_BERRY,
+        .moves = {MOVE_STOMP, MOVE_BARRAGE, MOVE_HYPNOSIS, MOVE_NONE},
+    },
+    {
+        .iv = 0,
+        .lvl = 30,
+        .species = SPECIES_ARCANINE,
+        .heldItem = ITEM_RAWST_BERRY,
+        .moves = {MOVE_TAKE_DOWN, MOVE_EMBER, MOVE_ROAR, MOVE_LEER},
+    },
+    {
+        .iv = 0,
+        .lvl = 30,
+        .species = SPECIES_CHARMELEON,
+        .heldItem = ITEM_PERSIM_BERRY,
+        .moves = {MOVE_FURY_ATTACK, MOVE_SLASH, MOVE_FLAMETHROWER, MOVE_FIRE_SPIN},
+    },
+    {
+        .iv = 0,
+        .lvl = 30,
+        .species = SPECIES_GYARADOS,
+        .heldItem = ITEM_PERSIM_BERRY,
+        .moves = {MOVE_HYDRO_PUMP, MOVE_DRAGON_RAGE, MOVE_LEER, MOVE_HYPER_BEAM},
+    },
+};
+
 static const struct TrainerMonNoItemDefaultMoves sParty_RSAromaLady[] = {DUMMY_TRAINER_MON};
 static const struct TrainerMonNoItemDefaultMoves sParty_RSRuinManiac[] = {DUMMY_TRAINER_MON};
 static const struct TrainerMonNoItemDefaultMoves sParty_Interviewer[] = {DUMMY_TRAINER_MON};
