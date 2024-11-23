@@ -63,7 +63,7 @@ struct ShopData
     /*0x12*/ u16 itemsShowed;
     /*0x14*/ u16 maxQuantity;
     /*0x16*/ u16 martType:4;    // 0x1 if tm list
-             u16 fontId:5;
+             u16 fontId:3;
              u16 itemSlot:2;
              u16 unk16_11:5;
     /*0x18*/ u16 unk18;

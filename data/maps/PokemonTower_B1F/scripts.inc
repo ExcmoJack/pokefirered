@@ -1,16 +1,12 @@
 .set LOCALID_TIP_LADY, 1
 
 PokemonTower_B1F_MapScripts::
-	map_script MAP_SCRIPT_ON_TRANSITION, PokemonTower_B1F_OnTransition @ ON_TRANSITION no sirve
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, PokemonTower_B1F_OnFrameTable
 	.byte 0
 
-PokemonTower_B1F_OnTransition::
-	goto_if_set FLAG_HIDE_POKEMON_TOWER_B1F_TIP_LADY, PokemonTower_B1F_OnTransition_1
-	end
-
-PokemonTower_B1F_OnTransition_1::
-	goto_if_eq VAR_MAP_SCENE_POKEMON_TOWER_B1F_TIMES_FAILED, 3, PokemonTower_B1F_EventScript_OnFrame_TipLady_Appear
-	end
+PokemonTower_B1F_OnFrameTable::
+	map_script_2 VAR_MAP_SCENE_POKEMON_TOWER_B1F_STATUS, 1, PokemonTower_B1F_EventScript_OnFrame_TipLady_Appear
+	.2byte 0
 
 PokemonTower_B1F_EventScript_Trigger::
 	lock
@@ -30,9 +26,15 @@ PokemonTower_B1F_EventScript_TriggerBlackout::
 	playse SE_M_SNORE
 	waitse
 	addvar VAR_MAP_SCENE_POKEMON_TOWER_B1F_TIMES_FAILED, 1
+	call_if_eq VAR_MAP_SCENE_POKEMON_TOWER_B1F_TIMES_FAILED, 3, PokemonTower_B1F_EventScript_TriggerBlackout_EnableTipLady
 	msgbox PokemonTower_B1F_Text_Trigger_2
 	warpsilent MAP_POKEMON_TOWER_B1F, 255, 19, 2
 	release
+	end
+
+PokemonTower_B1F_EventScript_TriggerBlackout_EnableTipLady::
+	setvar VAR_MAP_SCENE_POKEMON_TOWER_B1F_STATUS, 1
+	return
 	end
 
 PokemonTower_B1F_EventScript_OnFrame_TipLady_Appear::
@@ -42,6 +44,7 @@ PokemonTower_B1F_EventScript_OnFrame_TipLady_Appear::
 	applymovement LOCALID_TIP_LADY, Common_Movement_Appear
 	waitmovement 0
 	clearflag FLAG_HIDE_POKEMON_TOWER_B1F_TIP_LADY
+	setvar VAR_MAP_SCENE_POKEMON_TOWER_B1F_STATUS, 2
 	release
 	end
 

@@ -6,7 +6,7 @@
 
 @ Personalizar sprites LAVENDER TALES
 .equ PLAYER_OVERWORLD_MALE,     OBJ_EVENT_GFX_BOY
-.equ PLAYER_OVERWORLD_FEMALE,   OBJ_EVENT_GFX_WOMAN_2
+.equ PLAYER_OVERWORLD_FEMALE,   OBJ_EVENT_GFX_LASS
 
 PokemonTower_B3F_MapScripts::
 	map_script MAP_SCRIPT_ON_LOAD, PokemonTower_B3F_OnLoad
@@ -279,7 +279,7 @@ PokemonTower_B3F_EventScript_MissingNo_Action1::
 	addvar VAR_RESULT, 264
 	buffernumberstring 0, VAR_RESULT
 	msgbox PokemonTower_B3F_Text_MissingnoLoop_Intro_1
-	playbgm VAR_RESULT, 0
+	callnative PlayRandomBGM
 	delay 255
 	playbgm MUS_NONE, 0
 	closemessage
@@ -302,7 +302,7 @@ PokemonTower_B3F_EventScript_MissingNo_Action3::
 	addvar VAR_RESULT, 1
 	buffernumberstring 0, VAR_RESULT
 	msgbox PokemonTower_B3F_Text_MissingnoLoop_Intro_3
-	playse VAR_RESULT
+	callnative PlayRandomSE
 	waitse
 	closemessage
 	goto PokemonTower_B3F_EventScript_MissingNo_LoopMain

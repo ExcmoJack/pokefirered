@@ -48,6 +48,7 @@ PokemonTower_7F_EventScript_MrFuji::
 	removeobject VAR_LAST_TALKED
 	removeobject LOCALID_GHOST
 	delay 5
+	textcolor NPC_TEXT_COLOR_CREEPY
 	playse SE_M_COSMIC_POWER
 	msgbox PokemonTower_7F_Text_Ghost_0
 	waitse

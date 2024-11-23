@@ -22,7 +22,7 @@ LavenderTown_Text_GhostsAppearedInTower::
     .string "POKéMON pero, ¿qué quieren?$"
 
 LavenderTown_Text_TownSign::
-    .string "PUEBLO LAVANDA {STR_VAR_1}\n"
+    .string "PUEBLO LAVANDA\n"
     .string "El noble pueblo púrpura.$"
 
 LavenderTown_Text_SilphScopeNotice::

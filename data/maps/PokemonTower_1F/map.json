@@ -116,8 +116,8 @@
       "dest_warp_id": "1"
     },
     {
-      "x": 11,
-      "y": 2,
+      "x": 12,
+      "y": 8,
       "elevation": 0,
       "dest_map": "MAP_POKEMON_TOWER_B1F",
       "dest_warp_id": "0"

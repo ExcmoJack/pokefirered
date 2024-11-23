@@ -238,7 +238,7 @@ PokemonTower_B3F_Text_MissingnoLoop_Comment_1::
 
 PokemonTower_B3F_Text_MissingnoLoop_Comment_2::
     .string "¡Por fin mi soledad se ha\n"
-    .string "acabado! Gracias a ti, {PLAYER}$"
+    .string "acabado! Gracias a ti, {PLAYER}.$"
 
 PokemonTower_B3F_Text_MissingnoLoop_Comment_3::
     .string "¡{PLAYER}, eres increíble!\n"
@@ -249,11 +249,11 @@ PokemonTower_B3F_Text_MissingnoLoop_Comment_4::
     .string "¡Es {PLAYER}, mi mayor amistad!$"
 
 PokemonTower_B3F_Text_MissingnoLoop_Intro_1::
-    .string "¡Escuchemos algo de música! {STR_VAR_1}$"
+    .string "¡Escuchemos algo de música!$"
 
 PokemonTower_B3F_Text_MissingnoLoop_Intro_2::
     .string "¡Mira, sé imitar el grito de\n"
-    .string "{STR_VAR_1}.$"
+    .string "{STR_VAR_1}!$"
 
 PokemonTower_B3F_Text_MissingnoLoop_Intro_3::
-    .string "¡Juguemos a las onomatopeyas!{STR_VAR_1}$"
+    .string "¡Juguemos a las onomatopeyas!$"

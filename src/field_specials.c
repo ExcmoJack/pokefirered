@@ -1711,6 +1711,22 @@ void SaveGameSilently()
     }
 }
 
+void PlayRandomSE()
+{
+    u16 random_se = 0;
+    random_se = Random() % SE_POKE_JUMP_SUCCESS;
+    random_se++;
+    PlaySE(random_se);
+}
+
+void PlayRandomBGM()
+{
+    u16 random_bgm = 0;
+    random_bgm = Random() % 82;
+    random_bgm += 264;
+    PlayBGM(random_bgm);
+}
+
 void BufferMonNickname(void)
 {
     GetMonData(&gPlayerParty[gSpecialVar_0x8004], MON_DATA_NICKNAME, gStringVar1);
