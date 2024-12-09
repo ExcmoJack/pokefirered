@@ -8,13 +8,13 @@ PokemonTower_1F_OnLoad::
 	end
 
 PokemonTower_1F_EventScript_HideStairs::
-	setmetatile 10, 7, 0x2A0, 0
-	setmetatile 11, 7, 0x2A0, 0
-	setmetatile 12, 7, 0x2A0, 0
-	setmetatile 10, 8, 0x292, 0
-	setmetatile 11, 8, 0x284, 0
-	setmetatile 12, 8, 0x284, 0
-	setmetatile 10, 9, 0x28E, 0
+	setmetatile 10, 7, 0x282, 0
+	setmetatile 11, 7, 0x282, 0
+	setmetatile 12, 7, 0x282, 0
+	setmetatile 10, 8, 0x282, 0
+	setmetatile 11, 8, 0x282, 0
+	setmetatile 12, 8, 0x282, 0
+	setmetatile 10, 9, 0x282, 0
 	setmetatile 11, 9, 0x282, 0
 	setmetatile 12, 9, 0x282, 0
 	end
